@@ -1,0 +1,72 @@
+\subsection{Matrix elements of 
+\texorpdfstring{$\calbv^{\nl,\ell}$}{Vnonlocal},
+\texorpdfstring{$\bfv^\nl$}{Vnonlocal}
+and $[\bfr,\bfv^\nl]$}\label{vesnl}
+
+We take Eq.~\eqref{vcali}
+and use
+$\sum_{\bfG}\ket{\bfk+\bfG}\bra{\bfk+\bfG}=1$, 
+with
+$\braket{\bfr}{\bfk+\bfG}=(1/\sqrt{\gO})
+\mathrm{exp}(i(\bfk+\bfG)\cdot\bfr)$,
+to obtain,\cite{mottaCMS10}
+\begin{align}\label{vnl.5}
+\calbv^{\nl,\ell}_{nm}(\bfk)&=\frac{1}{2}
+\sum_{\bfG}
+\Big(
+\bra{n\bfk} C^\ell(z) 
+\ket{\bfk+\bfG}\bra{\bfk+\bfG}
+\bfv^\nl \ket{m\bfk}
++
+\bra{n\bfk}
+\bfv^\nl  
+\ket{\bfk+\bfG}\bra{\bfk+\bfG}
+C^\ell(z) \ket{m\bfk}
+\Big)
+\nonumber\\
+&=\frac{1}{2 \hbar}
+\sum_{\bfG}
+\left(
+\calf^{\ell*}_{n\bfk}(\bfG) 
+\calh_{m\bfk}(\bfG) 
++
+\calh^*_{n\bfk}(\bfG) 
+\calf^\ell_{m\bfk}(\bfG) 
+\right) 
+,
+\end{align}  
+where 
+we have defined  
+\begin{align}\label{vnl.10}
+\calf^\ell_{n\bfk}(\bfG) 
+=
+\sum_{\bfG'} 
+A_{n\bfk}(\bfG') 
+\gd_{\bfG_\parallel \bfG'_\parallel}f^\ell(\bfG'_\perp-\bfG_\perp) 
+,
+\end{align} 
+\begin{align}\label{vnl.11}
+\calh_{n\bfk}(\bfG)&=
+\sum_{\bfG'} 
+A_{n\bfk}(\bfG') 
+(\nabla_{\bfK}+\nabla_{\bfK'})  
+V^\nl(\bfK,\bfK') 
+,
+\end{align}
+and $\bfK=\bfk+\bfG$, $\bfK'=\bfk+\bfG'$.
+For fully  separable pseudopotentials in the   
+Kleinman-Bylander (KB) form,\cite{mottaCMS10,kleinman_efficacious_1982,adolphPRB96}  
+the  
+matrix elements 
+ $\bra{\bfK}  
+V^\nl  
+\ket{\bfK'}
+=V^\nl(\bfK,\bfK')  
+$, 
+along with their $\bfK$ and $\bfK'$ gradient 
+can be readily calculated.\cite{mottaCMS10,adolphPRB96,gordienkoRPJ04,fuchsCPC99} 
+We have 
+implemented 
+the calculation of $\calbv^{\nl,\ell}_{nm}(\bfk)$ with the help pf the  \depe~code.\cite{francesco}
+Taking $C^\ell(z)=1$, which implies $f^\ell(g)=\gd_{g0}$, form above three expressions we obtain 
+$\bfv^{\nl}_{nm}(\bfk)$.
