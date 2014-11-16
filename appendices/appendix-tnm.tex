@@ -5,12 +5,12 @@ Using Eq.~\eqref{vnl} we define
 \call^{\rma\rmb}_{nm}(\bfk) 
 \equiv\frac{1}{i\hbar}
 \bra{n\bfk}
-[\hat r^{\rma},\hat v^{\nl,\rmb}]
+[ r^{\rma}, v^{\nl,\rmb}]
 \ket{m\bfk}
 =
 \frac{1}{\hbar^2}
 \bra{n\bfk}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
+\big[ r^{\rma},[ V^\nl, r^\rmb]\big]
 \ket{m\bfk}
 ,
 \end{align} 
@@ -44,8 +44,10 @@ V^\nl(\bfr,\bfr')
 r'^{\rma}
 \Big) 
  e^{i\bfK'\cdot\bfr'}
-.
+,
 \end{align} 
+where 
+$V^\nl(\bfr,\bfr') = \bra{\bfr} V^\nl\ket{\bfr'}$.
 We use the following identity
 \begin{align}\label{3.4}
 &
