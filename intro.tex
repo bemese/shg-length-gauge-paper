@@ -1,0 +1,90 @@
+\section{Introduction}\label{intro}
+
+%check past tense
+%nonlocal, not non-local
+
+Nonlinear optics has been a relevant topic in physics research for the past 
+fifty years and has gained a wide range of applications in 
+diverse areas of technology and research. Second-harmonic generation (SHG) is
+one of the most fundamental nonlinear processes, and is of particular 
+importance in material science where it is has been proven to be very 
+effective as a surface probe. \cite{hughesPRB96, guyot-sionnestPRB88, 
+lupkeSSR99, downerPSSA01, shenAPB99, shenNAT89, chenPRL81, 
+maytorenaPRB98} Surface spectroscopy is a crucial tool for research in 
+microelectronics, semiconductors, nanomaterials, and many more recent 
+topics of great scientific and commercial interest.
+
+Numerous theoretical models have been developed to study the nonlinear optical
+response of materials -- each with various disadvantages. We recognize two 
+formalisms in this context. The first, called the ``velocity gauge'' or 
+``$\mathbf{v}\cdot\mathbf{A}$ gauge,'' features in early research in the field. 
+Butcher and McLean,\cite{butcherPOPS63}, and Aspnes\cite{aspnesPRB72} laid the 
+groundwork for the theory. They derived expressions for the nonlinear 
+susceptibility tensor that were either diverged at low frequencies or were 
+limited to specific crystal classes. Two decades later, 
+Ghahramani \emph{et al}.\cite{ghahramaniPRB91} realized a full-band-structure 
+calculation for Si/Ge superlattices and found significant surface SHG 
+while providing further proof that the expressions do not necessarily diverge 
+at low frequencies for certain materials. Sipe \emph{et al}.\cite{sipePRB93}
+distinguish both interband and intraband contributions to the susceptibility 
+tensor and further verify the non-divergent behavior. Levine\cite{levinePRB94} 
+introduces the scissors operator within the LDA and finds good agreement 
+with experimental results. The second formalism, called the ``length gauge'' 
+or ``$\mathbf{r}\cdot\mathbf{E}$ gauge'' presents various advantages over 
+the velocity gauge. Aversa and Sipe\cite{aversaPRB95} presented divergence 
+free expressions for the susceptibility tensor using the length gauge that 
+are  significantly easier to derive and calculate. Cabellos \emph{et al}.
+\cite{cabellosPRB09} provide a detailed derivation of the length gauge 
+formalism and a comparison with the velocity gauge for bulk GaAs. They 
+prove that the results are indeed gauge-invariant. This presents a strong
+case for using the length over the velocity gauge in order to more 
+efficiently calculate the nonlinear response of a system.
+
+We are also concerned with the optical response of surfaces and interfaces.
+Mendoza and Moch\'an\cite{mendozaPRB96} produced an early review of 
+theoretical SHG spectra from surfaces. Arzate and Mendoza\cite{arzatePRB01}
+went into a detailed analysis of the different contributions to the SHG spectra
+of a surface and the nuanced relationship between bulk, surface, interband, 
+intraband, $1\omega$ and $2\omega$ terms. Calculated surface SHG spectra are 
+in good agreement with experiment using both the velocity gauge
+\cite{mendozaPRB01,mendozaPRL98,reiningPRB94} and the length-gauge 
+approach\cite{sharmaPRB03}. Perhaps of more relevance to this 
+work, Mendoza \emph{et al}.\cite{mendozaPRB06} and 
+Mejía \emph{et al}.\cite{mejiaRMF04} developed a layer-by-layer analysis of 
+the linear and nonlinear responses of semiconductor systems. This model
+allows for obtaining results from selected regions within a slab or bulk,
+including the surface.
+
+The inclusion of nonlocal effects, such as the scissors correction, has been
+correctly introduced in both the velocity and length guage schemes. Both 
+Rashkeev \emph{et al}.,\cite{rashkeevPRB98} and Hughes and 
+Sipe\cite{hughesPRB96} effectively introduce the scissors correction when 
+calculating the nonlinear susceptibility tensor. Leitsmann 
+\emph{et al}.\cite{leitsmannPRB05} includes excitonic and local field 
+interactions within the velocity gauge scheme. 
+Lastly, Nastos \emph{et al}.\cite{nastosPRB05} demonstrated the correct 
+way to calculate the nonlinear response using the scissored Hamiltonian 
+providing better agreement with experiment. 
+
+The most complete approach will be a combination of the different techniques 
+that lead to more efficient and accurate calculations. Therefore,
+the goal of this paper is to derive new expressions for the nonlinear
+susceptibility tensor $\chi^{abc}(-2\omega;\omega,\omega)$ in the length
+gauge formalism, that includes nonlocal terms from the scissors approximation 
+and the nonlocal spatial contribution from the pseudopotentials, and a 
+layer-by-layer approach convenient for surface SHG calculations. We are also
+able to divide the resulting tensor in interband, intraband, $1\omega$, and 
+$2\omega$ contributions. This approach is unprecedented and yet produces 
+results that are in total agreement with the literature.
+
+The paper is organized as follows. In Sec. \ref{theory} we present the 
+relevant steps for deriving the surface second-order susceptibility tensor 
+within the length gauge formalism. This derivation includes the addition of 
+nonlocal terms and a layer-by-layer analysis that have been omitted 
+from previous works. In Sec. \ref{results} we show the results of this 
+reformulation with a layer-by-layer study of a clean Si(111) surface with a 
+$2 \times 1$ reconstruction. These calculations are done with ab initio 
+programs based on density-functional theory (DFT) within the local-density 
+approximation (LDA), using Troullier-Martins pseudopotentials. We compare 
+results from before and after adding the different nonlocal contributions.
+Finally, in Sec. \ref{conclusions} we present our conclusions.
