@@ -6,7 +6,7 @@ set out 'fig.mp'
 set xrange [0:5]
 #
 set xlabel  "\\Large $\\hbar\\omega$ (eV)"
-set ylabel "\\Large $|\\chi_{xxx}|$ (10$^5\\times$pm$^2$/V)" 
+set ylabel "\\Large $|\\chi^{xxx}_{\\mathrm{half-slab}}|$ (10$^5\\times$pm$^2$/V)" 
 shg(w,x,y,z)=sqrt((w+y)**2+(x+z)**2)
 scale=10.e5
 f16=2645.886245/scale
