@@ -6,7 +6,8 @@
 \usepackage{ulem}
 \usepackage{subfigure}
 %\input{/Users/bms/util/definitions}
-\def\chon{black}
+%\def\chon[1]{\color{red} #1}
+\def\chon{red}
 \input{definitions}
 \usepackage{bm}
 %%%%*****************%%%% fine hyperef 
@@ -17,7 +18,10 @@
 
 %%%
 % notes:
-% nonlocal or non-local
+% nonlocal, not non-local
+% check for tense consistency
+% surface SHG = SSHG
+% $\bfk$-points, not $\bfk$ points
 %%%
 
 
@@ -123,7 +127,7 @@ way to calculate the nonlinear response using the scissored Hamiltonian
 in the length gauge providing better agreement with experiment. 
 
 Concerning the optical response of surfaces and interfaces,
-Mendoza and Moch\'an\cite{mendozaPRB96} produced an early review of 
+Mendoza and Moch\'an\cite{mendozaPRB96a} produced an early review of 
 theoretical SHG spectra from surfaces. 
 Arzate and Mendoza\cite{arzatePRB01} improved upon that work and
 went into a detailed analysis of the different contributions to the 
@@ -1041,34 +1045,40 @@ either the front or the back surface.
 
 \section{Test Case}\label{results}
 
-In this section we present a test case in order to check the
-consistency of the approach presented above. To do this end,  we have chosen
-a clean Si(001) surface  with a $2\times 1$ surface reconstruction.
+In this section we present a 
+{\color{\chon} relevant test case} to check the
+consistency of {\color{\chon} our approach. We have selected}
+a clean Si(001) surface with a $2\times 1$ surface reconstruction.
 The slab for such a surface could be chosen to be centrosymmetric 
-by having the fron and the back surface with the same $2\times 1$
-reconstruction, however we terminate with hydrogen one of the
-surfaces, thus having it as an ideally bulk terminated Si
-surface. Indeed, the H atoms simply saturate the dangling bonds of the
-bulk-like Si atoms at the surface, as seen in Fig.~\ref{si2x1}. \textcolor{red}{details of the
- relaxation and some references}
+by {\color{\chon} creating} the front {\color{\chon} and back} 
+surfaces with the same $2\times 1$
+reconstruction{\color{\chon} . However, we choose to} terminate one 
+of the surfaces with hydrogen {\color{\chon} producing an ideal  
+terminated} bulk Si surface. {\color{\chon} The} H atoms simply saturate the 
+dangling bonds of the bulk-like Si atoms at the surface, as seen in 
+Fig.~\ref{si2x1}.
+\textcolor{red}{details of the relaxation and some references}
 \begin{figure}
 \centering 
 \includegraphics[scale=.8]{images/si2x1-crop}
-\caption{(color on line) The slab shows a front clean Si(001)$2\times 1$ surface,
-  while the back surface is ideally terminated Si bulk, where the  
-  dangling bonds are H (small balls) saturated. This picture shows 12  
-  Si atomic layers and one H atomic layer. 
+\caption{(color on line) The slab shows a 
+    {\color{\chon} clean Si(001)$2\times 1$ front surface 
+    with an ideal terminated Si bulk back surface. The}
+    dangling bonds are H (small balls) saturated. 
+    This {\color{\chon} image depicts} 12 Si atomic layers
+    {\color{\chon} with one} H atomic layer. 
 \label{si2x1}} 
 \end{figure} 
-The idea for such an slab is that the cristalline symmetry of the
-H terminated surface imposes that $\chi_{\mathrm{H}}^{xxx}=0$, while
-for the $2\times 1$ surface there is not such symmetry restriction and
-then, $\chi_{2\times 1}^{xxx}\ne 0$.
-Therefore, due to this fact, calculating $\chi^{xxx}$ for the full-slab
-or the half-salb that contains the $2\times 1$ surface,\cite{nota1}
- ought to give the same result, since the contribution from the H
- saturated  surface is zero any way. Then, for this slab one must check
- whether or not this relation is satisfied,
+The idea {\color{\chon} behind this slab configuration} is that the 
+cristalline symmetry of the H terminated surface imposes that 
+$\chi_{\mathrm{H}}^{xxx}=0${\color{\chon} . The $2\times 1$ surface has no 
+such restrictions, so} $\chi_{2\times 1}^{xxx}\ne 0$.
+Thus, calculating $\chi^{xxx}$ for the full-slab, or the 
+{\color{\chon} half-slab containing} the $2\times 1$ surface\cite{nota1}
+{\color{\chon} should yield the} same result since the contribution from the H
+saturated surface is zero {\color{\chon} regardless. 
+We must check that the following 
+relationship is satisfied for this particular slab}
 \begin{align}\label{hs}
 \chi_{\mathrm{half-slab}}^{xxx}(-2\go;\go,\go) 
 =
@@ -1077,84 +1087,70 @@ or the half-salb that contains the $2\times 1$ surface,\cite{nota1}
 \end{align}
 where
 $\chi_{\mathrm{half-slab}}^{xxx}(-2\go;\go,\go)$ is calculated using
-$C^\ell(z)=1$ un the upper half of the salb, that contains the
-$2\times 1$ surface reconstruction, as seen in
-Fig.~\ref{si2x1},
-whereas $\chi_{\mathrm{full-slab}}^{xxx}(-2\go;\go,\go)$ is calculated using
+$C^\ell(z)=1$ {\color{\chon} from the upper half containing the }$2\times 1$ 
+surface reconstruction, as seen in Fig.~\ref{si2x1},
+and $\chi_{\mathrm{full-slab}}^{xxx}(-2\go;\go,\go)$ is calculated using
 $C^\ell(z)=1$ through the full slab.
-Indeed, in what follows we show the results of such a comparison.
+{\color{\chon} We show the results for this comparison in the remainder 
+of this section}
 
 The self-consistent ground state and their Kohn-Sham states were
-calculated in the frame-work of DFT-LDA,
-with the use of the plane-wave ABINIT
-code.\cite{abinit}
-We used
-Troullier-Martins
-pseudopotentials,\cite{troullierPRB91} 
-that are 
-fully separable nonlocal pseudopotentials in the 
-Kleinman-Bylander 
-form;\cite{kleinmanPRL82}
-the contribution of $\bfv^\nl$ to Eq.~\eqref{chis},
-can be calculated, as explained in Appendix \ref{vesnl}; 
-we use the DP code for this end.\cite{francesco}
-The $2\times 1$ and the H surfaces are relaxed \textcolor{red}{Nicolas 
-  some details}, where we find agreement with previous results for 
-both surfaces.\cite{relax} For instance the Si-H bond distance is 1.48 
-$\AA$ ??. The unit cell has two atoms, making the calculation
-computational very heavy. The vacuum size is equivalent to one quarter
-of the
-size of the slab, thus avoiding spurious effects from the possible
-tunneling of the wave function of the contiguous surfaces of the full
+calculated in the {\color{\chon} DFT-LDA framework using} the plane-wave 
+ABINIT code.\cite{abinit}
+We used Troullier-Martins pseudopotentials\cite{troullierPRB91} that are 
+fully separable nonlocal pseudopotentials in the Kleinman-Bylander 
+{\color{\chon} form.\cite{kleinmanPRL82}
+The contribution of $\bfv^\nl$ to Eq.~\eqref{chis} can be carried out 
+as detailed in Appendix \ref{vesnl} using the DP code for 
+the actual calculation}.\cite{francesco}
+The $2\times 1$ and {\color{\chon} H terminated} surfaces are relaxed 
+\textcolor{red}{Nicolas some details}, 
+{\color{\chon} and we} find agreement with previous results for 
+both surfaces.\cite{relax} 
+{\color{\chon} For instance the Si-H bond distance is 1.48 \AA ??.} 
+The unit cell has two atoms {\color{\chon} making for a computationally
+expensive calculation.} 
+The vacuum size is equivalent to one {\color{\chon} quarter the} 
+size of the slab, {\color{\chon} avoiding the effects produced by possible 
+wave-function tunneling} from the contiguous surfaces of the full
 crystal formed by the repeated super cell scheme.\cite{mendozaPRB06}    
 
-Spin-orbit effects, local field effects, and the consequences of the
-electron-hole
-attraction\cite{leitsmannPRB05,trollePRB14} on the SHG process are neglected. 
-Although all these effects are important for the optical response of a
-semiconductor, 
-their calculation is still an open question and a numerical challenge
-that ought to be pursued. 
-However this endeavor is beyond the scope of this paper. 
-For a given size  
-of the slab,  we find converged spectra
-for all the quantities of interest in this
-work, 
-and the most important parameters are
-an energy cut-off of 10 Ha,
-a number 
-of conduction bands equal to the number of valence 
-bands,
-and a set of 244 $\bfk$-points
-is used for
-the linear analytic tetrahedron method used in the evaluation
-the Brillouin zone integrals for of Eq.~\eqref{chis}, where special care
-was taken to examine the double resonances.\cite{nastosPRB05}
-Double resonances occur if for a given frequency $\omega$
-there can be resonant
-transitions at both frequencies $\omega$ and 2$\omega$,
- that is, if there is a
-region in the Brillouin zone such that
-$\omega_{cv}(\bfk)=2 \omega_{c'v}(\bfk)$
-For these $\bfk$ points the perturbation theory used to calculate
-the spectrum breaks down, since there is real population excited,
-which in a correct calculation must be taken into account. These
-points introduce sharp spikes in the spectrum that can, in
-principle, affect the low-frequency results, since the response at
-frequencies below the band gap is computed from the Kramers-Kronig
-relation. However, in agreement with Ref.~\onlinecite{nastosPRB05}
- we find here
-that the double resonances affect the low-frequency results by less
-than 2\%. 
-Finally, all the spectra are calculated with an energy Gaussian smearing of  0.15 eV {\color{red}Chon??} 
+{\color{\chon} Spin-orbit, local field, and electron-hole 
+attraction\cite{leitsmannPRB05,trollePRB14} 
+effects on the SHG process are all neglected.}
+Although these are important factors in the optical response of a semiconductor,
+{\color{\chon} their efficient calculation is still numerically challenging and 
+under debate. This merits further study but is beyond the scope of this paper.}
+For a given {\color{\chon} slab size, we find the} converged spectra 
+{\color{\chon} to obtain the relevant parameters. The most important of 
+these are: an energy cut-off of 10 Ha, an equal number of conduction and 
+valence bands, and a set of 244 $\bfk$-points.} 
+{\color{\chon} The $\bfk$-points are used} for the linear analytic 
+tetrahedron method {\color{\chon} for evaluating the}
+Brillouin zone integrals in Eq.~\eqref{chis}, 
+where special care was taken to examine the double resonances.\cite{nastosPRB05}
+{\color{\chon}
+Double resonances occur at a given frequency $\omega$ if there can be 
+resonant transitions at both $\omega$ and 2$\omega$ frequencies. This 
+implies that there is a region in the Brillouin zone where 
+$\omega_{cv}(\bfk)=2 \omega_{c'v}(\bfk)$. Since there is a real population 
+excitation, the perturbation theory used to calculate the spectrum breaks 
+down at these $\bfk$-points. This must be taken into account in a more 
+complete calculation. These points introduce sharp spikes in the spectrum. 
+In principle, these can affect the low frequency results since the response 
+is computed from the Kramers-Kronig relation for frequencies below the band 
+gap. However, in agreement with Ref.~\onlinecite{nastosPRB05} we find that 
+the double resonances affect the low frequency results by less than 2\%. 
+All spectra were calculated with a Gaussian smearing of 0.15 eV.}
 \begin{figure}
 \centering 
 \includegraphics[scale=.8]{plots/fig1}
 \caption{(color on line) 
-$|\chi_{\mathrm{half-slab}}^{xxx}|$ vs $\hbar\omega$ for different slabs with 16, 24, 32 
-and 40 atomic Si layers. The fron surface of the slab presents a 
-$2\times 1$ reconstruction, whereas the back sufrace is ideally bulk 
-terminated where the dangling bonds are H-saturated. 
+$|\chi_{\mathrm{half-slab}}^{xxx}|$ vs $\hbar\omega$ 
+{\color{\chon} for the slab} 
+with 16, 24, 32, and 40 atomic Si layers. The front surface 
+{\color{\chon} is in a clean $2\times 1$ reconstruction and the back 
+surface is an ideal terminated bulk H-saturated dangling bonds.}
 \label{fig1}} 
 \end{figure}
 \begin{figure}
@@ -1164,119 +1160,118 @@ terminated where the dangling bonds are H-saturated.
 $\chi^{xxx}_{\mathrm{half-slab}}$
 and 
 $\chi^{xxx}_{\mathrm{full-slab}}$
-vs $\hbar\omega$ for a slab of 32 
-atomic Si layers plus one layer of H. 
+vs $\hbar\omega$ for a slab {\color{\chon} with} 32 
+atomic Si layers plus one {\color{\chon} H layer}. 
 \label{fig2}} 
 \end{figure}
 
-To obtain Eqs.~\eqref{tau.1}  and \eqref{tau.1n}, required in
-Eq.~\eqref{chis},
-we see that the
-evaluation of the commutator $[\bfr,\bfv^\nl]$ is required as it is
-outlined in Appendix \ref{appvnl}; second order derivatives
-are required to do such evaluation, making the numerical
-procedure very
-time consuming. Indeed this time is much higher than the already
-lengthy time needed for the calculation of the contribution of
-$\bfv^\nl$, proportional to only first order derivatives, as seen in
-Appendix \ref{vesnl}. 
-On top of this, the memory required is also very demanding for both
-$\bfv^\nl$ and $[\bfr,\bfv^\nl]$.
-However, the contribution coming from 
-$[\bfr,\bfv^\nl]$, turns out to be very small,\cite{valerie} and
-therefore we neglect it in this work.
+{\color{\chon} 
+We must evaluate the $[\bfr,\bfv^\nl]$ commutator in order to obtain 
+Eqs.~\eqref{tau.1} and \eqref{tau.1n} that are required for 
+Eq.~\eqref{chis}, as outlined in Appendix \ref{appvnl}. Computing second 
+order derivatives is required thus making the numerical procedure very 
+time consuming. This adds significantly to the already lengthy time needed 
+for the calculation of the $\bfv^\nl$ contribution and is proportional to 
+the first order derivatives. Details can be found in Appendix \ref{vesnl}. 
+Memory requirements are also increased for both $\bfv^\nl$ and 
+$[\bfr,\bfv^\nl]$. However, the contribution from $[\bfr,\bfv^\nl]$ 
+is very small\cite{valerie} and therefore we neglect it in this work.}
 
 In Fig.~\ref{fig1} we show $|\chi_{\mathrm{half-slab}}^{xxx}|$
- for a
-slab of 16, 24, 32, and 40 Si atomic layers. We see that 
-$|\chi_{\mathrm{half-slab}}^{xxx}|$ for
-16 and 24
-layers are different from each other, and different from that of 32
-and 40 layers,
-that are very similar to each other.
+for {\color{\chon} the} slab {\color{\chon} with} 
+16, 24, 32, and 40 Si atomic layers. 
+{\color{\chon} We note that the response differs substantially 
+for 16 and 24 layers but is quite similar for 32 and 40 layers.}
 As explained above,
-the calculation of the contribution given by
-$\bfv^\nl$ is computational very demanding. A good
-compromise between the accuracy in the convergence of
-$\chi^{xxx}_{\mathrm{half-slab}}$,
- as a function of the number
-of atomic layers in the slab, and the computational burden, is to take
-the slab with 32 Si atomic layers, as representative of our system
-in question.
+the calculation of {\color{\chon} the $\bfv^\nl$ contribution is 
+computationally expensive.} 
+A good compromise between the accuracy in the convergence of
+$\chi^{xxx}_{\mathrm{half-slab}}$ as a function of the number
+of layers in the slab, and the computational 
+{\color{\chon} expense is to consider} 
+the slab with 32 Si atomic layers as 
+{\color{\chon} an accurate representation} of our 
+{\color{\chon} system.}
 In Fig.~\ref{fig2}
 we compare 
 $\chi^{xxx}_{\mathrm{half-slab}}$  
 vs. 
-$\chi^{xxx}_{\mathrm{full-slab}}$, 
-for the four different possibilities of including or not including the
-effects of $\bfv^\nl$ and having or not having a scissors correction
+$\chi^{xxx}_{\mathrm{full-slab}}$ 
+{\color{\chon} for} the four different possibilities 
+{\color{\chon} between} including or not including the
+effects of $\bfv^\nl$ {\color{\chon} or the} scissors correction
 $\hbar\sigma$.
-We see that for all four instances the comparison between
-$\chi^{xxx}_{\mathrm{half-slab}}$ 
-and
-$\chi^{xxx}_{\mathrm{full-slab}}$,
-is very good. Indeed, where the value of $|\chi^{xxx}|$ is large the
-difference is very small, and when its value is small, the difference
-are just slightly larger, but the spectra is so close to zero that the
-differences are not very meaning full; this diferences would become
-smaller as the number of atomic layers is increased. However, with 32
-layers is more than enough to 
-confirm that the extraction of the surface second
-harmonic susceptibility from the $2\times 1$ surface is 
-readily possible using the formalism contained in Eq.~\eqref{chis}.
+We see that for all four instances the 
+{\color{\chon} difference between responses is quite small}. 
+{\color{\chon} Indeed, when the value $|\chi^{xxx}|$ 
+is large the difference between the two is very small; 
+when the value is small the difference increases only slightly, 
+but the spectra is so close to zero that these it is negligible. 
+These differences would decrease as the number of atomic layers 
+increases. We note that 32 layers in the slab} is more than enough 
+to confirm that the extraction of the surface second harmonic 
+susceptibility from the $2\times 1$ surface is readily possible 
+using the formalism contained in Eq.~\eqref{chis}.
 
-Although in a forthcoming publication we will present a study of SSHG
-from several Si surfaces where experimental results are available, we
-proceed to explain, without confronting with experiment ({\color{red}
-Nicolas are there any for this particular component?}), some of the
-features seen in 
-$|\chi^{xxx}_{2\times 1}|$,  
-that is of coures given by
-$|\chi^{xxx}_{\mathrm{half-slab}}|$.
-First of all, from Fig.~\ref{fig2} 
-we see a series of resonances 
-that come from the 1$\omega$ and 2$\omega$ terms in
-Eq.~\eqref{chis}. The 2$\omega$ resonances naively would start below
-$E_g/2$ where $E_g=3.4$ eV is
-the band gap of bulk Si. However we see that there are several
-resonances well below 1.7 eV, and of course, these resonances are
-coming from the electronic states of the $2\times 1$ surface, that lie
-inside the gap, that are the well known surface states.
+{\color{\chon} We will present a study of SSHG from several 
+Si surfaces in a forthcoming publication with comparison to experimental 
+results. However, without referring to experiment, we proceed to explain 
+some of the features seen in $|\chi^{xxx}_{2\times 1}|$ that are obtained 
+by calculating $|\chi^{xxx}_{\mathrm{half-slab}}|$.}
+({\color{red} Nicolas are there any for this particular component?})
+{\color{\chon} First,} from Fig.~\ref{fig2} we note a series of resonances 
+that {\color{\chon} derive from} 1$\omega$ and 2$\omega$ terms in
+Eq.~\eqref{chis}. {\color{\chon} We could naively assume that the
+2$\omega$ resonances} start below $E_g/2$ where $E_g=3.4$ eV is
+the band gap of bulk Si. However, we also {\color{\chon} observe} 
+that there are several resonances well below 1.7 eV
+{\color{\chon} that come} from the electronic states of the 
+$2\times 1$ surface, that lie inside the gap and are the 
+well known surface states.
 We see that the effect of $\bfv^\nl$ reduces the value of   
 $|\chi^{xxx}_{2\times 1}|$,\cite{note2}  
-without changing the form of the spectra, as can be confirmed from
+without changing the 
+{\color{\chon} spectral shape}, as can be confirmed from
 both cases of zero and non-zero scissors correction.
-Also, we see that the scissors correction shifts the spectra to higher
-energies, as expected, however, contrary to the case of linear optics,\cite{cabellosPRB09}
-the shifting is not rigid. This is because, the second harmonic optical
-response mixes 1$\omega$ and 2$\omega$ transitions, as can be seen from
-Eq.~\eqref{chis}, and thus the spectra is not rigidly shifted. 
+{\color{\chon} We note that the scissors correction 
+shifts the spectra to higher energies as expected. However, contrary 
+to the case of linear optics\cite{cabellosPRB09} this shit is not 
+rigid. This is because the second harmonic optical response mixes 
+$1\omega$ and $2\omega$ transitions (see Eq.~\eqref{chis}), and accounts 
+for the non-rigid shift.}
 \begin{figure}
 \centering 
 \includegraphics[scale=.8]{plots/fig3}
 \caption{(color on line) 
 $\chi^{xxx}_{2\times 1}$
-vs $\hbar\omega$ for a slab of 32 
-atomic Si layers plus one layer of H, for two different values of 
+vs $\hbar\omega$ for a slab {\color{\chon} with} 32 
+atomic Si layers plus one {\color{\chon} H layer}, 
+for two different values of 
 the scissors correction $\hbar\sigma$.
 \label{fig3}} 
 \end{figure}
 
 Finally, in Fig.~\ref{fig3} we compare 
-$|\chi^{xxx}_{2\times 1}|$ for two values of $\hbar\sigma$. Indeed,
-the value of $\hbar\sigma=0.5$ eV, used above, is the ``average'' GW gap taken from 
-Refs.~\onlinecite{rholfingPRB95} which is in agreement with \onlinecite{garciaCPC01}, and  
-the value of $\hbar\sigma=0.63$ eV is the ``average'' GW gap taken from 
-Refs.~\onlinecite{asahiPRB00}, where more $\bfk$ points in the
-Brillouin zone were used.
-We see that the fist two peaks are almost rigidly shifted with a small
-difference in height, while the rest of the peaks are modified
-substantially. This behavior, comes from the fact that the first two
-peaks are almost related to the 1$\omega$ resonances of
-Eq.~\eqref{chis}, and the other peaks are a combination of 1$\omega$
-and 2$\omega$ resonances, thus giving a more different spectrum. This
-way we see that small changes in the value of the scissors shift can affect the
-$|\chi^{xxx}_{2\times 1}|$ quite dramatically.
+$|\chi^{xxx}_{2\times 1}|$ for two values of $\hbar\sigma$. 
+{\color{\chon} The} value of $\hbar\sigma=0.5$ eV, used above, 
+is the ``average'' GW gap taken from 
+Refs.~\onlinecite{rholfingPRB95} 
+{\color{\chon} and} is in agreement with \onlinecite{garciaCPC01}. 
+{\color{\chon} The} value of $\hbar\sigma=0.63$ eV is the ``average'' 
+GW gap taken from Refs.~\onlinecite{asahiPRB00}, 
+where more {\color{\chon}$\bfk$-points} in the Brillouin zone were used.
+We see that the {\color{\chon} first} two peaks are almost rigidly 
+shifted with a small difference in {\color{\chon} height while} 
+the rest of the peaks are modified substantially. 
+This {\color{\chon} behavior comes} from the fact that the first two
+peaks are {\color{\chon} almost exclusively related} to the 
+1$\omega$ resonances of
+Eq.~\eqref{chis}{\color{\chon} . The} other peaks are a combination 
+of 1$\omega$ and 2$\omega$ resonances 
+{\color{\chon} and yield a more varied} spectrum. 
+This way we see that small changes in the value of the 
+scissors shift can affect the
+$|\chi^{xxx}_{2\times 1}|$ {\color{\chon} spectrum} quite dramatically.
 
 
 %%%%%%%%%%%%%
@@ -1769,7 +1764,7 @@ lim_optical_2000,
 gavrilenko_optical_2000,
 mendozaPRB99,
 mendozaPRL98,
-mendozaPRB96,
+mendozaPRB96a,
 mendozaPRB97,
 guyotPRB90} 
 
