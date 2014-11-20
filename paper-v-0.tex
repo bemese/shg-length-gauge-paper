@@ -6,29 +6,21 @@
 \usepackage{ulem}
 \usepackage{subfigure}
 %\input{/Users/bms/util/definitions}
-%\def\chon[1]{\color{red} #1}
 \def\chon{red}
-\def\chonn{red}
 \def\nicolas{red}
 \input{definitions}
 \usepackage{bm}
 %%%%*****************%%%% fine hyperef 
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{showlabels}
+%\usepackage{showlabels}
 %\usepackage{showkeys}
 
 %%%
 % notes:
-% nonlocal, not non-local
 % check for tense consistency
-% surface SHG = SSHG
-% $\bfk$-points, not $\bfk$ points
-% Nature Materials de valerie
 % Local fields?
 %%%
-
-
 
 \begin{document}
 
@@ -38,7 +30,7 @@
 \author{Nicolas Tancogne-Dejean}
 \affiliation{Laboratoire des Solides Irradi\'es, \'Ecole 
   Polytechnique, CNRS, CEA/DSM, 91128 Palaiseau, France}
- \affiliation{European Theoretical Spectroscopy Facility (ETSF), Palaiseau, France}
+\affiliation{European Theoretical Spectroscopy Facility (ETSF), Palaiseau, France}
 \author{Bernardo S. Mendoza}\email{bms@cio.mx}
 \affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico}
 \author{Val\'erie V\'eniard}
@@ -62,176 +54,119 @@ and intra-band one-electron transitions.
 
 \section{Introduction}\label{intro}
 
-
-In recent years, surface nonlinear optical spectroscopies and in 
-particular, surface second-harmonic generation SSHG have evolved as useful 
-nondestructive and noninvasive tool to study properties of surfaces 
-and interfaces: atomic structure, phase transitions, and adsorption of 
-atoms, among others.\cite{
-    daumPRL93, 
-    mcgilpOE94, 
-    meyerPRL95, 
-    powerPRL95, 
-    godefroyAPL96, 
-    hoferAPA96, 
-    dadapPRB97, 
-    bloembergenAPB99, 
-    mcgilpSRL99, 
-    suzukiAPB99, 
-    mitchellSS01,
-    hughesPRB96, 
-    guyotPRB88, 
-    downerPSSA01, 
-    shenAPB99, 
-    shenNAT89, 
-    chenPRL81, 
-    mendozaPRL98,
-    downerSIA01,
-    cazzanelliNM14}
-Nowadays, SSHG spectroscopy is a crucial tool for research and development
-in microelectronics,\cite{zheltikovLP00} semiconductors,
-\cite{lupkeSSR99}, nanomaterials,\cite{salazar-aparicioPRB14} 
-and many more recent 
-areas of great scientific and commercial interest.\cite{cazzanelliNM14}
-The high surface sensitivity of SSHG spectroscopy is due to the
-fact that, within the dipole approximation, the bulk SHG signal of
-centrosymmetric materials is identically zero, and thus only the
-surface, where the inversion symmetry is broken, can radiate. 
-Much of the foundation of surface science has been built from
-experiments involving emission or scattering of electrons from
-surfaces. These require ultrahigh vacuum (UHV) environments and
-provide no access to buried interfaces. 
-However, SSHG
-is compatibile with non-UHV ambients and has access to
-interfaces buried beneath transparent overlayers. Even when applied to
-surfaces in UHV, the light source and detectors can be aligned and
+In recent years surface nonlinear optical spectroscopies, particulary surface 
+second-harmonic generation (SSHG), have evolved as useful nondestructive 
+and noninvasive tools to study surface and interface properties. These 
+properties include atomic structure, phase transitions, adsorption of 
+atoms, and many others.\cite{daumPRL93, mcgilpOE94, meyerPRL95, powerPRL95, 
+godefroyAPL96, hoferAPA96, dadapPRB97, bloembergenAPB99, mcgilpSRL99, 
+suzukiAPB99, mitchellSS01, hughesPRB96, guyotPRB88, downerPSSA01, shenAPB99, 
+shenNAT89, chenPRL81, mendozaPRL98, downerSIA01} Nowadays, SSHG spectroscopy 
+is a crucial tool for research and development in microelectronics,
+\cite{zheltikovLP00} semiconductors, \cite{lupkeSSR99} nanomaterials,
+\cite{salazar-aparicioPRB14} and many more recent areas of great scientific 
+and commercial interest.\cite{cazzanelliNM14} The high surface sensitivity 
+of SSHG spectroscopy is due to the fact that within the dipole approximation 
+the bulk SHG signal of centrosymmetric materials is identically zero. 
+Radiation can occur only at the surface where the inversion symmetry is 
+broken. Much of the foundation of surface science has been built from 
+experiments involving emission or scattering of electrons from surfaces. 
+These require ultrahigh vacuum (UHV) environments and provide no access to 
+buried interfaces. However, SSHG is compatibile with non-UHV conditions and 
+has access to interfaces buried beneath transparent overlayers. Even when 
+applied to surfaces in UHV, the light source and detectors can be aligned and
 used outside the vacuum chamber. 
 
-The usefulness of SSHG could be limited by
-the lack of microscopic theoretical
-understanding of the nonlinear spectra. The macroscopic
-phenomenological theory of SSHG, which relates the intensity,
-phase and polarization of detected fields to nonlinear and linear
-susceptibilities at the material interface, is now fully developed. 
-However, microscopic theory, which relates atomic-level structure to
-the nonlinear source polarization, is still being developed.
-In this article we put forward an approach to calculate the
+The usefulness of SSHG could be limited by the lack of microscopic theoretical
+understanding of the nonlinear spectra. The macroscopic phenomenological 
+theory of SSHG, which relates the intensity, phase, and polarization of 
+detected fields to nonlinear and linear susceptibilities at the material 
+interface is now fully developed. However, microscopic theory that relates 
+atomic-level structure to the nonlinear source polarization is still being 
+developed. In this article we put forward an approach to calculate the
 microscopic second harmonic surface susceptibility that encompasses several
-theoretical features not taken into account before. 
-Within the independent particle approximation (IPA),  
-some frameworks for bulk SHG have been developed to study the 
-nonlinear optical response of bulk materials, where several degrees of
-sophistication were 
-introduced.\cite{butcherPOPS63,aspnesPRB72,sipePRB93,levinePRB94,aversaPRB95,hughesPRB96,rashkeevPRB98} 
+theoretical features not taken into account before. Within the independent 
+particle approximation (IPA) some frameworks for bulk SHG have been developed 
+to study the nonlinear optical response of bulk materials with varying degrees 
+of sophistication.\cite{butcherPOPS63, aspnesPRB72, sipePRB93, levinePRB94,
+aversaPRB95, hughesPRB96, rashkeevPRB98} 
 
-As it is well known
-Density Functional Theory (DFT) within the Local Density Approximation
-(LDA),\cite{kohnPR65} the most 
-used framework for \textit{ab initio} calculations,
-underestimates the energy band gap of semiconductors. It is also well
-understood that one has to include the many-body interaction to
-correct for the underestimation of the gap. In this context the so
-called GW approximation\cite{onidaRMP02} is known to correct the band
-gap of most semiconductors\cite{luceroJPCM12}. However this could be a numerically very
-expensive calculation, and thus one uses the much simpler scissors
-operator scheme.\cite{levinePRL89, levinePRL91}
-This allows to ``open'' the DFT-LDA gap to
-its correct experimental or GW value, when experiments are not available. 
-In this context,
-to correct for the underestimation of the energy band gap of semiconductors, 
-Nastos et al.\cite{nastosPRB05} 
-using the 
-``length gauge'' or 
-``$\mathbf{r}\cdot\mathbf{E}$ gauge'' 
-showed how to correctly include in the SH susceptibility the many-body corrections through the
-scissors operator.
-Later,
-Cabellos \textit{et al}.\cite{cabellosPRB09} 
-elaborated a derivation of the ``velocity gauge'' or
-``$\bfA\cdot\bfv$'' gauge properly including the scissors
-operator, and proved  gauge 
-invariance with respect to the length gauge.
-From these works, it is clear the length gauge is a much better staring
-point to obtain the surface SH (SSH) susceptibility, as it will be
-elaborated in this article. Above only being valid for bulk semiconductors.
+The most used framework for \textit{ab initio} calculations, Density 
+Functional Theory (DFT) within the Local Density Approximation (LDA),
+\cite{kohnPR65} underestimates the energy band gap of semiconductors. It is 
+well understood that one has to include the many-body interaction to correct 
+for this underestimation of the gap. In this context, the so-called GW 
+approximation\cite{onidaRMP02} is known to correct the band gap of most 
+semiconductors\cite{luceroJPCM12}. However this can be a very expensive
+calculation and thus one uses the much simpler scissors operator scheme.
+\cite{levinePRL89, levinePRL91} This allows us to ``open'' the DFT-LDA gap to 
+its correct experimental or GW value even when experiments are not available. 
+In this context, to correct for the underestimation of the energy band gap of 
+semiconductors Nastos et al.\cite{nastosPRB05} used the ``length gauge'' or 
+``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to correctly include the 
+many-body corrections through the scissors operator in the SH susceptibility.
+Later, Cabellos \textit{et al}.\cite{cabellosPRB09} elaborated a derivation 
+of the ``velocity gauge'' or ``$\bfA\cdot\bfv$'' gauge properly including the 
+scissors operator and proved gauge invariance with respect to the length 
+gauge. From these works it is clear the length gauge is a much better staring
+point to obtain the surface SH (SSH) susceptibility, as will be elaborated 
+in this article. However, these considerations are only valid for bulk 
+semiconductors.
 
-Concerning the optical response of surfaces and interfaces,
-Reining \textit{et al.}\cite{reiningPRB94}  
-introduced the concept of a 
-cut function in order to obtain the surface SH 
-susceptibility tensor.
-This cut function is required since one usually uses a slab approach
-when treating semi-infinite surface systems; if the slab is
-centrosymmetric the susceptibility tensor will be identically zero.
-The cut function is such that it separates the nonlinear response
-the two surfaces of the slab, thus avoiding the destructive
-interference between them, giving a finite value of the tensor, that
-one identifies with the SSH susceptibility tensor; if the slab is not
-centrosymmetric the cut function can be used to separate the
-different signals coming from either surface of the slab.
-Indeed, one of the main results of this article is to show that the SSH 
-susceptibility tensor obtained by using the cut function is 
-correctly extracted from the slab.   
-After Reining \textit{et al.}\cite{reiningPRB94}, 
-Refs.~\onlinecite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02}
-followed upon this work and in particular Ref.~\onlinecite{arzatePRB01}
-went into a detailed analysis of the different contributions to the 
-SHG spectra of a surface and the nuanced relationship between bulk, 
-surface, interband, intraband, $1\omega$ and $2\omega$ terms. 
-Perhaps of more relevance to this work, 
-Mej\'ia \textit{et al}.\cite{mejiaRMF04} developed a layer-by-layer analysis for 
-the nonlinear responses of semiconductor systems, within a 
-Tight-Binding framework. This model 
-allows for obtaining results from selected regions of a system,
-including the surface. 
-However, in these references the scissors is either not implemented or
-wrongly implemented. 
+Concerning the optical response of surfaces and interfaces, Reining 
+\textit{et al.}\cite{reiningPRB94} introduced the concept of a cut function 
+in order to obtain the surface SH susceptibility tensor. This cut function 
+is required since one usually uses a slab approach when treating semi-infinite 
+surface systems. If the slab is centrosymmetric the susceptibility tensor will 
+be identically zero. The cut function is such that it separates the nonlinear 
+response for the two surfaces of the slab avoiding the destructive 
+interference between them giving a finite value that one identifies with the 
+SSH susceptibility tensor. If the slab is not centrosymmetric the cut function 
+can be used to separate the different signals coming from either surface of 
+the slab. Indeed, one of the main results of this article is to show that the 
+SSH  susceptibility tensor obtained by using the cut function is correctly 
+extracted from the slab. After Reining \textit{et al.},\cite{reiningPRB94}
+Refs.~\onlinecite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02} followed 
+upon this work and in particular Ref.~\onlinecite{arzatePRB01} went into a 
+detailed analysis of the different contributions to the SHG spectra of a 
+surface and the nuanced relationship between bulk, surface, interband, 
+intraband, $1\omega$ and $2\omega$ terms. Perhaps of more relevance to this 
+work, Mej\'ia \textit{et al}.\cite{mejiaRMF04} developed a layer-by-layer 
+analysis for the nonlinear responses of semiconductor systems, within a 
+tight-binding framework. This model allows for obtaining results from 
+selected regions of a system including the surface. However, in these 
+references the scissors operator is either excluded or incorrectly 
+implemented.
 
-Finally,  DFT-LDA calculations are often based on the use of pseudopotentials
-that usually contain spatial non-localities to include the interaction
-of the valence electrons with the core electrons.
-As it will be discussed in this article, 
- this non-local
-dependence on the position vector, introduces corrections to
-the velocity operator of the electron, that have to be included with
-care in the SSH susceptibility. So far, this contribution has been
-neglected in the literature.
+Finally, DFT-LDA calculations are often based on the use of pseudopotentials
+of the valence electrons with the core electrons. As it will be discussed 
+in this article, dependence on the position vector introduces corrections to
+the velocity operator of the electron that have to be included with care in 
+the SSH susceptibility. So far, this contribution has been neglected in the 
+literature.
 
-Therefore, within the IPA, 
-the most complete approach 
-for the calculation of the SSH susceptibility is one which includes
-i) the scissors correction, ii) the cut function, and iii) the  
-contribution of the non-local part of the pseudopotentials.  
-Therefore,
-the goal of this paper is to derive, within the length gauge, 
-new expressions for the 
-SSH susceptibility tensor 
-$\chi^{\rma\rmb\rmc}(-2\omega;\omega,\omega)$ 
-that include the aforementioned contributions.
-The inclusion of these three contributions 
-makes 
-our scheme unprecedented and opens the possibility to study 
-surface SHG with more versatility and providing 
-more accurate results than previous approaches. 
+Therefore, within the IPA the most complete approach for the calculation of 
+the SSH susceptibility is one which includes i) the scissors correction, 
+ii) the cut function, and iii) the contribution of the nonlocal part of the 
+pseudopotentials. Therefore, the goal of this paper is to derive new 
+expressions within the length gauge for the SSH susceptibility tensor 
+$\chi^{\textrm{a}\textrm{b}\textrm{c}}(-2\omega;\omega,\omega)$ 
+that include the aforementioned contributions. The inclusion of these three 
+contributions makes our scheme unprecedented and opens the possibility to 
+study surface SHG with more versatility and providing more accurate results 
+than previous approaches. 
 
-The paper is organized as follows. 
-In Sec. \ref{theory} we present the 
-relevant steps for deriving the surface second-order susceptibility
-tensor
-$\chi^{\rma\rmb\rmc}(-2\omega;\omega,\omega)$  
-within the length gauge formalism. This derivation includes the addition of 
-the terms mentioned above
-that have 
-been absent in previous works. Also,
-our $\chi^{\rma\rmb\rmc}(-2\omega;\omega,\omega)$  
-can be used for a layer-by-layer
-analysis if wanted.
-In Sec. \ref{results} we show the results of this 
-reformulation with a study of a clean Si(001) surface with a 
-$2 \times 1$ reconstruction. 
-We compare 
-results from before and after adding the different nonlocal contributions.
-Finally, in Sec. \ref{conc} we give our conclusions.
+The paper is organized as follows. In Sec. \ref{theory} we present the 
+relevant steps for deriving the surface second-order susceptibility tensor
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ within the 
+length gauge formalism. This derivation includes the addition of the terms 
+mentioned above that have been absent in previous works. Also, our 
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ can be used 
+for a layer-by-layer analysis if desired. In Sec. \ref{results} we show the 
+results of this reformulation with a study of a clean Si(001) surface with a 
+$2 \times 1$ reconstruction. We compare results from before and after adding 
+the different nonlocal contributions. Finally, in Sec. \ref{conc} we give 
+our conclusions.
 
 \section{Theory}
 
@@ -379,7 +314,6 @@ $V$
  the periodic crystal potential, where we neglect spin-orbit terms.
 To be more general in our derivation of
 $\chi^{abc}(-2\omega;\omega,\omega)$, we asume
-that the crystal potential could have a non-local spatial
 contribution as is customary for most
 pseudopotentials, and then we replace $V$ with
 \begin{align}\label{ps}
@@ -388,13 +322,11 @@ V^{\mathrm{ps}}(\bfr,\bfp)=V(\bfr)+V^{\mathrm{nl}}(\bfr,\bfp)
 \end{align}
 where 
 $V(\bfr)$ and $V^{\mathrm{nl}}(\bfr,\bfp)$  are the local and 
-non-local contributions to the pseudopotential $V^{\mathrm{ps}}$,
  respectively.
 In case of
 a local potential, i.e. $V= V(\bfr)$, 
 like that of all-electron schemes, 
 we simply omit the contribution coming
-from the non-local part of the pseudopotential, $V^{\mathrm{nl}}$, in
 the results that we have derived.
 
 It is well known that the use of the LDA
@@ -407,7 +339,6 @@ This is often in fairly good agreement with the GW
 band gap based on a more sophisticated calculation.\cite{hybertsenPRB86}
 The LDA wave functions are used since they produce band
 structures with dispersion relations similar to those predicted by the GW
-approximation. Mathematically, the scissors (non-local) operator 
 $S$ is added to the unperturbed or unscissored Hamiltonian $H^{\mathrm{LDA}}_{0}$ ,
 \begin{equation*}
 H^\sigma_{0}(\bfr,\bfp)=H^{\mathrm{LDA}}_{0}(\bfr,\bfp)+S(\bfr,\bfp)
@@ -587,7 +518,6 @@ Hamiltonian, thus negating the need to label them.
 Of course, it is more convenient to calculate them
 through $\bfv^\lda_{nm}(\bfk)$ which 
 includes only the contribution of 
-the non-local part of the pseudopotentials through
 $\bfv^\nl_{nm}(\bfk)$. These can be readily
 calculated
 for 
@@ -837,7 +767,7 @@ is all that is needed to change any of the
 electron velocity operators $\bfV$ to the new velocity
 operator $\calbv$ that implicitly takes into account the
 contribution of the region of the slab given by $\calc(z)$.
-We note that this modified operator is hermitian as it must.\cite{nota3}
+We note that this modified operator is hermitian as it must.\cite{note2}
 The operator $\bfV$ could be any of those given by Eq.~\eqref{vop2},
 thus
 \begin{align}\label{vopii}
@@ -1130,7 +1060,7 @@ H-saturated surface, whereas
 for the $2\times 1$ surface this mirror is lost as the dimers are
 asymmetric along $x$. 
 Thus, calculating $\chi^{xxx}$ for the full-slab, or the 
-half-slab containing the $2\times 1$ surface\cite{nota1}
+half-slab containing the $2\times 1$ surface\cite{note1}
 should yield the same result since the contribution from the H
 saturated surface is zero regardless. 
 We must check that the following 
@@ -1278,7 +1208,7 @@ effects of $\bfv^\nl$ or the scissors correction
 $\hbar\sigma$.   
 For these results we chose
 $\hbar\sigma=0.5$ eV, that is the GW gap reported in
-Ref.~\onlinecite{rholfingPRB95,garciaCPC01}. 
+Ref.~\onlinecite{rohlfingPRB95,garciaCPC01}. 
 We see that for all four instances the 
 difference between responses is quite small.
 Indeed, when the value $|\chi^{xxx}|$ 
@@ -1292,12 +1222,12 @@ susceptibility from the $2\times 1$ surface is readily possible
 using the formalism contained in Eq.~\eqref{chis}.
 This confirms the validity of our theory and is the main result of
 this article; through the proposed layer formalism we can calculate the surface SH
-susceptibility including the effect of the non-local part of the
 pseudopotentials
 and the many-body effects through the scissors correction.
 Our scheme ought to work for any slab.  
 
-\subsection{\texorpdfstring{Results for $\chi^{xxx}_{2\times 1}(-2\go;\go,\go)$}{Results for Xxxx(2x1)(-2w;w,w)}}
+\subsection{\texorpdfstring{Results for $\chi^{xxx}_{2\times 1}(-2\go;\go,\go)$}
+{Results for Xxxx(2x1)(-2w;w,w)}}
 
 We proceed to explain 
 some of the features seen in $|\chi^{xxx}_{2\times 1}|$ that, as
@@ -1368,7 +1298,7 @@ spectrum quite dramatically.
 We mention that
 the value of $\hbar\sigma=0.5$ eV, used above, 
 is the ``average'' GW gap taken from 
-Ref.~\onlinecite{rholfingPRB95} 
+Ref.~\onlinecite{rohlfingPRB95} 
 that is in agreement with Ref.~\onlinecite{garciaCPC01}. 
 The value of $\hbar\sigma=0.63$ eV is the ``average'' 
 gap taken from Refs.~\onlinecite{asahiPRB00}, 
@@ -1393,12 +1323,11 @@ results.
 
 \section{Conclusions}\label{conc}
 
-We have presented a formulation to calculate surface second harmonic
-(SSH) susceptibility tensor $\bfgchi(-2\go;\go,\go)$,  using a length gauge
+We have presented a formulation to calculate the surface second harmonic
+(SSH) susceptibility tensor $\bfgchi(-2\go;\go,\go)$, using the length gauge
 formalism and within the independent particle approximation (IPA).
 It includes on the same footing and for the first time in the literature 
 i) the scissors correction, ii) the cut function, and iii) the 
-contribution of the non-local part of the pseudopotentials. 
 We have used a Si(001)$2\times 1$ surface to confirm that our scheme
 correctly obtains the surface response as we confirm
 that 
@@ -1446,9 +1375,6 @@ in
 our scheme opens the unprecedented possibility to study 
 surface SHG with more versatility and providing 
 more accurate results than previous approaches. 
-
-
-
 
 
 %%%%%%%%%%%%%
@@ -1912,32 +1838,6 @@ Eq.~\eqref{chon.2},
 \end{align}
 a result that is in agreement with Eq. A(6) of Ref.~\onlinecite{cabellosPRB09}.
 
-%%%%%%%%%%%%%%
 \newpage
-\bibliography{ref}% 
-\end{document}  %
-%%%%%%%%%%%%%%
-
-
-\section{Introduction}\label{intro}
-
-The first attempt to go beyond the independent particle approximation 
-could be found in 
-Leitsmann \textit{et al}.\cite{leitsmannPRB05} 
-that included excitonic and local field interactions. 
-More recently, Luppi \textit{et al.}\cite{luppiPRB10,luppiJCP10} and 
-H\"ubner \textit{at al.}\cite{hubenerPRB11}, studied 
-the influence of crystal local fields and excitonic effects on 
-the spectrum of the second harmonic generation of several bulk 
-systems 
-by using time-dependent density-functional theory 
-including many-body effects, namely, quasiparticle corrections through 
-the scissors operator, crystal local field effects, and excitonic 
-interaction.  
-Also,
-Trolle \textit{et al}.\cite{trollePRB14} 
-elaborate on a theoretical model for SHG of 
-mono-layer MoS$_{2}$. Their approach is based on the tight-binding model 
-fitted to GW results and include excitonic effects from the 
-Bethe-Salpeter exciton picture. However, neither of these models 
-has a consideration for surfaces. 
+\bibliography{ref}
+\end{document}
