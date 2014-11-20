@@ -17,24 +17,24 @@ f32=4815.512966/scale
 f40=5873.867464/scale
 #
 set origin 0,3
-set label 1 at 2.8,1.2 '$\sigma=0\quad\mathrm{without}\quad\mathbf{v}^\mathrm{nl}$' 
+set label 1 at 2.5,1.1 '\Large$\sigma=0\,\,\mathrm{without}\,\,\mathbf{v}^\mathrm{nl}$' 
 p  'shg-results/32layers/shgC.sm_xxx_244_half-slab_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t 'half-slab',\
    'shg-results/32layers/shgL.sm_xxx_244_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t 'full-slab'
 
 set origin 0,2.25
-set label 1 at 2.8,1.2 '$\sigma=0\quad\mathrm{with}\quad\mathbf{v}^\mathrm{nl}$' 
+set label 1 at 2.5,1.1 '\Large$\sigma=0\,\,\mathrm{with}\,\,\mathbf{v}^\mathrm{nl}$' 
 p  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t 'half-slab',\
    'shg-results/32layers/shgL.vnl.sm_xxx_244_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t 'full-slab'
 
 set origin 0,1.5
-set label 1 at 2.8,1.2 '$\hbar\sigma=0.5\,\mathrm{eV}\quad\mathrm{without}\quad\mathbf{v}^\mathrm{nl}$' 
+set label 1 at 2.5,1.1 '\Large$\hbar\sigma=0.5\,\mathrm{eV}\,\,\mathrm{without}\,\,\mathbf{v}^\mathrm{nl}$' 
 p  'shg-results/32layers/shgC.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t 'half-slab',\
    'shg-results/32layers/shgL.sm_xxx_244_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t 'full-slab'
 
 set origin 0,.65
 set size 1,.9
 set xlabel "\\Large $\\hbar\\omega$ (eV)"
-set label 1 at 2.8,1.2 '$\hbar\sigma=0.5\,\mathrm{eV}\quad\mathrm{with}\quad\mathbf{v}^\mathrm{nl}$' 
+set label 1 at 2.5,1.1 '\Large$\hbar\sigma=0.5\,\mathrm{eV}\,\,\mathrm{with}\,\,\mathbf{v}^\mathrm{nl}$' 
 p  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t 'half-slab',\
    'shg-results/32layers/shgL.vnl.sm_xxx_244_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t 'full-slab'
 
