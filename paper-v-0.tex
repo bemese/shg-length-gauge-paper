@@ -1,4 +1,5 @@
-\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,11pt,preprint,letterpaper]{revtex4}
+%\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,11pt,preprint,letterpaper]{revtex4}
+\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,reprint,letterpaper]{revtex4}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -41,41 +42,31 @@
                 Palaiseau, France}
 
 \begin{abstract}
-We formulate a theoretical approach of surface second-harmonic generation 
-from semiconductor surfaces based on the length gauge. 
-Within the independent particle approximation 
-the nonlinear second-order surface susceptibility tensor
-$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$   
-is calculated, including for the first time in one unique formulation
-i) the scissors correction, needed to have the correct value of the
-energy band gap,
-ii) the derivation for the inclusion of the cut function, 
-used to extract the surface nonlinear response,
-and iii) the contribution of the nonlocal part of the 
-pseudopotentials, routinely  used in \textit{ab initio} band structure calculations. 
-First and third terms are described by spatially nonlocal quantum
-mechanical operators and are fully taken into account in the present formulation. 
-As a test-case of the approach we calculate 
-$\chi^{xxx}(-2\omega;\omega,\omega)$ for the clean Si(001)$2\times 1$
-reconstructed surface and find that our scheme to extract the surface
-through the cut function
-readily works and is exact. The effects of the scissors correction and
-of the nonlocal part of the pseudopotentials are discussed for the
-first time in surface nonlinear optics. 
-The scissors correction shifts the spectrum to 
-higher energies though the shifting is not rigid and mixes the 
-$1\omega$ and $2\omega$ resonances, 
-and has a strong influence in the line-shape. 
-The 
-effects of the nonlocal part of the pseudopotentials 
-keeps the same line-shape of $|\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)|$, but 
-reduces its value
-by 15-20\%.  
-Therefore, the inclusion of the three aforementioned 
-contributions is very important and 
-makes our scheme unprecedented and opens the possibility to 
-study SSHG with more versatility and providing more accurate results 
-than previous approaches. 
+We formulate a theoretical approach of surface second-harmonic generation from 
+semiconductor surfaces based on the length gauge. We calculate the nonlinear 
+second-order surface susceptibility tensor 
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ within the 
+independent particle approximation, and for the first time in one unique 
+formulation we include i) the scissors correction, needed to have the correct 
+value for the energy band gap, ii) the derivation for the inclusion of the cut 
+function used to extract the surface nonlinear response, and iii) the 
+contribution of the nonlocal part of the pseudopotentials that are routinely 
+used in \textit{ab initio} band structure calculations. The first and third 
+terms are described by spatially nonlocal quantum mechanical operators and 
+are fully taken into account in the present formulation. As a test-case for 
+this approach, we calculate $\chi^{xxx}(-2\omega;\omega,\omega)$ for a clean 
+Si(001)$2\times 1$ reconstructed surface and find that this scheme for 
+extracting the surface response through the cut function is exact and readily
+implemented. The effects of the scissors correction and the nonlocal part of 
+the pseudopotentials are discussed for the first time for surface nonlinear 
+optics. The scissors correction non-rigidly shifts the spectrum to higher 
+energies by mixing the $1\omega$ and $2\omega$ resonances and exerts a strong 
+influence on the line-shape. The effects of the nonlocal part of the 
+pseudopotentials keeps the same line-shape of 
+$|\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)|$ but reduces its value by 
+15-20\%. Therefore, our scheme is unprecedented through the inclusion of 
+these three contributions and also opens the possibility to study SSHG with 
+more versatility and more accuracy than previous approaches. 
 \end{abstract}  
 
 \maketitle
@@ -128,20 +119,19 @@ for this underestimation of the gap. In this context, the so-called GW
 approximation\cite{onidaRMP02} is known to correct the band gap of most 
 semiconductors\cite{luceroJPCM12}. However this can be a very expensive
 calculation and thus one uses the much simpler scissors operator scheme.
-\cite{levinePRL89,levinePRL91,delsolePRB93}  
-This allows us to ``open'' the DFT-LDA gap to 
-its correct experimental or GW value even when experiments are not available. 
-In this context, to correct for the underestimation of the energy band gap of 
-semiconductors Nastos et al.\cite{nastosPRB05} used the ``length gauge'' or 
-``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to correctly include the 
-many-body corrections through the scissors operator in the SH susceptibility.
-Later, Cabellos \textit{et al}.\cite{cabellosPRB09} elaborated a derivation 
-of the ``velocity gauge'' or ``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the 
-scissors operator and proved gauge invariance with respect to the length 
-gauge. From these works it is clear the length gauge is a much better staring
-point to obtain the surface SH (SSH) susceptibility, as will be elaborated 
-in this article. However, these considerations are only valid for bulk 
-semiconductors.
+\cite{levinePRL89,levinePRL91,delsolePRB93} This allows us to ``open'' the 
+DFT-LDA gap to its correct experimental or GW value even when experiments 
+are not available. In this context, to correct for the underestimation of 
+the energy band gap of semiconductors Nastos et al.\cite{nastosPRB05} used 
+the ``length gauge'' or ``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to 
+correctly include the many-body corrections through the scissors operator in 
+the SH susceptibility. Later, Cabellos \textit{et al}.\cite{cabellosPRB09} 
+elaborated a derivation of the ``velocity gauge'' or 
+``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the scissors operator 
+and proved gauge invariance with respect to the length gauge. From these works 
+it is clear the length gauge is a much better staring point to obtain the 
+surface SH (SSH) susceptibility, as will be elaborated in this article. 
+However, these considerations are only valid for bulk semiconductors.
 
 Concerning the optical response of surfaces and interfaces, Reining 
 \textit{et al.}\cite{reiningPRB94} introduced the concept of a cut function 
@@ -157,10 +147,9 @@ the slab. Indeed, one of the main results of this article is to show that the
 SSH  susceptibility tensor obtained by using the cut function is correctly 
 extracted from the slab. After Reining \textit{et al.},\cite{reiningPRB94}
 Refs.~\onlinecite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02,sanoPRB02}
-followed 
-upon this work and in particular Ref.~\onlinecite{arzatePRB01} went into a 
-detailed analysis of the different contributions to the SHG spectra of a 
-surface and the nuanced relationship between bulk, surface, interband, 
+followed upon this work and in particular Ref.~\onlinecite{arzatePRB01} went 
+into a  detailed analysis of the different contributions to the SHG spectra 
+of a surface and the nuanced relationship between bulk, surface, interband, 
 intraband, $1\omega$ and $2\omega$ terms, and
 Ref. \onlinecite{mejiaRMF04} developed a layer-by-layer 
 analysis for the nonlinear responses of semiconductor systems, within a 
@@ -170,13 +159,10 @@ references the scissors operator is either excluded or incorrectly
 implemented.
 
 Finally, DFT-LDA calculations are often based on the use of pseudopotentials.
-As it will be discussed 
-in this article, the presence of a nonlocal part of the
-pseudopotential introduces
-corrections to
-the momentum operator of the electron that have to be included with care in 
-the SSH susceptibility. So far, this contribution has been neglected in the 
-literature.
+As we will discuss later in this article, the presence of the nonlocal part 
+of the pseudopotential introduces corrections to the momentum operator of 
+the electron that have to be included with care into the SSH susceptibility. 
+So far, this contribution has been neglected in the literature.
 
 Therefore, within the IPA the most complete approach for the calculation of 
 the SSH susceptibility is one which includes i) the scissors correction, 
@@ -193,16 +179,14 @@ The paper is organized as follows. In Sec. \ref{theory} we present the
 relevant steps for deriving the surface second-order susceptibility tensor
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ within the 
 length gauge formalism. This derivation includes the addition of the terms 
-mentioned above that have been absent in previous works. Also, our 
-$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ can be used 
-for a layer-by-layer analysis if desired. In Sec. \ref{results} we show the 
-results of this reformulation with a study of a clean Si(001) surface with a 
-$2 \times 1$ reconstruction, 
-proving the correctness of our approach with a special test-case,
-never exploited before.
-We compare results from before and after adding 
-the different nonlocal contributions. Finally, in Sec. \ref{conc} we give 
-our conclusions.
+mentioned above that have been absent in previous works. If desired, we can 
+use $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ for a 
+layer-by-layer analysis. In Sec. \ref{results} we show the results of this 
+reformulation with a study of a clean Si(001) surface with a $2 \times 1$ 
+reconstruction that proves the validity of our approach with a special 
+test-case that has never been implemented before. We compare results from 
+before and after adding the different nonlocal contributions. Finally, in 
+Sec. \ref{conc} we submit our conclusions.
 
 \section{Theory}
 
