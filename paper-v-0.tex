@@ -1,5 +1,5 @@
 %\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,11pt,preprint,letterpaper]{revtex4}
-\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,reprint,letterpaper]{revtex4}
+\documentclass[floatfix,prb,aps,superscriptaddress,showpacs,letterpaper]{revtex4}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -192,94 +192,80 @@ Sec. \ref{conc} we submit our conclusions.
 
 \label{theory}
 
-In this section we present the scheme used to calculate the surface second-order
-nonlinear response using the length gauge formalism.
-Our derivation includes the aforementioned terms not included
-before for the surface nonlinear
-response. 
+In this section we present the scheme used to calculate the surface 
+second-order nonlinear response using the length gauge formalism. Our 
+derivation includes the aforementioned terms not included before for 
+this response. 
 
 \subsection{Perturbation approach}
 
-We assume the IPA and neglect local field  
-and excitonic effects.  
-We assume a classical electromagnetic field
-and quantum mechanical matter.
-We can describe the system using 
+We assume the IPA, a classical electromagnetic field, and quantum mechanical 
+matter. We neglect local field and excitonic effects. We can describe the 
+system using 
 %a scaled 
-the one electron density
-operator ${\rho}$, with which we can calculate the expectation value of a
-single-particle observable $\mathcal{O}$ as 
-$\langle{\cal O}\rangle=\mbox{Tr}({\rho} {\cal O}),  
-\label{calo}$
-with $\mathcal{O}$ the associated quantum mechanical operator and Tr
-the trace. 
-The density operator satisfies
-$
-i\hbar (d{\rho}/dt)=[H(t),{\rho}],  
-\label{rho}
-$
+the one electron density operator ${\rho}$, with which we can calculate the 
+expectation value of a single-particle observable $\mathcal{O}$ as 
+$\langle{\cal O}\rangle = \mbox{Tr}({\rho}{\cal O}),\label{calo}$
+with $\mathcal{O}$ the associated quantum mechanical operator and Tr the 
+trace. The density operator satisfies
+$i\hbar(d{\rho}/dt) = [H(t), {\rho}], \label{rho}$
 with $H(t)$ as the total single electron Hamiltonian, written as 
 \begin{equation*}
-H(t)=H_{0}+H_{I}(t),  
+H(t) = H_{0} + H_{I}(t),  
 \label{ache}
 \end{equation*}
 where $H_{0}$ is the unperturbed time-independent Hamiltonian, and $H_{I}(t)$
-is the time-dependent potential energy due to the interaction of the
-electron with the electromagnetic field.
+is the time-dependent potential energy due to the interaction of the electron 
+with the electromagnetic field.
 % ; $H_{0}$ has eigenvalues
 % $\hbar \omega_{n}(\mathbf{k})$
 % and eigenstates $| n\mathbf{k} \rangle$ (Bloch states) labeled by a band 
 % index $n$ and crystal momentum $\mathbf{k}$.
-To proceed with the solution of $\rho$  it is convenient to use the
-interaction picture, where a unitary operator $U=\exp ({iH_{0}t/\hbar })$
-transforms any operator $\mathcal{O}$ into 
-$\tilde{\mathcal{O}}=U{\cal O}U^{\dagger }$. Even if $\mathcal{O}$ 
-is time-independent, 
-$\tilde{\mathcal{O}}$ is time-dependent through the explicit
-time dependence of $U$. 
-The dynamical 
-equation for $\tilde{\rho}$ is 
-given by
+To proceed with the solution of $\rho$ it is convenient to use the interaction 
+picture, where a unitary operator $U = \exp({iH_{0}t/\hbar})$ transforms any 
+operator $\mathcal{O}$ into $\tilde{\mathcal{O}} = U{\cal O}U^{\dagger}$. 
+Even if $\mathcal{O}$ is time-independent, $\tilde{\mathcal{O}}$ is 
+time-dependent through the explicit time dependence of $U$. The dynamical 
+equation for $\tilde{\rho}$ is given by
 \begin{equation*}
-i\hbar \frac{d\tilde{{\rho}}}{dt}=[\tilde{H}_{I}(t),\tilde{{\rho}}],  
+i\hbar \frac{d\tilde{\rho}}{dt} = [\tilde{H}_{I}(t), \tilde{\rho}],
 \label{rho1}
 \end{equation*}
 with solution 
 \begin{equation}
-i\hbar \tilde{{\rho}}(t)=i\hbar \tilde{{\rho}}_{0}+\int_{-\infty }^{t}dt^{\prime }[
-\tilde{H}_{I}(t^{\prime }),\tilde{\rho}(t^{\prime })],  
+i\hbar \tilde{\rho}(t) = 
+    i\hbar \tilde{\rho}_{0} + 
+    \int_{-\infty}^{t}dt^{\prime}
+    [\tilde{H}_{I}(t^{\prime}),\tilde{\rho}(t^{\prime})],  
 \label{trans}
 \end{equation}
-where $\tilde{\rho}_{0}=\tilde{\rho}(t=-\infty )$ is the unperturbed density matrix. We look
-for the standard perturbation series solution, 
-$\tilde{\rho}(t)=\tilde{\rho}^{(0)}+\tilde{\rho}^{(1)}+\tilde{\rho}^{(2)}+\cdots$,  
-where the superscript denotes the order (power) with which each term depends
-on the perturbation $H_{I}(t)$. From Eq.~\eqref{trans} the $N$-th order
-term is 
+where $\tilde{\rho}_{0} = \tilde{\rho}(t = -\infty)$ is the unperturbed 
+density matrix. We look for the standard perturbation series solution, 
+$\tilde{\rho}(t) = \tilde{\rho}^{(0)} + \tilde{\rho}^{(1)} + 
+\tilde{\rho}^{(2)} + \cdots$, where the superscript denotes the order (power) 
+with which each term depends on the perturbation $H_{I}(t)$. From 
+Eq.~\eqref{trans} the $N$-th order term is 
 \begin{equation}
-\tilde{{\rho}}^{(N)}(t)=\frac{1}{i\hbar }\int_{-\infty }^{t}dt^{\prime }[\tilde{
-H}_{I}(t^{\prime }),\tilde{\rho}^{(N-1)}(t^{\prime })].  
+\tilde{\rho}^{(N)}(t) = 
+    \frac{1}{i\hbar}\int_{-\infty }^{t}dt^{\prime}
+    [\tilde{H}_{I}(t^{\prime }), \tilde{\rho}^{(N - 1)}(t^{\prime})].
 \label{rhop}
 \end{equation}
-The series is generated by the unperturbed density operator $\tilde{\rho}
-^{(0)}\equiv \tilde{\rho}_{0}$, assumed to be the diagonal Fermi-Dirac distribution, 
-$\langle n\mathbf{k}|\tilde{\rho}_{0}|n\mathbf{k}\rangle=f(\hbar \omega_{n}(\mathbf{k}))\equiv f_{n}$. For a
-clean, cold semiconductor $f_{n}=1$ when $n$ is a valence ($v$) or
-occupied band, and zero when $n$ is a conduction ($c$) or empty band.
-We assume this for the remainder of the article.
-The expectation values must satisfy
-$
-\langle{\cal O}\rangle=
-\mbox{Tr}({\rho}{\cal O})
-=
-\mbox{Tr}(\tilde{{\rho}}\tilde{\cal O})
-$.  
+The series is generated by the unperturbed density operator $\tilde{\rho}^{(0)}
+\equiv \tilde{\rho}_{0}$, assumed to be the diagonal Fermi-Dirac distribution, 
+$\langle n\mathbf{k}|\tilde{\rho}_{0}|n\mathbf{k}\rangle = 
+f(\hbar\omega_{n}(\mathbf{k}))\equiv f_{n}$. For a clean, cold semiconductor 
+$f_{n}=1$ when $n$ is a valence ($v$) or occupied band, and zero when $n$ is 
+a conduction ($c$) or empty band. We assume this for the remainder of the 
+article. The expectation values must satisfy
+$\langle{\cal O}\rangle = \mbox{Tr}({\rho}{\cal O}) = 
+\mbox{Tr}(\tilde{\rho}\tilde{\cal O})$.  
 
 We will look for the expectation value of the microscopic current density, 
 $\mathbf{J}$, given by 
 \begin{equation}
-\mathbf{J}=\langle{\mathbf{J}}\rangle=\frac{e}{A}\mbox{Tr}({\rho}\dot{\mathbf{r}})
-,
+\mathbf{J} = \langle{\mathbf{J}}\rangle 
+           = \frac{e}{A}\mbox{Tr}({\rho}\dot{\mathbf{r}}),
 \label{pe}
 \end{equation}
 where $\dot{\mathbf{r}}$ is the time derivative of the position operator of the
