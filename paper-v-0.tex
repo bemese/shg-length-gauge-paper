@@ -263,11 +263,10 @@ $\langle{\cal O}\rangle = \mbox{Tr}({\rho}{\cal O}) =
 
 We will look for the expectation value of the microscopic current density, 
 $\mathbf{J}$, given by 
-\begin{equation}
+\begin{equation*}
 \mathbf{J} = \langle{\mathbf{J}}\rangle 
            = \frac{e}{A}\mbox{Tr}({\rho}\dot{\mathbf{r}}),
-\label{pe}
-\end{equation}
+\end{equation*}
 where $\dot{\mathbf{r}}$ is the time derivative of the position operator of the
 electron with charge $e$, defined as
 \begin{equation}
@@ -311,10 +310,10 @@ Functional Theory (DFT). It is convenient to work within the Local
 Density Approximation (LDA), so we label the hamiltonian with the corresponding  
 LDA superscript. Any other approximation can be used (like GGA) and our 
 derivation remains the same. Then,
-\begin{equation}\label{h0}
+\begin{equation*}
 H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})
 =\frac{p^{2}}{2m_e}+V(\mathbf{r},\mathbf{p})
-\end{equation}
+\end{equation*}
 with $m_e$ the mass of the electron, $\mathbf{p}$ its canonical momentum, and 
 $V$
  the periodic crystal potential, where we neglect spin-orbit terms.
@@ -370,10 +369,9 @@ H_{0}^\Sigma (\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=&\hbar \om
 \end{eqnarray*}
 where the scissor-shifted energies, 
 $\omega_{n}^\Sigma(\mathbf{k})$ , are given by
-\begin{equation}
+\begin{equation*}
 \omega_{n}^\Sigma(\mathbf{k})=\omega^\mathrm{LDA}_{n}(\mathbf{k})+(1-f_{n})\Delta.
-\label{wese}
-\end{equation}
+\end{equation*}
 We emphasize that the scissored and unscissored Hamiltonian 
 have the same eigenfunctions, where
 $\psi_{n\mathbf{k}}(\mathbf{r})=\langle\mathbf{r}|n\mathbf{k}\rangle=e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})$,
@@ -386,7 +384,7 @@ To calculate the optical response
 within the Length Gauge formalism, we take the 
 interaction Hamiltonian as
 \begin{equation}
-H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).  \label{rde}
+H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).\label{rde}
 \end{equation}
 The 
 treatment of the position operator
@@ -425,13 +423,13 @@ $D_m$ are all the possible degenerate $m$-states.
 For the intraband part, $\mathbf{r}_i$ only appears in
 commutators during the derivation of
 the optical response. We use,\cite{aversaPRB95}
-\begin{equation}\label{conmri3n}
+\begin{equation}
 \langle n\mathbf{k} | [\mathbf{r}_i,{\cal O}] | m\mathbf{k}'\rangle
-=i\delta(\mathbf{k}-\mathbf{k}')({\cal O}_{nm})_{;\mathbf{k}}
-,
+=i\delta(\mathbf{k}-\mathbf{k}')({\cal O}_{nm})_{;\mathbf{k}},
+\label{conmri3n}
 \end{equation}  
 where
-\begin{equation}\label{gendevnn}
+\begin{equation}
 ({\cal O}_{nm})_{;\mathbf{k}}=
 \nabla_\mathbf{k} 
 {\cal O}_{n m}(\mathbf{k}) 
@@ -444,6 +442,7 @@ i
 \boldsymbol{\xi}_{mm}(\mathbf{k}) 
 \right) 
 ,
+\label{gendevnn}
 \end{equation} 
 is
 the generalized derivative 
@@ -491,8 +490,9 @@ where we have defined
 with $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ the canonical momentum operator, 
 and using $[r^a,p^b]=i\hbar\delta_{ab}$, where $\delta_{ab}$ is the Kronecker delta.
 Using Eq.~\eqref{hats} we obtain 
-\begin{equation}\label{chon.2} 
+\begin{equation}
 \mathbf{v}^S_{nm}=i\Delta f_{mn}\mathbf{r}_{nm},
+\label{chon.2} 
 \end{equation}
 with $f_{nm}\equiv f_n-f_m$,
 where we see that $\mathbf{v}^S_{nn}=0$. It follows that
@@ -554,8 +554,9 @@ matrix elements of Eq.~\eqref{rhop} with the $H_{I}(t)$ of
 Eq.~\eqref{rde}, we obtain 
 $(\tilde{\rho}^{(1)}(t))_{nm}=B_{nm}^{b}E^{b}(\omega)e^{i(\omega^\Sigma_{nm}-\tilde\omega)t}$,
 with 
-\begin{equation}\label{j.1}
+\begin{equation}
 B_{nm}^{b}=\frac{e}{\hbar }\frac{f_{mn}r_{nm}^{b}}{\omega^\Sigma_{nm}-\tilde\omega},
+\label{j.1}
 \end{equation}
 and 
 \begin{eqnarray}\label{j.2}
@@ -629,9 +630,9 @@ we can generalize this
 simple choice for ${\mathbf{\cal C}}(z)$ by a top-hat cut function
 ${\mathbf{\cal C}}^\ell(z)$ that selects a given layer,
 \begin{equation}
-\label{sz}
 {\mathbf{\cal C}}^\ell(z)=\Theta(z-z_\ell+\Delta_\ell^{b})  
             \Theta(z_\ell-z+\Delta_\ell^f),
+\label{sz}
 \end{equation} 
 where $\Theta$ is the Heaviside function. Here, $\Delta_\ell^{f/b}$
 is the distance that the $\ell$-th layer extends towards the front
@@ -665,7 +666,7 @@ $\mathbf{j}(\mathbf{r})=\frac{e}{2}\left(\mathbf{v}^\Sigma | \mathbf{r}\rangle\l
 ,
 \end{align}
 where 
-\begin{equation}\label{jmic3}
+\begin{equation}
 \mathbf{j}_{mn}(\mathbf{k};\mathbf{r})=
 \frac{e}{2}
 \left(
@@ -673,6 +674,7 @@ where
 +
 \langle m\mathbf{k}|\mathbf{r}\rangle\langle\mathbf{r} | \mathbf{v}^\Sigma | n\mathbf{k}\rangle
 \right),
+\label{jmic3}
 \end{equation}
 are the matrix elements of the microscopic current operator.
 % and we have used the fact that the matrix elements between states $\ket{n\mathbf{k}}$
@@ -684,27 +686,29 @@ towards the total current, we can integrate $\mathbf{j}({\mathbf r},t)$
 over the desired region. Then the contribution 
 to the current density from the
 chosen region of the slab is given by
-\begin{equation}\label{jsz}
+\begin{equation*}
 \frac{1}{A}\int d^3r\, {\mathbf{\cal C}}(z)\, 
 \mathbf{J} (\mathbf{r},t)
  \equiv \boldsymbol{\mathcal{\cal J}}^{(N)}(t),
-\end{equation}
+\end{equation*}
 where $\boldsymbol{\mathcal{\cal J}}^{(N)}(t)$ is the $N$-th order current induced in the
 region specified by ${\mathbf{\cal C}}(z)$.
 Therefore we define
-\begin{equation}\label{vcal}
+\begin{equation}
 e{\boldsymbol{\mathcal{V}}}^{\Sigma}_{mn}(\mathbf{k})
 \equiv
 \int d^3r\, {\mathbf{\cal C}}(z)\,\mathbf{j}_{mn}({\mathbf{k}};\mathbf{r}),
+\label{vcal}
 \end{equation}
 to write the Fourier transform of Eq.~\eqref{jmic} as
-\begin{equation}\label{jmac2}
+\begin{equation}
 \boldsymbol{\mathcal{\cal J}}^{(N)}(2\omega)=\frac{e}{A}
 \int \frac{dk^3}{8\pi^3}
 \sum_{mn}
 \boldsymbol{\mathcal{\cal V}}^{\Sigma}_{mn}(\mathbf{k}) 
 \rho^{(N)}_{nm}(\mathbf{k};2\omega) 
 , 
+\label{jmac2}
 \end{equation}
 that gives the induced microscopic current of the chosen region, to order $N$ 
 in the external perturbation. 
@@ -823,7 +827,7 @@ Using
 $\boldsymbol{\mathcal{\cal J}}=d\boldsymbol{\mathcal{\cal P}}/dt$ 
 and Eq.~\eqref{jmac2} 
 we obtain the SH polarization of a given region as
-\begin{equation}\label{Pjikn}
+\begin{equation}
 \boldsymbol{\mathcal{\cal P}}^{(2)}(2\omega)
 =\frac{ie}{2A\tilde\omega}
 \int \frac{dk^3}{8\pi^3}
@@ -831,6 +835,7 @@ we obtain the SH polarization of a given region as
 \boldsymbol{\mathcal{\cal V}}^{\Sigma}_{mn}(\mathbf{k})
 \rho^{(2)}_{nm}(\mathbf{k};2\omega)
 ,
+\label{Pjikn}
 \end{equation}
 and using Eqs.~\eqref{pshg} and \eqref{j.2} 
 leads to
@@ -863,7 +868,7 @@ split this equation into
 two contributions from the first and second terms on the right hand side
 of Eq.~\eqref{Pjikn2}:
 %\end{document}  
-\begin{equation}\label{chii}
+\begin{equation}
 \chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_i (-2\omega;\omega,\omega)
 =-\frac{e^3}{A\hbar^22\tilde\omega}
 \int \frac{dk^3}{8\pi^3}
@@ -871,9 +876,10 @@ of Eq.~\eqref{Pjikn2}:
 \frac{{\mathbf{\cal V}}_{mn}^{\Sigma,\mathrm{a}}}{\omega^\Sigma_{nm}-2\tilde\omega}
 \left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}}
 ,
+\label{chii}
 \end{equation} 
 related to intraband transitions, and 
-\begin{equation}\label{chie}
+\begin{equation}
 \chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_e (-2\omega;\omega,\omega)
 =\frac{ie^3}{A\hbar^22\tilde\omega}
 \int \frac{dk^3}{8\pi^3}
@@ -885,14 +891,16 @@ f_{mq}}{\omega^\Sigma_{qm}-\tilde\omega}
 -\frac{r_{nq}^{\mathrm{b}} r_{qm}^{\mathrm{c}} 
 f_{qn}}{\omega^\Sigma_{nq}-\tilde\omega}
 \right),
+\label{chie}
 \end{equation} 
 related to interband transitions.
 The generalized derivative in Eq.~\eqref{chii} is dealt with by the chain rule 
-\begin{equation}\label{gene2}
+\begin{equation}
 \left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}}=
 \frac{f_{mn}}{\omega^\Sigma_{nm}-\tilde\omega}\left(r_{nm}^\mathrm{b}\right)_{;k^{\mathrm{c}}}
 -\frac{f_{mn}r_{nm}^{\mathrm{b}}\Delta_{nm}^\mathrm{c}}{(\omega^\Sigma_{nm}-\tilde\omega)^2}
 ,
+\label{gene2}
 \end{equation}
 where substituting $H^\Sigma_0$ 
 into Eq.~\eqref{conmri3n} and then
@@ -916,7 +924,7 @@ and taking the limit of $\eta\to 0$,
 we obtain the following expressions for the imaginary parts of 
 Eqs. \eqref{chii} and \eqref{chie}, 
 \begin{subequations}\label{chis}
-\begin{equation}\label{calvimchiewn}
+\begin{equation*}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}]= 
 \frac{\pi |e|^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -927,8 +935,8 @@ Eqs. \eqref{chii} and \eqref{chie},
 -\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{qv})}
 \right]\delta(\omega^\Sigma_{cv}-\omega),
-\end{equation}  
-\begin{equation}\label{calvimchiwn}
+\end{equation*}  
+\begin{equation*}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}]= 
 \frac{\pi\vert e\vert^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -938,8 +946,8 @@ Eqs. \eqref{chii} and \eqref{chie},
 +\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}} 
 \right]\delta(\omega^\Sigma_{cv}-\omega),
-\end{equation}
-\begin{equation}\label{calvimchie2wn}
+\end{equation*}
+\begin{equation*}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}]= 
 -\frac{\pi |e|^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -952,8 +960,8 @@ Eqs. \eqref{chii} and \eqref{chie},
   c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
 {2\omega^\Sigma_{c'v}-\omega^\Sigma_{cv}}
 \right]\delta(\omega^\Sigma_{cv}-2\omega),
-\end{equation}
-\begin{equation}\label{calvimchi2wn}
+\end{equation*}
+\begin{equation*}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}]= 
  \frac{\pi \vert
    e\vert^{3}}{2\hbar^2}
@@ -964,7 +972,7 @@ Eqs. \eqref{chii} and \eqref{chie},
 \frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega)
 ,
-\end{equation}
+\end{equation*}
 \end{subequations}
 where we have split the interband and intraband $1\omega$ and $2\omega$
 contributions and supressed the $\omega$ arguments for 
@@ -991,9 +999,10 @@ case, Eq.~\eqref{chis} is equivalent to the expressions of
 Ref.~\onlinecite{cabellosPRB09}, valid for bulk semiconductors.
  
 Finally, we could also calculate the nonlinear surface susceptibility as 
-\begin{equation}\label{chiijksur}
+\begin{equation}
 \boldsymbol{\chi}(-2\omega;\omega,\omega)
 = \sum_{\{\ell\}}\boldsymbol{\chi}^\ell(-2\omega;\omega,\omega),
+\label{chiijksur}
 \end{equation} 
 where $\ell$ would denote a particular layer chosen through
 ${\mathbf{\cal C}}^\ell(z)$ of Eq.~\eqref{sz} and
