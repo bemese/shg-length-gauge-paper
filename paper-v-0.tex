@@ -321,10 +321,10 @@ To be more general in our derivation of
 $\chi^{abc}(-2\omega;\omega,\omega)$, we asume
 contribution as is customary for most
 pseudopotentials, and then we replace $V$ with
-\begin{align}\label{ps}
+\begin{align*}
 V^{\mathrm{ps}}(\mathbf{r},\mathbf{p})=V(\mathbf{r})+V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})
 ,
-\end{align}
+\end{align*}
 where 
 $V(\mathbf{r})$ and $V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$  are the local and nonlocal parts, 
  respectively.
@@ -361,12 +361,12 @@ applied.
 %Several properties of $S(\mathbf{r},\mathbf{p})$ are shown in the
 %appendix.
 The unscissored and scissored Hamiltonians satisfy 
-\begin{eqnarray*}
-H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=&\hbar \omega^{\mathrm{LDA}}_{n}(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),
-\label{hamils} \\
-H_{0}^\Sigma (\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=&\hbar \omega_{n}^\Sigma
-(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),
-\end{eqnarray*}
+\begin{align*}
+H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=
+\hbar \omega^{\mathrm{LDA}}_{n}(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),\label{hamils} \\
+H_{0}^\Sigma (\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=
+\hbar \omega_{n}^\Sigma(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),
+\end{align*}
 where the scissor-shifted energies, 
 $\omega_{n}^\Sigma(\mathbf{k})$ , are given by
 \begin{equation*}
@@ -397,15 +397,16 @@ $\mathbf{r}$ is split into the {\it intraband}
 ($\mathbf{r}_i$) and {\it interband} ($\mathbf{r}_e$) parts, where 
 $\mathbf{r}=\mathbf{r}_i+\mathbf{r}_e$. 
 For $\mathbf{r}_e$ one uses
-\begin{align}\label{rnminn}
+\begin{align}
 \langle n\mathbf{k} | \mathbf{r}_e | m\mathbf{k}'\rangle &=
 (1-\delta_{nm})\delta(\mathbf{k}-\mathbf{k}')\boldsymbol{\xi}_{nm}(\mathbf{k})
 ,
+\label{rnminn}
 \end{align}
 such that $\mathbf{r}_{e,nm}=0$ for $n=m$.
 From Eq.~\eqref{mv} with $H_0\to
 H^\Sigma_0$, we obtain
-\begin{align}\label{pmnrmn}
+\begin{align}
 \mathbf{r}_{e,nm}(\mathbf{k}) =
 \boldsymbol{\xi}_{nm}(\mathbf{k})\equiv 
 \mathbf{r}_{nm}(\mathbf{k}) 
@@ -413,6 +414,7 @@ H^\Sigma_0$, we obtain
 \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
 \quad\quad n\notin D_m 
 ,
+\label{pmnrmn}
 \end{align}  
 where we defined
 $\omega^\Sigma_{nm}(\mathbf{k})\equiv\omega^\Sigma_n(\mathbf{k})-\omega^\Sigma_m(\mathbf{k})$, and
@@ -455,7 +457,7 @@ Before continuing,
 we derive a key result for the length gauge formulation. 
 Again, using $H^\Sigma_0$ in
 Eq.~\eqref{mv} we obtain
-\begin{align}\label{vop2}
+\begin{align}
 \mathbf{v}^\Sigma&=
 \mathbf{v} 
 +
@@ -465,28 +467,27 @@ Eq.~\eqref{mv} we obtain
 \mathbf{v}^\mathrm{LDA} 
 +\mathbf{v}^S 
 ,
+\label{vop2}
 \end{align}
 where we have defined 
-\begin{subequations}
-\begin{align}\label{ve}
+\begin{align}
 \mathbf{v} 
 &=\frac{\mathbf{p}}{m_e},
-\\\label{vnl}
+\nonumber\\
 \mathbf{v}^\mathrm{nl} 
 &=
-\frac{1}{i\hbar}[\mathbf{r},V^\mathrm{nl}],
-\\\label{vs}
+\frac{1}{i\hbar}[\mathbf{r},V^\mathrm{nl}],\label{vnl}
+\\
 \mathbf{v}^S
 &=
 \frac{1}{i\hbar}[\mathbf{r}, S],
-\\\label{vlda}
+\nonumber\\
 \mathbf{v}^\mathrm{LDA} 
 &=
 \mathbf{v} 
 +\mathbf{v}^\mathrm{nl}
-,
+,\nonumber
 \end{align}  
-\end{subequations}
 with $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ the canonical momentum operator, 
 and using $[r^a,p^b]=i\hbar\delta_{ab}$, where $\delta_{ab}$ is the Kronecker delta.
 Using Eq.~\eqref{hats} we obtain 
@@ -496,21 +497,22 @@ Using Eq.~\eqref{hats} we obtain
 \end{equation}
 with $f_{nm}\equiv f_n-f_m$,
 where we see that $\mathbf{v}^S_{nn}=0$. It follows that
-\begin{align}\label{chon.9}
+\begin{equation}
 \mathbf{v}^\Sigma_{nm}(\mathbf{k}) 
 =\frac{\omega^\Sigma_{nm}(\mathbf{k})}{\omega^\mathrm{LDA}_{nm}(\mathbf{k})}
 \mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k}) 
 ,
-\end{align}
+\label{chon.9}
+\end{equation}
 and
- \begin{align}\label{chon.8}
+\begin{equation*}
 \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{\omega^\Sigma_{nm}(\mathbf{k})}
-&=
+=
 \frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}{\omega^\mathrm{LDA}_{nm}(\mathbf{k})}
 ,
-\end{align}
+\end{equation*}
 and from Eq.~\eqref{pmnrmn},
-\begin{align}\label{chon.10}
+\begin{equation}
 \mathbf{r}_{nm}(\mathbf{k}) 
 =
 \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
@@ -518,7 +520,8 @@ and from Eq.~\eqref{pmnrmn},
 \frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}{i\omega^\mathrm{LDA}_{nm}(\mathbf{k})}
 \quad\quad n\notin D_m 
 . 
-\end{align}
+\label{chon.10}
+\end{equation}
 The matrix elements 
 of $\mathbf{r}_{nm}(\mathbf{k})$ are identical using either
 the LDA or scissored
@@ -559,13 +562,14 @@ B_{nm}^{b}=\frac{e}{\hbar }\frac{f_{mn}r_{nm}^{b}}{\omega^\Sigma_{nm}-\tilde\ome
 \label{j.1}
 \end{equation}
 and 
-\begin{eqnarray}\label{j.2}
-(\tilde{\rho}^{(2)}(t))_{nm} &=&\frac{e}{i\hbar }\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\bigg[
+\begin{equation}
+(\tilde{\rho}^{(2)}(t))_{nm} = \frac{e}{i\hbar }\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\bigg[
 i\sum_{q }\Big(r_{nq }^{b}B_{q m}^{c}-B_{nq}^{c}r_{q m}^{b}
 \Big)  
 -(B_{nm}^{c})_{;k^{b}}\bigg]E^{b}(\omega)E^{c}(\omega)e^{i(\omega^\Sigma_{nm}-2\tilde\omega)t}
 .
-\end{eqnarray}
+\label{j.2}
+\end{equation}
 We have used the fact that for a cold semiconductor $\partial
 f_{n}/\partial \mathbf{k}=0$ and thus the intraband contribution to the linear
 term vanishes identically. 
@@ -657,14 +661,15 @@ the calculation of $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}$, we start from
 the operator for the electron current,
 $\mathbf{j}(\mathbf{r})=\frac{e}{2}\left(\mathbf{v}^\Sigma | \mathbf{r}\rangle\langle\mathbf{r} |
 + | \mathbf{r}\rangle\langle\mathbf{r} | \mathbf{v}^\Sigma\right)$, that leads to
-\begin{align}\label{jmic}
+\begin{equation}
 \mathbf{j}^{(N)}(\mathbf{r},t)=\mathrm{Tr}(\mathbf{j}(\mathbf{r})\rho^{(N)}(t))
 =
 \int \frac{dk^3}{8\pi^3}
 \sum_{nm}
 \rho^{(N)}_{nm}(\mathbf{k};t)\mathbf{j}_{mn}(\mathbf{k};\mathbf{r})
 ,
-\end{align}
+\label{jmic}
+\end{equation}
 where 
 \begin{equation}
 \mathbf{j}_{mn}(\mathbf{k};\mathbf{r})=
@@ -714,7 +719,7 @@ that gives the induced microscopic current of the chosen region, to order $N$
 in the external perturbation. 
 From
 Eqs.~\eqref{vcal} and \eqref{jmic3} we obtain
-\begin{align}\label{intj}
+\begin{align*}
 {\boldsymbol{\mathcal{V}}}^{\Sigma}_{mn}({\mathbf k})
 &=
 \frac{1}{2}
@@ -751,27 +756,28 @@ Eqs.~\eqref{vcal} and \eqref{jmic3} we obtain
 \boldsymbol{\mathcal{\cal V}}^{\Sigma}
 \psi_{n\mathbf{k}}(\mathbf{r})
 ,
-\end{align}
+\end{align*}
 %Here an integration by parts is performed on the third term of the
 %right-hand; since the $e^{-i\mathbf{k}\cdot\mathbf{r}}\psi_{n\mathbf{k}}(\mathbf{r})$
 %are periodic over the unit cell, the surface term vanishes. 
 where, we used the hermitian property of $\mathbf{v}^\Sigma$ and defined
-\begin{align}\label{nl.4}
+\begin{equation*}
 \boldsymbol{\mathcal{\cal V}}^{\Sigma}
 =
 \frac{{\mathbf{\cal C}}(z) \mathbf{v}^\Sigma +
 \mathbf{v}^\Sigma {\mathbf{\cal C}}(z)}{2}
 .
-\end{align} 
+\end{equation*} 
 %where the superscript $\ell$ is inherited from ${\mathbf{\cal C}}(z)$.
 % and we
 %supress the dependance on $z$ from the increasingly crowded notation.  
 We see that the replacement
-\begin{align}\label{vcali}
+\begin{equation}
 \mathbf{V} \to \boldsymbol{\mathcal{\cal V}}=\frac{{\mathbf{\cal C}}(z) \mathbf{V} +
 \mathbf{V} {\mathbf{\cal C}}(z)}{2}
 ,
-\end{align} 
+\label{vcali}
+\end{equation} 
 is all that is needed to change any of the
 electron velocity operators $\mathbf{V}$ to the new velocity
 operator $\boldsymbol{\mathcal{\cal V}}$ that implicitly takes into account the
@@ -779,7 +785,7 @@ contribution of the region of the slab given by ${\mathbf{\cal C}}(z)$.
 We note that this modified operator is hermitian as it must.\cite{note2}
 The operator $\mathbf{V}$ could be any of those given by Eq.~\eqref{vop2},
 thus
-\begin{align}\label{vopii}
+\begin{align*}
 \boldsymbol{\mathcal{\cal V}}^{\Sigma}
 &=
 \boldsymbol{\mathcal{\cal V}}^{\mathrm{LDA}}
@@ -792,7 +798,7 @@ thus
 +
 \boldsymbol{\mathcal{\cal V}}^{\mathrm{nl}}
 .
-\end{align}
+\end{align*}
 To calculate
 $\boldsymbol{\mathcal{\cal V}}^{\Sigma}_{nm}(\mathbf{k})$ 
 we calculate the matrix elements of 
@@ -839,7 +845,7 @@ we obtain the SH polarization of a given region as
 \end{equation}
 and using Eqs.~\eqref{pshg} and \eqref{j.2} 
 leads to
-\begin{align}\label{Pjikn2}
+\begin{align}
 \chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega) 
 &=
 \frac{e^2}{2A\hbar\tilde\omega}
@@ -856,6 +862,7 @@ leads to
   r_{qm}^{\mathrm{b}}\right)
 \bigg]
 ,
+\label{Pjikn2}
 \end{align}
 which gives the susceptibility 
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ 
@@ -906,14 +913,14 @@ where substituting $H^\Sigma_0$
 into Eq.~\eqref{conmri3n} and then
 Eq.~\eqref{chon.9}
 we obtain
-\begin{align}\label{eli.13}
+\begin{equation}
 \left(\omega^\Sigma_{nm}\right)_{;k^{\mathrm{a}}}
 =
 \left(\omega^\mathrm{LDA}_{nm}\right)_{;k^{\mathrm{a}}}
 = 
 v_{nn}^{\mathrm{LDA},\mathrm{a}}-v_{mm}^{\mathrm{LDA},\mathrm{a}}\equiv\Delta_{nm}^{\mathrm{a}}
 .
-\end{align} 
+\end{equation} 
 The apparent divergence as $\tilde\omega\to 0$
 in Eqs. \eqref{chii} and \eqref{chie},  
 is removed  by
@@ -924,7 +931,7 @@ and taking the limit of $\eta\to 0$,
 we obtain the following expressions for the imaginary parts of 
 Eqs. \eqref{chii} and \eqref{chie}, 
 \begin{subequations}\label{chis}
-\begin{equation*}
+\begin{equation}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}]= 
 \frac{\pi |e|^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -935,8 +942,8 @@ Eqs. \eqref{chii} and \eqref{chie},
 -\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{qv})}
 \right]\delta(\omega^\Sigma_{cv}-\omega),
-\end{equation*}  
-\begin{equation*}
+\end{equation}  
+\begin{equation}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}]= 
 \frac{\pi\vert e\vert^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -946,8 +953,8 @@ Eqs. \eqref{chii} and \eqref{chie},
 +\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}} 
 \right]\delta(\omega^\Sigma_{cv}-\omega),
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}]= 
 -\frac{\pi |e|^3}{2\hbar^2}
 \int \frac{dk^3}{8\pi^3}
@@ -960,8 +967,8 @@ Eqs. \eqref{chii} and \eqref{chie},
   c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
 {2\omega^\Sigma_{c'v}-\omega^\Sigma_{cv}}
 \right]\delta(\omega^\Sigma_{cv}-2\omega),
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 \mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}]= 
  \frac{\pi \vert
    e\vert^{3}}{2\hbar^2}
@@ -972,7 +979,7 @@ Eqs. \eqref{chii} and \eqref{chie},
 \frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega)
 ,
-\end{equation*}
+\end{equation}
 \end{subequations}
 where we have split the interband and intraband $1\omega$ and $2\omega$
 contributions and supressed the $\omega$ arguments for 
@@ -1080,12 +1087,12 @@ should yield the same result since the contribution from the H
 saturated surface is zero regardless. 
 We must check that the following 
 relationship is satisfied for this particular slab
-\begin{align}\label{hs}
+\begin{equation}
 \chi_{\mathrm{half-slab}}^{xxx}(-2\omega;\omega,\omega) 
 =
 \chi_{\mathrm{full-slab}}^{xxx}(-2\omega;\omega,\omega) 
 ,
-\end{align}
+\end{equation}
 where
 $\chi_{\mathrm{half-slab}}^{xxx}(-2\omega;\omega,\omega)$ is calculated using
 ${\mathbf{\cal C}}(z)=1$ from the upper half containing the $2\times 1$ 
@@ -1426,17 +1433,17 @@ and
 }\label{calpcalc}
 
 Expanding the wave function in plane waves we obtain
-\begin{align}\label{eni.1}
+\begin{equation*}
 \psi_{n\mathbf{k}}(\mathbf{r})=\sum_\mathbf{G} A_{n\mathbf{k}}(\mathbf{G})e^{i(\mathbf{k}+\mathbf{G})\cdot\mathbf{r}}
 ,
-\end{align}
+\end{equation*}
 where $\{\mathbf{G}\}$ are the reciprocal basis vectors satisfying
 $e^{\mathbf{R}\cdot\mathbf{G}}=1$, with $\{\mathbf{R}\}$ the translation vectors in real
 space, and $A_{n\mathbf{k}}(\mathbf{G})$ the expansion coefficients. Using
 $m_e\mathbf{v}=\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ into 
 Eq.~\eqref{vcali}
 we obtain,\cite{mendozaPRB06}
-\begin{align}\label{eni.2}
+\begin{equation}
 \boldsymbol{\mathcal{\cal V}}_{nm}(\mathbf{k})=
 \frac{\hbar}{2m_e}
 \sum_{\mathbf{G},\mathbf{G}'} A^*_{n\mathbf{k}}(\mathbf{G}')  A_{m\mathbf{k}}(\mathbf{G})
@@ -1444,12 +1451,12 @@ we obtain,\cite{mendozaPRB06}
 \delta_{\mathbf{G}_\parallel \mathbf{G}'_\parallel}  
 f(G_\perp-G'_\perp)
 ,
-\end{align}   
+\label{eni.2}
+\end{equation}   
 where
-\begin{align}\label{vnl.9}
-f(G_\perp)=\frac{1}{L}\int{\mathbf{\cal C}}(z) e^{iG_\perp z}dz  
- ,
-\end{align}
+\begin{equation*}
+f(G_\perp)=\frac{1}{L}\int{\mathbf{\cal C}}(z) e^{iG_\perp z}dz,
+\end{equation*}
 with $f^*(G_\perp)=f(-G_\perp)$,
 and $L$
 is the length of the super-cell. 
@@ -1464,13 +1471,14 @@ creating a pointer array to identify all the plane-wave coefficients
 associated with the same $G_\parallel$.  
 
 Likewise we obtain that
-\begin{align}\label{eni.4}
+\begin{equation}
 {\mathbf{\cal C}}_{nm}(\mathbf{k})=
 \sum_{\mathbf{G},\mathbf{G}'} A^*_{n\mathbf{k}}(\mathbf{G}')  A_{m\mathbf{k}}(\mathbf{G})
 \delta_{\mathbf{G}_\parallel \mathbf{G}'_\parallel} 
 f(G_\perp-G'_\perp)
 .
-\end{align}  
+\label{eni.4}
+\end{equation}  
 If ${\mathbf{\cal C}}(z)=1$, then $f(G_\perp)=\delta_{G_\perp 0}$ and we 
 obtain the full-slab/bulk values, 
 $\mathbf{v}_{nm}(\mathbf{k})$ and ${\mathbf{\cal C}}_{nm}(\mathbf{k})=\delta_{nm}$,
@@ -1491,8 +1499,8 @@ $
 [r^{\mathrm{b}},{\mathbf{\cal V}}^\mathrm{a}]
 $
 one can show that
-\begin{align}\label{nmesn}
-({\mathbf{\cal V}}^{\mathrm{LDA},\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}&=
+\begin{equation}
+({\mathbf{\cal V}}^{\mathrm{LDA},\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}=
 {\cal T}_{nm}^{\mathrm{a}\mathrm{b}}
 +i
 \sum_{q}
@@ -1507,17 +1515,18 @@ r^{\mathrm{b}}_{q m}
 r^{\mathrm{b}}_{nm}
 \Delta^{\mathrm{a}}_{mn}
 ,
-\end{align}
+\label{nmesn}
+\end{equation}
 where
-\begin{eqnarray}\label{tdel}
+\begin{equation*}
 \Delta^{\mathrm{a}}_{mn}
 =
 {\mathbf{\cal V}}^{\mathrm{LDA},\mathrm{a}}_{nn}  
 -
 {\mathbf{\cal V}}^{\mathrm{LDA},\mathrm{a}}_{mm}  
 ,
-\end{eqnarray} 
-\begin{align}\label{tau.1}
+\end{equation*} 
+\begin{equation}
 {\cal T}_{nm}^{\mathrm{a}\mathrm{b}}
 =
 \frac{\hbar}{m_e}\delta_{\mathrm{a}\mathrm{b}} 
@@ -1527,13 +1536,15 @@ C_{nm}
 L^{\mathrm{a}\mathrm{b}}_{nq} 
 C_{qm} 
 ,
-\end{align}   
+\label{tau.1}
+\end{equation}   
 and
-\begin{align}\label{lab}
+\begin{equation}
 L_{nm}^{\mathrm{a}\mathrm{b}}
 =\frac{i}{\hbar}[r^{\mathrm{b}},v^{\mathrm{nl},\mathrm{a}}]_{nm}
 .
-\end{align}  
+\label{lab}
+\end{equation}  
 The matrix elements $L^{\mathrm{a}\mathrm{b}}_{nm}$
 are calculated in Appendix \ref{vesnl}.
 % is small
@@ -1549,9 +1560,9 @@ write
 $(r^{\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}
 =(v^{\mathrm{LDA},\mathrm{a}}_{nm}/i\omega^\mathrm{LDA}_{nm})_{;k^{\mathrm{b}}}
 $ and simply apply the chain rule,
-\begin{align}\label{rka}
+\begin{equation}
 (r^{\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}
-&=
+=
 T^{\mathrm{a}\mathrm{b}}_{nm}
 +
 \frac{ 
@@ -1574,23 +1585,25 @@ r^{\mathrm{a}}_{nq}
 r^{\mathrm{b}}_{q m}
 \bigg)
 ,
-\end{align} 
+\label{rka}
+\end{equation} 
 where 
-\begin{eqnarray}\label{del}
+\begin{equation*}
 \Delta^{\mathrm{a}}_{mn}
 =
 v^{\mathrm{LDA},\mathrm{a}}_{nn}  
 -
 v^{\mathrm{LDA},\mathrm{a}}_{mm}  
 ,
-\end{eqnarray}
+\end{equation*}
 and
-\begin{align}\label{tau.1n} 
+\begin{equation}
 T_{nm}^{\mathrm{a}\mathrm{b}}
 =\frac{\hbar}{m_e}\delta_{ab}\delta_{nm} 
 -\hbar L^{\mathrm{a}\mathrm{b}}_{nm} 
 .
-\end{align}
+\label{tau.1n} 
+\end{equation}
 Eq.~\eqref{rka} generalizes the usual expresion of
 $(r^a_{nm})_{;k^b}$ for a local 
 Hamiltonian
@@ -1606,9 +1619,9 @@ Again, we use Eqs.~\eqref{rnminn}, \eqref{conmri3n}, and \eqref{gendevnn},
 along with $[\mathbf{r},F(\mathbf{r})]=0$, valid for 
 and any function $F(\mathbf{r})$, 
 to obtain 
-\begin{align} 
+\begin{equation*} 
 ({\mathbf{\cal C}}_{nm})_{;\mathbf{k}}
-&=
+=
 i 
 \sum_{q} 
  \left(\mathbf{r}_{nq}
@@ -1619,7 +1632,7 @@ i
 \right) 
 +i\mathbf{r}_{nm}({\mathbf{\cal C}}_{mm}-{\mathbf{\cal C}}_{nn}) 
 ,
-\end{align} 
+\end{equation*} 
 where we remind the reader that $\mathbf{r}_{nm}$ 
 is calculated through 
 Eq.~\eqref{chon.10} for LDA. 
@@ -1639,7 +1652,7 @@ with
 $\langle\mathbf{r}|\mathbf{k}+\mathbf{G}=(1/\sqrt{\Omega})
 \mathrm{exp}(i(\mathbf{k}+\mathbf{G})\cdot\mathbf{r})$
 to obtain,
-\begin{align}\label{vnl.5}
+\begin{align*}
 \boldsymbol{\mathcal{\cal V}}^{\mathrm{nl}}_{nm}(\mathbf{k})&=\frac{1}{2}
 \sum_{\mathbf{G}}
 \Big(
@@ -1663,25 +1676,24 @@ H^*_{n\mathbf{k}}(\mathbf{G})
 {\mathbf{\cal F}}_{m\mathbf{k}}(\mathbf{G}) 
 \right) 
 ,
-\end{align}  
+\end{align*}  
 where 
 we have defined  
-\begin{align}\label{vnl.10}
+\begin{align*}
 {\mathbf{\cal F}}_{n\mathbf{k}}(\mathbf{G}) 
-=
+&=
 \sum_{\mathbf{G}'} 
 A_{n\mathbf{k}}(\mathbf{G}') 
 \delta_{\mathbf{G}_\parallel \mathbf{G}'_\parallel}f(G'_\perp-G_\perp) 
 ,
-\end{align} 
-\begin{align}\label{vnl.11}
-H_{n\mathbf{k}}(\mathbf{G})&=
+H_{n\mathbf{k}}(\mathbf{G})\\
+&=
 \sum_{\mathbf{G}'} 
 A_{n\mathbf{k}}(\mathbf{G}') 
 (\nabla_{\mathbf{K}}+\nabla_{\mathbf{K}'})  
 V^\mathrm{nl}(\mathbf{K},\mathbf{K}')
 ,
-\end{align}
+\end{align*}
 and $\mathbf{K}=\mathbf{k}+\mathbf{G}$, $\mathbf{K}'=\mathbf{k}+\mathbf{G}'$.
 For fully  separable pseudopotentials in the   
 Kleinman-Bylander (KB) form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}  
@@ -1705,7 +1717,7 @@ and
 ${\mathbf{\cal F}}_{n\mathbf{k}}(\mathbf{G}) \to F_{n\mathbf{k}}(\mathbf{G})=A_{n\mathbf{k}}(\mathbf{G})$.
 
 From Eqs.~\eqref{lab} and \eqref{vnl} 
-\begin{align}\label{3.1}
+\begin{equation}
 L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k}) 
 =
 \frac{1}{\hbar^2}
@@ -1713,9 +1725,9 @@ L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
 \big[ r^{\mathrm{a}},[ V^\mathrm{nl}, r^\mathrm{b}]\big]
 | m\mathbf{k}\rangle
 ,
-\end{align} 
+\end{equation} 
 and we expand the triple commutator to obtain,
-\begin{align}\label{3.5}
+\begin{align*}
 L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k}) 
 &=
 \frac{1}{\hbar^2\Omega}
@@ -1745,11 +1757,11 @@ r'^{\mathrm{a}}
 \Big) 
  e^{i\mathbf{K}'\cdot\mathbf{r}'}
 ,
-\end{align} 
+\end{align*} 
 where 
 $V^\mathrm{nl}(\mathbf{r},\mathbf{r}') = \langle\mathbf{r} | V^\mathrm{nl} | \mathbf{r}'\rangle$.
 We use the following identity
-\begin{align}\label{3.4}
+\begin{align*}
 &
 \Big(
 \frac{\partial^2}{\partial K^\mathrm{a}\partial K'^\mathrm{b}}
@@ -1788,11 +1800,11 @@ r'^{\mathrm{a}}
 \Big)  
 e^{i\mathbf{K}'\cdot\mathbf{r}'}
 ,
-\end{align}
+\end{align*}
 to write
-\begin{align}\label{3.7}
+\begin{equation*}
 L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
-&=
+=
 \frac{1}{\hbar^2}
 \sum_{\mathbf{G},\mathbf{G}'} 
 A^*_{n\mathbf{k}}(\mathbf{K}) 
@@ -1808,11 +1820,10 @@ A_{m\mathbf{k}}(\mathbf{K}')
 \Big)
 \langle \mathbf{K} |
 V^\mathrm{nl} 
-| \mathbf{K}'\rangle, 
-\nonumber\\
-\end{align} 
+| \mathbf{K}'\rangle,
+\end{equation*} 
 where
-\begin{align}\label{vkk}
+\begin{equation*}
 \langle\mathbf{K} |
 V^\mathrm{nl} 
 | \mathbf{K}'\rangle
@@ -1824,7 +1835,7 @@ d\mathbf{r} d\mathbf{r}'
 V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
 e^{i\mathbf{K}'\cdot\mathbf{r}'}
 ,
-\end{align}
+\end{equation*}
 The double derivatives with respect to $\mathbf{K}$ and $\mathbf{K}'$ 
 can be worked out explicitly and 
 $L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})$
@@ -1837,22 +1848,23 @@ and
 }\label{calvs} 
 
 From Eq.~\eqref{vcali}
-\begin{align}\label{a.3b}
+\begin{equation}
 \boldsymbol{\mathcal{\cal V}}^{S}_{nm}
-&=
+=
 \frac{1}{2}\sum_q\left(   
 \mathbf{v}^S_{nq}{\mathbf{\cal C}}_{qm}+{\mathbf{\cal C}}_{nq}\mathbf{v}^S_{qm}
 \right)  
 ,
-\end{align}    
+\label{a.3b}
+\end{equation}    
 where $\sum_q | q\mathbf{k}\rangle\langle q\mathbf{k} | =1$ was used
 and $\mathbf{v}^S_{nm}$ is given in Eq.~\eqref{chon.2}.
 Taking the generalized derivative of Eq.~\eqref{a.3b}
 and applying
 the chain rule, we obtain
-\begin{align}\label{a.3bn}
+\begin{equation*}
 \left(\boldsymbol{\mathcal{\cal V}}^{S}_{nm}\right)_{;\mathbf{k}}
-&=
+=
 \frac{1}{2}\sum_q\left(
 (\mathbf{v}^S_{nq})_{;\mathbf{k}}{\mathbf{\cal C}}_{qm}
 +    
@@ -1863,14 +1875,14 @@ the chain rule, we obtain
 {\mathbf{\cal C}}_{nq} (\mathbf{v}^S_{qm})_{;\mathbf{k}}
 \right)  
 .
-\end{align}    
+\end{equation*}    
 Again, from
 Eq.~\eqref{chon.2}, 
-\begin{align}\label{choni.1}
+\begin{equation*}
 (\mathbf{v}^S_{nm})_{;\mathbf{k}}=i\Delta f_{mn}
 (\mathbf{r}_{nm})_{;\mathbf{k}}
 ,
-\end{align}
+\end{equation*}
 a result that is in agreement with Eq. A(6) of Ref.~\onlinecite{cabellosPRB09}.
 
 \newpage
