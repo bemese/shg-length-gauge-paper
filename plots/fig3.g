@@ -15,7 +15,7 @@ f32=4815.512966/scale
 f40=5873.867464/scale
 #
 set xlabel "\\Large   $\\hbar\\omega$ (eV)"
-set label 1 at 3.45,.7 '\Large $\hbar\sigma=0.50$ eV'
-p  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t 'with $\mathbf{v}^\mathrm{nl}$',\
-   'shg-results/32layers/shgC.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t 'without $\mathbf{v}^\mathrm{nl}$'
+set label 1 at 3.45,.7 '\Large $\hbar\Sigma=0.50$ eV'
+p  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t '\large with $\mathbf{v}^\mathrm{nl}$',\
+   'shg-results/32layers/shgC.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t '\large without $\mathbf{v}^\mathrm{nl}$'
 

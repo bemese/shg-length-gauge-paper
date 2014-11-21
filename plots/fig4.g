@@ -16,8 +16,8 @@ f40=5873.867464/scale
 #
 set xlabel "\\Large   $\\hbar\\omega$ (eV)"
 set label 1 at 3.45,.8 '\Large with $\mathbf{v}^\mathrm{nl}$'
-p 'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 3 lw 2 t '$\hbar\sigma=0.00$ eV',\
-  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t '$\hbar\sigma=0.50$ eV',\
-  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.63_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t '$\hbar\sigma=0.63$ eV'
+p 'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.0_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 3 lw 2 t '\large $\hbar\Sigma=0.00$ eV',\
+  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.5_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 1 lw 1 t '\large $\hbar\Sigma=0.50$ eV',\
+  'shg-results/32layers/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_0.63_Nc_130' u 1:(f32*shg($2,$3,$4,$5)) w l lt 2 lw 2 t '\large $\hbar\Sigma=0.63$ eV'
 
 
