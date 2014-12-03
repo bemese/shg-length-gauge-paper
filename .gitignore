@@ -19,7 +19,7 @@ ondi-va.tex
 # *.eps
 # *.pdf
 paper-v-*.pdf
-
+manuscript.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
