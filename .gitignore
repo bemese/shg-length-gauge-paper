@@ -1,8 +1,8 @@
 ## Specific files
-paper-v-0.pdf
-ondi-va.tex
+manuscript.pdf
 .\#*
 .DS_Store
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
