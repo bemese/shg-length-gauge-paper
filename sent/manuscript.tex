@@ -1,20 +1,8 @@
 \documentclass[floatfix,prb,aps,superscriptaddress,showpacs,11pt,preprint,letterpaper]{revtex4}
-\usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{ulem}
-\usepackage{subfigure}
-\usepackage{bm}
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %\usepackage{showlabels}
-%\usepackage{showkeys}
-\allowdisplaybreaks[1]%biutiful equation breaker!!!
-
-%%%
-% notes:
-% check for tense consistency
-% Local fields?
-%%%
 
 \pacs{78.68.+m, 42.65.An, 71.15.Mb, 42.65.Ky, 78.66.-w}
 
@@ -41,35 +29,44 @@
                 Palaiseau, France}
 
 \begin{abstract}
-We formulate a theoretical approach of surface second-harmonic generation from 
-semiconductor surfaces based on the length gauge. We calculate the nonlinear 
-second-order surface susceptibility tensor 
-$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ within the 
-independent particle approximation, and for the first time in one unique 
-formulation we include 
-(i) the derivation for the inclusion of the cut 
-(ii) the scissors correction, needed to have the correct  
-value for the energy band gap,  function used to extract the surface
-response, 
-and (iii) the 
-contribution of the nonlocal part of the pseudopotentials that are routinely 
-used in \textit{ab initio} band structure calculations. The last two contributions
-are described by spatially nonlocal quantum mechanical operators and 
-are fully taken into account in the present formulation. As a test-case for 
-this approach, we calculate $\chi^{xxx}(-2\omega;\omega,\omega)$ for a clean 
-Si(001)$2\times 1$ reconstructed surface and find that this scheme for 
-extracting the surface response through the cut function is exact and readily
-implemented. The effects of the scissors correction and the nonlocal part of 
-the pseudopotentials are discussed for the first time for surface nonlinear 
-optics. The scissors correction non-rigidly shifts the spectrum to higher 
-energies by mixing the $1\omega$ and $2\omega$ resonances and exerts a strong 
-influence on the line-shape. The effects of the nonlocal part of the 
-pseudopotentials keeps the same line-shape of 
-$|\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)|$ but reduces its value by 
-15-20\%. Therefore, our scheme is unprecedented through the inclusion of 
-these three contributions and also opens the possibility to study
-surface second-harmonic generation with 
-more versatility and more accuracy than previous approaches. 
+We formulate a theoretical approach of surface second-harmonic generation 
+from semiconductor surfaces based on the length gauge and the 
+electron  
+density operator.  
+Within the independent particle approximation 
+the nonlinear second-order surface susceptibility tensor
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$    
+is calculated, including for the first time in one unique formulation
+(i) the scissors correction, needed to have the correct value of the
+energy band gap,
+(ii) the contribution of the nonlocal part of the  
+pseudopotentials, routinely  used in \textit{ab initio} band structure calculations, 
+and (iii) the derivation for the inclusion of the cut function, 
+used to extract the surface response.
+The first two contributions
+are described by spatially nonlocal quantum
+mechanical operators and are fully taken into account in the present formulation. 
+As a test-case of the approach we calculate 
+$\chi^{xxx}(-2\omega;\omega,\omega)$ for the clean Si(001)$2\times 1$
+reconstructed surface and find that our scheme to extract the surface
+through the cut function
+readily works and is exact. The effects of the scissors correction and
+of the nonlocal part of the pseudopotentials are discussed 
+in surface nonlinear optics. 
+The scissors correction shifts the spectrum to 
+higher energies though the shifting is not rigid and mixes the 
+$1\omega$ and $2\omega$ resonances, 
+and has a strong influence in the line-shape. 
+The 
+effects of the nonlocal part of the pseudopotentials 
+keeps the same line-shape of $|\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)|$, but 
+reduces its value
+by 15-20\%.  
+Therefore, the inclusion of the three aforementioned 
+contributions is very important and 
+makes our scheme unprecedented and opens the possibility to 
+study surface second-harmonic generation
+with more versatility and providing more accurate results.
 \end{abstract}  
 
 \maketitle
@@ -89,9 +86,12 @@ is a crucial tool for research and development in microelectronics,
 \cite{salazar-aparicioPRB14} and many more recent areas of great scientific 
 and commercial interest.\cite{cazzanelliNM14} The high surface sensitivity 
 of SSHG spectroscopy is due to the fact that within the dipole approximation 
-the bulk SHG signal of centrosymmetric materials is identically zero. 
+the bulk SHG signal of centrosymmetric materials is identically zero.
 Radiation can occur only at the surface where the inversion symmetry is 
-broken. Much of the foundation of surface science has been built from 
+broken. 
+The bulk quadrupole contribution for centrosymmetric materials is
+different from zero, but usually it is very small,\cite{downerSIA01} and we neglect it. 
+Much of the foundation of surface science has been built from 
 experiments involving emission or scattering of electrons from surfaces. 
 These require ultrahigh vacuum (UHV) environments and provide no access to 
 buried interfaces. However, SSHG is compatibile with non-UHV conditions and 
@@ -103,43 +103,47 @@ The usefulness of SSHG could be limited by the lack of microscopic theoretical
 understanding of the nonlinear spectra. The macroscopic phenomenological 
 theory of SSHG, which relates the intensity, phase, and polarization of 
 detected fields to nonlinear and linear susceptibilities at the material 
-interface is now fully developed. However, microscopic theory that relates 
-atomic-level structure to the nonlinear source polarization is still being 
-developed. In this article we put forward an approach to calculate the
-microscopic second-harmonic surface susceptibility that encompasses several
-theoretical features not taken into account before. Within the independent 
+interface is now fully developed.\cite{downerSIA01}
+ However, microscopic theory that relates 
+electronic-level structure to the nonlinear source polarization is still being 
+developed. \cite{butcherPOPS63, aspnesPRB72, sipePRB93,
+  levinePRB94,aversaPRB95, hughesPRB96, rashkeevPRB98,beyond}  
+ Within the independent 
 particle approximation (IPA) some frameworks for bulk SHG have been developed 
-to study the nonlinear optical response of bulk materials with varying degrees 
-of sophistication.\cite{butcherPOPS63, aspnesPRB72, sipePRB93, levinePRB94,
-aversaPRB95, hughesPRB96, rashkeevPRB98} 
+to study the nonlinear optical response of bulk materials. \cite{butcherPOPS63, aspnesPRB72, sipePRB93, levinePRB94,aversaPRB95, hughesPRB96, rashkeevPRB98} 
+In this article we put forward an approach to calculate the
+microscopic second-harmonic surface susceptibility that encompasses several
+theoretical features not taken into account before 
+in the case of a surface.
 
 The most used framework for \textit{ab initio} calculations, Density 
 Functional Theory (DFT) within the Local Density Approximation (LDA),
 \cite{kohnPR65} underestimates the energy band gap of semiconductors. It is 
 well understood that one has to include the many-body interaction to correct 
 for this underestimation of the gap. In this context, the so-called GW 
-approximation\cite{onidaRMP02} is known to correct the band gap of most 
+approximation\cite{onidaRMP02} is known to correct the electronic gap of most 
 semiconductors\cite{luceroJPCM12}. However this can be a very expensive
 calculation and thus one uses the much simpler scissors operator scheme.
-\cite{levinePRL89,levinePRL91,delsolePRB93} This allows us to ``open'' the 
-DFT-LDA gap to its correct experimental or GW value even when experiments 
-are not available. In this context, to correct for the underestimation of 
-the energy band gap of semiconductors Nastos et al.\cite{nastosPRB05} used 
-the ``length gauge'' or ``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to 
-correctly include the many-body corrections through the scissors operator in 
-the SH susceptibility. Later, Cabellos \textit{et al}.\cite{cabellosPRB09} 
-elaborated a derivation of the ``velocity gauge'' or 
-``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the scissors operator 
-and proved gauge invariance with respect to the length gauge. From these works 
-it is clear the length gauge is a much better staring point to obtain the 
-surface SH (SSH) susceptibility, as will be elaborated in this article. 
-However, these considerations are only valid for bulk semiconductors.
+\cite{levinePRL89,levinePRL91,delsolePRB93}  
+This allows us to ``open'' the DFT-LDA gap to 
+its correct experimental or GW value even when experiments are not available. 
+In this context, to correct for the underestimation of the energy band gap of 
+semiconductors Nastos et al.\cite{nastosPRB05} used the ``length gauge'' or 
+``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to correctly include the 
+many-body corrections through the scissors operator in the SH susceptibility.
+Later, Cabellos \textit{et al}.\cite{cabellosPRB09} elaborated a derivation 
+of the ``velocity gauge'' or ``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the 
+scissors operator and proved gauge invariance with respect to the length 
+gauge. From these works it is clear the length gauge is a much better starting
+point to obtain the surface SH (SSH) susceptibility, as will be elaborated 
+in this article. However, these considerations are only valid for bulk 
+semiconductors.
 
 Concerning the optical response of surfaces and interfaces, Reining 
 \textit{et al.}\cite{reiningPRB94} introduced the concept of a cut function 
 in order to obtain the surface SH susceptibility tensor. This cut function 
 is required since one usually uses a slab approach when treating semi-infinite 
-surface systems. If the slab is centrosymmetric the susceptibility tensor will 
+surface systems.\cite{reiningPRB94} If the slab is centrosymmetric the susceptibility tensor will 
 be identically zero. The cut function is such that it separates the nonlinear 
 response for the two surfaces of the slab avoiding the destructive 
 interference between them giving a finite value that one identifies with the 
@@ -149,9 +153,10 @@ the slab. Indeed, one of the main results of this article is to show that the
 SSH  susceptibility tensor obtained by using the cut function is correctly 
 extracted from the slab. After Reining \textit{et al.},\cite{reiningPRB94}
 Refs.~\onlinecite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02,sanoPRB02}
-followed upon this work and in particular Ref.~\onlinecite{arzatePRB01} went 
-into a  detailed analysis of the different contributions to the SHG spectra 
-of a surface and the nuanced relationship between bulk, surface, interband, 
+followed 
+upon this work and in particular Ref.~\onlinecite{arzatePRB01} went into a 
+detailed analysis of the different contributions to the SHG spectra of a 
+surface and the nuanced relationship between bulk, surface, interband, 
 intraband, $1\omega$ and $2\omega$ terms, and
 Ref. \onlinecite{mejiaRMF04} developed a layer-by-layer 
 analysis for the nonlinear responses of semiconductor systems, within a 
@@ -161,45 +166,61 @@ references the scissors operator is either excluded or incorrectly
 implemented.
 
 Finally, DFT-LDA calculations are often based on the use of pseudopotentials.
-As we will discuss later in this article, the presence of the nonlocal part 
-of the pseudopotential introduces corrections to the momentum operator of 
-the electron that have to be included with care into the SSH susceptibility. 
-So far, this contribution has been neglected in the literature.
+As it will be discussed 
+in this article, the presence of a nonlocal part of the
+pseudopotential introduces
+corrections to
+the momentum operator of the electron that have to be included with care in 
+the SSH susceptibility. 
+For the bulk counterpart see for instance Refs.~\onlinecite{ismailPRL01,luppiPRB08}.  
 
 Therefore, within the IPA the most complete approach for the calculation of 
-the SSH susceptibility is one which includes i) the scissors correction, 
-ii) the cut function, and iii) the contribution of the nonlocal part of the 
-pseudopotential. Therefore, the goal of this paper is to derive a new 
+the SSH susceptibility is one which includes (i) the scissors correction, 
+(ii) the contribution of the nonlocal part of the 
+pseudopotential, and
+(iii) the cut function.
+ Therefore, the goal of this paper is to derive a new 
 expression within the length gauge for the SSH susceptibility tensor 
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ 
-that include the aforementioned contributions. The inclusion of these three 
+that includes the aforementioned contributions. The inclusion of these three 
 contributions makes our scheme unprecedented and opens the possibility to 
-study surface SHG with more versatility and providing more accurate results 
-than previous approaches. 
+study surface SHG with more versatility and providing accurate results. 
 
 The paper is organized as follows. In Sec. \ref{theory} we present the 
 relevant steps for deriving the surface second-order susceptibility tensor
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ within the 
 length gauge formalism. This derivation includes the addition of the terms 
-mentioned above that have been absent in previous works. If desired, we can 
-use $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ for a 
-layer-by-layer analysis. In Sec. \ref{results} we show the results of this 
-reformulation with a study of a clean Si(001) surface with a $2 \times 1$ 
-reconstruction that proves the validity of our approach with a special 
-test-case that has never been implemented before. We compare results from 
-before and after adding the different nonlocal contributions. Finally, in 
-Sec. \ref{conc} we submit our conclusions.
+mentioned above that have been absent in previous works. Also, our 
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ can be used 
+for a layer-by-layer analysis if desired. 
+Nevertheless, such an analysis could depend on the choice of the basis
+used to expand the wavefunctions.
+In Sec. \ref{results} we show the 
+results of this reformulation with a study of a clean Si(001) surface with a 
+$2 \times 1$ reconstruction, 
+proving the correctness of our approach with a special test-case,
+never exploited before.
+We compare results from before and after adding 
+the different nonlocal contributions. Finally, in Sec. \ref{conc} we give 
+our conclusions.
 
 \section{Theory}
 
 \label{theory}
 
 In this section we present the scheme used to calculate the surface 
-second-order nonlinear response using the length gauge formalism. Our 
-derivation includes the aforementioned terms not included before for 
-this response. 
+second-order nonlinear response using the length gauge formalism and
+the electron 
+density operator. 
+Some of the results presented  in Subsections \ref{pa} and \ref{lgf}
+have already been discussed in earlier
+studies and can be applied to bulk and surface studies.\cite{sipePRB00,cabellosPRB09}
+We present them in order to have a self-contained derivation.
+The terms presented in these Subsections are used in Subsection \ref{cd}, 
+where we derive the expression 
+for the surface $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$.    
 
-\subsection{Perturbation approach}
+\subsection{Perturbation approach}\label{pa}
 
 We assume the IPA, a classical electromagnetic field, and quantum mechanical 
 matter. We neglect local field and excitonic effects. We can describe the 
@@ -253,8 +274,15 @@ The series is generated by the unperturbed density operator $\tilde{\rho}^{(0)}
 $\langle n\mathbf{k}|\tilde{\rho}_{0}|n\mathbf{k}\rangle = 
 f(\hbar\omega_{n}(\mathbf{k}))\equiv f_{n}$. For a clean, cold semiconductor 
 $f_{n}=1$ when $n$ is a valence ($v$) or occupied band, and zero when $n$ is 
-a conduction ($c$) or empty band. We assume this for the remainder of the 
-article. The expectation values must satisfy
+a conduction ($c$) or empty band. 
+We assume this for the remainder of the  
+article.  
+As we neglect spin-orbit coupling, the
+final expression for
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$   
+has to be multiplied by a factor of 2
+to account for spin-degeneracy.
+The expectation values must satisfy
 $\langle{\cal O}\rangle = \mbox{Tr}({\rho}{\cal O}) = 
 \mbox{Tr}(\tilde{\rho}\tilde{\cal O})$.  
 
@@ -281,20 +309,22 @@ and $\eta >0$ adiabatically switches on the interaction,
 we write the second-order nonlinear
 polarization as, 
 \begin{equation}
-{\mathbf{\cal P}}^a(2\omega)=\chi ^{abc}(-2\omega;\omega,\omega)E^{b}(\omega)E^{c}(\omega),  
+{\mathbf{\cal P}}^{\mathrm{a}}(2\omega)=
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)
+E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega),  
 \label{pshg}
 \end{equation}
-where $\chi^{abc}(-2\omega ;\omega ,\omega )$ is the nonlinear
+where $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega ;\omega ,\omega )$ is the nonlinear
 susceptibility responsible for surface second-harmonic generation
 (SSHG). 
 The 
 superscripts in Eq.~\eqref{pshg} denote Cartesian components, and if
-repeated are to be summed over. Without loss of generality we can always
-define $\chi^{abc}(-2\omega;\omega,\omega)$
+repeated are to be summed over. Without loss of generality we will
+define $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$
  to satisfy intrinsic permutation
 symmetry, 
-$\chi^{abc}(-2\omega ;\omega ,\omega )=\chi ^{acb}(-2\omega ;\omega
-,\omega )$.
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega ;\omega ,\omega )
+=\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega ;\omega,\omega )$.
 
 The unperturbed Hamiltonian 
 is used to solve the Kohn-Sham equations\cite{kohnPR65} of Density  
@@ -310,7 +340,7 @@ with $m_e$ the mass of the electron, $\mathbf{p}$ its canonical momentum, and
 $V$
  the periodic crystal potential, where we neglect spin-orbit terms.
 To be more general in our derivation of
-$\chi^{abc}(-2\omega;\omega,\omega)$, we asume
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$, we asume
 contribution as is customary for most
 pseudopotentials, and then we replace $V$ with
 \begin{align*}
@@ -318,13 +348,18 @@ V^{\mathrm{ps}}(\mathbf{r},\mathbf{p})=V(\mathbf{r})+V^{\mathrm{nl}}(\mathbf{r},
 ,
 \end{align*}
 where 
-$V(\mathbf{r})$ and $V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$  are the local and nonlocal parts, 
+$V(\mathbf{r})$ and 
+$V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$  
+are the local and nonlocal parts, 
  respectively.
+The argument $(\mathbf{r},\mathbf{p})$
+  is equivalente to the
+explicit $(\mathbf{r},\mathbf{r}')$ nonlocal notation.\cite{ismailPRL01}
 In case of
 a local potential, i.e. $V= V(\mathbf{r})$, 
 like that of all-electron schemes, 
-we simply omit the contribution coming
-the results that we have derived.
+we simply omit the contribution of $V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$
+from the results that we have derived.
 
 It is well known that the use of the LDA
 leads to an underestimation of the band gap. A standard
@@ -332,7 +367,7 @@ procedure to correct for this is to
 use the ``scissors approximation'', where the 
 conduction bands are rigidly shifted in energy so that the band gap 
 corresponds to the accepted 
-experimental band gap.\cite{levinePRL89,levinePRL91,delsolePRB93} 
+experimental electronic band gap.\cite{levinePRL89,levinePRL91,delsolePRB93} 
 This is often in fairly good agreement with the GW
 band gap based on a more sophisticated calculation.\cite{hybertsenPRB86}
 The LDA wave functions are used since they produce band
@@ -367,9 +402,10 @@ have the same eigenfunctions, where
 $\psi_{n\mathbf{k}}(\mathbf{r})=\langle\mathbf{r}|n\mathbf{k}\rangle=e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})$,
 are the real space representations of the Bloch states $| n\mathbf{k}\rangle$ labelled 
 by the band index $n$ and the crystal momentum $\mathbf{k}$, and $u_{n\mathbf{k}}(\mathbf{r})$
-is cell periodic. 
+are cell periodic. 
 
-\subsection{Length Gauge Formalism}
+\subsection{Length Gauge Formalism}\label{lgf}
+
 To calculate the optical response 
 within the Length Gauge formalism, we take the 
 interaction Hamiltonian as
@@ -382,7 +418,7 @@ treatment of the position operator
 $\mathbf{r}$ for extended Bloch states, $\langle\mathbf{r}|n\mathbf{k}\rangle$ has 
 been described in detail.\cite{adamsJCP53,blountSSP62} 
 In particular, Ref.~\onlinecite{aversaPRB95} develops
-the correct treatment of $\mathbf{r}$ for
+the treatment of $\mathbf{r}$ for
 the calculation of the nonlinear optical response.
 $\mathbf{r}$ is split into the {\it intraband} 
 ($\mathbf{r}_i$) and {\it interband} ($\mathbf{r}_e$) parts, where 
@@ -484,22 +520,9 @@ Using Eq.~\eqref{hats} we obtain
 \label{chon.2} 
 \end{equation}
 with $f_{nm}\equiv f_n-f_m$,
-where we see that $\mathbf{v}^S_{nn}=0$. It follows that
-\begin{equation}
-\mathbf{v}^\Sigma_{nm}(\mathbf{k}) 
-=\frac{\omega^\Sigma_{nm}(\mathbf{k})}{\omega^\mathrm{LDA}_{nm}(\mathbf{k})}
-\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k}) 
-,
-\label{chon.9}
-\end{equation}
-and
-\begin{equation*}
-\frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{\omega^\Sigma_{nm}(\mathbf{k})}
-=
-\frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}{\omega^\mathrm{LDA}_{nm}(\mathbf{k})}
-,
-\end{equation*}
-and from Eq.~\eqref{pmnrmn},
+where we see that $\mathbf{v}^S_{nn}=0$. From Eqs.~\eqref{pmnrmn} and
+\eqref{vop2}
+ it follows that
 \begin{equation}
 \mathbf{r}_{nm}(\mathbf{k}) 
 =
@@ -522,23 +545,22 @@ calculated
 for 
 fully separable nonlocal pseudopotentials in the 
 Kleinman-Bylander 
-form,\cite{francesco,mottaCMS10,kleinmanPRL82,adolphPRB96}
-as shown in Appendix \ref{vesnl}.
-The advantage of the length gauge formalism for 
-calculating linear and nonlinear optical responses 
+form.\cite{olevanoPC,mottaCMS10,kleinmanPRL82,adolphPRB96}
+The advantage of using the electron density operator along with 
+the length gauge formalism for 
+calculating linear and nonlinear optical responses,
+for the scissored Hamiltonian,
 resides in the ease with which the scissors operator
-can be introduced into the calculation, also described in detail in
-Nastos et al.\cite{nastosPRB05} The 
-length gauge formalism for the scissored Hamiltonian can be easily worked 
-out by simply using the unscissored LDA Hamiltonian,
+can be introduced into the calculation
+by simply using the unscissored LDA Hamiltonian,
 $H_0^{\mathrm{LDA}}$,
 for the unperturbed system 
-with $-e\mathbf{r}\cdot \mathbf{E}(t)$ as the interaction. 
+with $-e\mathbf{r}\cdot \mathbf{E}(t)$ as the interaction.
 We stress that within the length gauge,
 we need only replace $\omega^{\mathrm{LDA}}_{n}$ with 
 $\omega_{n}^{\Sigma}$ at the end of the derivation
 to obtain the scissored results for any 
-susceptibility expression, whether linear or nonlinear. 
+susceptibility expression, whether linear or nonlinear.\cite{nastosPRB05} 
 
 Following Ref.~\onlinecite{sipePRB00} we take the
 matrix elements of Eq.~\eqref{rhop} with the $H_{I}(t)$ of 
@@ -574,9 +596,8 @@ semiconductor crystal is as follows. Instead of using a
 semi-infinite system, we replace it by a super-cell that 
 consists of a finite
 slab of atomic layers and a vacuum region (see Fig.~\ref{fslab}). This
-super-cell constitutes the unit cell, and
-is repeated to form a full three dimensional crystalline structure,
-i.e. a repeated super-cell scheme. 
+super-cell
+is repeated to form a full three dimensional crystalline structure.
 The slab itself consists of front, back, and 
 sub-surface regions, and in between these
 a region that is equivalent to the
@@ -601,9 +622,8 @@ are different, breaking the centrosymmetry and therefore giving an
 overall $\chi^{\mathrm{slab},\mathrm{a}\mathrm{b}\mathrm{c}}\ne 0$; we still
 need a procedure to extract the front surface $\chi^{f,\mathrm{a}\mathrm{b}\mathrm{c}}$
 and the back surface $\chi^{b,\mathrm{a}\mathrm{b}\mathrm{c}}$ from the slab
-susceptibility 
-$\chi^{\mathrm{slab},\mathrm{a}\mathrm{b}\mathrm{c}}=\chi^{f,\mathrm{a}\mathrm{b}\mathrm{c}}-\chi^{b,\mathrm{a}\mathrm{b}\mathrm{c}}$.
-We have omitted the frequency arguments of $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}$ for 
+susceptibility. 
+We have omitted the frequency dependence of $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}$ for 
 convenience of notation.
 
 A convenient way to accomplish the separation of the SH signal of
@@ -632,10 +652,11 @@ $\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$
 (see Fig.~\ref{fslab}).
 \begin{figure}
 \centering
-\includegraphics[scale=.7]{images/slab}
+\includegraphics[scale=.7]{fig1}
 \caption{(color on line) A sketch of the super-cell. 
-The slab corresponds to the
-circles representing the atoms of the system.\label{fslab}} 
+The atomic slab corresponds to the
+circles representing the atoms of the system.
+\label{fslab}} 
 \end{figure}
 
 To introduce the
@@ -661,10 +682,9 @@ where
 \langle m\mathbf{k} | \mathbf{v}^\Sigma | \mathbf{r}\rangle \langle\mathbf{r}|n\mathbf{k}\rangle
 +
 \langle m\mathbf{k}|\mathbf{r}\rangle\langle\mathbf{r} | \mathbf{v}^\Sigma | n\mathbf{k}\rangle
-\right),
+\right).
 \label{jmic3}
 \end{equation}
-are the matrix elements of the microscopic current operator.
 Integrating the microscopic current $\mathbf{j}(\mathbf{r},t)$ over
 the entire slab gives the averaged microscopic current density, $\mathbf{J}(t)$. 
 If we want the contribution from only one region of the unit cell 
@@ -674,7 +694,7 @@ to the current density from the
 chosen region of the slab is given by
 \begin{equation*}
 \frac{1}{A}\int d^3r\, {\mathbf{\cal C}}(z)\, 
-\mathbf{J} (\mathbf{r},t)
+\mathbf{J}^{(N)} (\mathbf{r},t)
  \equiv \boldsymbol{\mathcal{\cal J}}^{(N)}(t),
 \end{equation*}
 where $\boldsymbol{\mathcal{\cal J}}^{(N)}(t)$ is the $N$-th order current induced in the
@@ -757,7 +777,7 @@ is all that is needed to change any of the
 electron velocity operators $\mathbf{V}$ to the new velocity
 operator $\boldsymbol{\mathcal{\cal V}}$ that implicitly takes into account the
 contribution of the region of the slab given by ${\mathbf{\cal C}}(z)$.
-We note that this modified operator is hermitian as it must.\cite{note2}
+We note that this modified operator is hermitian as it should.\cite{note2}
 The operator $\mathbf{V}$ could be any of those given by Eq.~\eqref{vop2},
 thus
 \begin{align*}
@@ -780,17 +800,9 @@ we calculate the matrix elements of
 $\boldsymbol{\mathcal{\cal V}}^{\mathrm{LDA}}$ and $\boldsymbol{\mathcal{\cal V}}^{S}$
  (separately)
 according to the expressions of
-Appendices \ref{calpcalc}, \ref{vesnl} and \ref{calvs}.
+Appendices \ref{calpcalc} and \ref{calvs}.
 If not stated differently, calligraphic letters correspond to layer quantities. 
 
-The layer-by-layer analysis of Refs. \onlinecite{hoganPRB03,castilloPRB03,mottaCMS10}  
-used ${\mathbf{\cal C}}(z)$
-to obtain the  
-anisotropic linear optical response of semiconductor surfaces, 
-where, the first formal derivation  
-of this scheme  
-was presented in  
-Ref.~\onlinecite{mendozaPRB06}. 
 To limit the SHG response to one surface, Eq.~\eqref{vcali} 
 for $\boldsymbol{\mathcal{\cal V}}$ was proposed in 
 Ref.~\onlinecite{reiningPRB94} and later used in Refs.
@@ -883,7 +895,7 @@ The generalized derivative in Eq.~\eqref{chii} is dealt with by the chain rule
 \end{equation}
 where substituting $H^\Sigma_0$ 
 into Eq.~\eqref{conmri3n} and then
-Eq.~\eqref{chon.9}
+Eq.~\eqref{chon.10}
 we obtain
 \begin{equation*}
 \left(\omega^\Sigma_{nm}\right)_{;k^{\mathrm{a}}}
@@ -897,7 +909,7 @@ The apparent divergence as $\tilde\omega\to 0$
 in Eqs. \eqref{chii} and \eqref{chie},  
 is removed  by
  a partial fraction expansion over $\tilde\omega$. 
-Using time-reversal invariance, an integration by parts to 
+Using time-reversal symmetry, an integration by parts to 
 remove the square in the denominator of the second term of Eq.~\eqref{gene2}, 
 and taking the limit of $\eta\to 0$, 
 we obtain the following expressions for the imaginary parts of 
@@ -956,6 +968,7 @@ Eqs. \eqref{chii} and \eqref{chie},
 where we have split the interband and intraband $1\omega$ and $2\omega$
 contributions and supressed the $\omega$ arguments for 
 convenience of notation.
+The factor of 2 for spin degeneracy is not included in Eq.~\eqref{chis}. 
 The real part of each contribution can be obtained through
 a Kramers-Kronig transformation\cite{nicolasPRB14} and
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}=
@@ -969,7 +982,9 @@ the $\{\}$ notation symmetrizes the $\mathrm{b}\mathrm{c}$ Cartesian indices, i.
 $\{u^{\mathrm{b}}s^{\mathrm{c}}\}=(u^{\mathrm{b}}s^{\mathrm{c}}+u^{\mathrm{c}}s^{\mathrm{b}})/2$,
 and thus
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}=\chi^{\mathrm{a}\mathrm{c}\mathrm{b}}$.
-The various quantities involved in Eqs.~\eqref{chis} are given in
+The full expressions for
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$, along 
+with the various quantities involved in Eq.~\eqref{chis} are given in
 the Appendix \ref{appe}. 
 We mention that if we take ${\mathbf{\cal C}}(z)=1$ through out, the layered
 matrix elements $\boldsymbol{\mathcal{\cal V}}^{\Sigma}_{nm}$ become standard bulk-like
@@ -1002,7 +1017,7 @@ the slab needs to have enough atomic layers
 in order to give converged results for 
 $\boldsymbol{\chi} (-2\omega;\omega,\omega)$. 
 We can use Eq.~\eqref{chiijksur} for 
-either the front or the back surface. cite{mejiaRMF04}
+either the front or the back surface. 
 
 \section{Results}\label{results}
 
@@ -1022,7 +1037,7 @@ We take the $z$ coordinate pointing out of the surface and the $x$
 coordinate along the crystallographic [011] direction is parallel to the dimmers. 
 \begin{figure}
 \centering 
-\includegraphics[scale=.8]{images/si2x1-crop}
+\includegraphics[scale=.8]{fig2}
 \caption{(color on line) The slab shows a 
     clean Si(001)$2\times 1$ front surface 
     with an ideal terminated Si bulk back surface. The
@@ -1058,23 +1073,28 @@ ${\mathbf{\cal C}}(z)=1$ from the upper half containing the $2\times 1$
 surface reconstruction, as seen in Fig.~\ref{si2x1},
 and $\chi_{\mathrm{full-slab}}^{xxx}(-2\omega;\omega,\omega)$ is calculated using
 ${\mathbf{\cal C}}(z)=1$ through the full slab.
-We show the results for this comparison in the remainder 
-of this section.
+We show the results for this comparison in the remainder  
+of this section.  
+Also, we checked that 
+for the
+dihydride surface
+$\chi_{\mathrm{half-slab}}^{xxx}(-2\omega;\omega,\omega)=0$.
 
-
-The self-consistent ground state and their Kohn-Sham states were
+The self-consistent ground state and the Kohn-Sham states were
 calculated in the DFT-LDA framework using the plane-wave 
 ABINIT code.\cite{abinit}
 We used Troullier-Martins pseudopotentials\cite{troullierPRB91} that are 
 fully separable nonlocal pseudopotentials in the Kleinman-Bylander 
 form.\cite{kleinmanPRL82}
-The contribution of $\mathbf{v}^\mathrm{nl}$ to Eq.~\eqref{chis} can be carried out 
-as detailed in Appendix \ref{vesnl} using the DP code for 
-the actual calculation.\cite{francesco}
-The surfaces have been studied with a lattice constant of 5.43 \AA. 
-Structural optimizations were performed using DFT-LDA
+The contribution of $\mathbf{v}^\mathrm{nl}$ 
+and 
+$\boldsymbol{\mathcal{\cal V}}^\mathrm{nl}$ 
+to Eq.~\eqref{chis} is carried out 
+using the DP code.\cite{olevanoDP}
+The surfaces have been studied with the experimental lattice constant of 5.43 \AA. 
+Structural optimizations were performed 
 with the ABINIT code.\cite{abinit}  
-The geometry optimization as been carried out in slabs of 12
+The geometry optimization has been carried out in slabs of 12
 atomic layers where the central four layers where fixed at the bulk
 positions.  
 The structures were relaxed until the Cartesian force components were less than 5 meV/\AA. 
@@ -1101,23 +1121,13 @@ these are: an energy cut-off of 10 Ha, an equal number of conduction and
 valence bands, and a set of 244 $\mathbf{k}$-points.
 The $\mathbf{k}$-points are used for the linear analytic 
 tetrahedron method for evaluating the
-Brillouin zone integrals in Eq.~\eqref{chis}, 
-where special care was taken to examine the double resonances.\cite{nastosPRB05}
-Double resonances occur at a given frequency $\omega$ if there can be 
-resonant transitions at both $\omega$ and 2$\omega$ frequencies. This 
-implies that there is a region in the Brillouin zone where 
-$\omega_{cv}(\mathbf{k})=2 \omega_{c'v}(\mathbf{k})$. Since there is a real population 
-excitation, the perturbation theory used to calculate the spectrum breaks 
-down at these $\mathbf{k}$-points. This must be taken into account in a more 
-complete calculation. These points introduce sharp spikes in the spectrum. 
-In principle, these can affect the low frequency results since the response 
-is computed from the Kramers-Kronig relation for frequencies below the band 
-gap. However, in agreement with Ref.~\onlinecite{nastosPRB05} we find that 
-the double resonances affect the low frequency results by less than 2\%. 
+Brillouin zone integrals 
+where special care was taken to examine the double resonances
+of Eq.~\eqref{chis}. \cite{nastosPRB05}
 All spectra were calculated with a Gaussian smearing of 0.15 eV.
 \begin{figure}
 \centering 
-\includegraphics[scale=.8]{plots/fig1}
+\includegraphics[scale=.8]{fig3}
 \caption{(color on line) 
 $|\chi_{\mathrm{half-slab}}^{xxx}|$ vs $\hbar\omega$ 
 for the slab
@@ -1128,7 +1138,7 @@ surface is an ideal terminated bulk H-saturated dangling bonds (see Fig.~\ref{si
 \end{figure}
 \begin{figure}
 \centering 
-\includegraphics[scale=.8]{plots/fig2}
+\includegraphics[scale=.8]{fig4}
 \caption{(color on line) 
 $\chi^{xxx}_{\mathrm{half-slab}}$
 and 
@@ -1139,8 +1149,7 @@ atomic Si layers plus one H layer.
 \end{figure}
 
 We must evaluate 
-$T^{\mathrm{a}\mathrm{b}}_{nm}=(i/\hbar)[r^\mathrm{b},v^{\mathrm{nl},\mathrm{a}}]_{nm}$,
-as outlined in Appendix \ref{vesnl},
+$T^{\mathrm{a}\mathrm{b}}_{nm}=(i/\hbar)[r^\mathrm{b},v^{\mathrm{nl},\mathrm{a}}]_{nm}$
 in order to obtain 
 Eqs.~\eqref{tau.1} and \eqref{tau.1n} that are required for 
 Eq.~\eqref{chis}.
@@ -1158,7 +1167,11 @@ is very small\cite{valerie} and therefore we neglect it in this work.
 
 In Fig.~\ref{fig1} we show $|\chi_{\mathrm{full-slab}}^{xxx}|$
 for the slab with
-16, 24, 32, and 40 Si atomic layers. 
+16, 24, 32, and 40 Si atomic layers, without the contribution of
+$\mathbf{v}^{\mathrm{nl}}$ and with no scissors correction.
+Since the clean Si(001) surface is $2\times 1$,
+there are two atoms per atomic layer, thus the total number of atoms per slab is 
+twice the number of atomic layers of the slab. 
 In making the slabs larger, we add steps of 8 layers of bulk-like atomic positions. 
 We note that the response differs substantially 
 for 16 and 24 layers but is quite similar for 32 and 40 layers.
@@ -1192,17 +1205,22 @@ difference between responses is quite small.
 Indeed, when the value $|\chi^{xxx}|$ 
 is large the difference between the two is very small; 
 when the value is small the difference increases only slightly, 
-but the spectra is so close to zero that these it is negligible. 
+but the spectra is so close to zero that it is negligible. 
 These differences would decrease as the number of atomic layers 
 increases. We remark that 32 layers in the slab is more than enough 
 to confirm that the extraction of the surface second-harmonic 
 susceptibility from the $2\times 1$ surface is readily possible 
 using the formalism contained in Eq.~\eqref{chis}.
+We have confirmed that for the dihydride surface
+$|\chi^{xxx}_{\mathrm{half-slab}}|\approx 0$ (not shown).
 This confirms the validity of our theory and is the main result of
 this article; through the proposed layer formalism we can calculate the surface SH
-pseudopotentials
-and the many-body effects through the scissors correction.
-Our scheme should to work for any slab.  
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$    
+including
+the
+contribution of the nonlocal part of the pseudopotentials 
+and the part of the many-body effects through the scissors correction.
+Our scheme should work for any slab.  
 
 \subsection{\texorpdfstring{Results for $\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)$}
 {Results for Xxxx(2x1)(-2w;w,w)}}
@@ -1215,20 +1233,21 @@ First, from Fig.~\ref{fig2} we note a series of resonances
 that derive from 1$\omega$ and 2$\omega$ terms in
 Eq.~\eqref{chis}. 
 Notice that the 
-2$\omega$ resonances start below $E_g/2$ where $E_g=0.53$ eV is the LDA
-band gap of this surface, and $E_g=1.03$ eV is the scissor shifted gap for
-$\hbar\Delta=0.5$ eV.
+2$\omega$ resonances start below $E_g/2$ where $E_g$ is the band gap
+(0.53 eV  for LDA and
+1.03 eV if the scissor is used with
+$\hbar\Delta=0.5$ eV).
 These resonances
 come from the electronic states of the 
 $2\times 1$ surface, that lie inside the bulk band gap of Si and are the 
-well known electronic surface states.
+well known electronic surface states.\cite{rohlfingPRB95} 
 In Fig.~\ref{fig3}
-We see that the effect of $\mathbf{v}^\mathrm{nl}$
+we see that the effect of $\mathbf{v}^\mathrm{nl}$
  reduces the value of   
 $|\chi^{xxx}_{2\times 1}|$  
 by 15-20\% 
 showing the importance of this contribution for a correct calculation  
-of SSHG.  
+of SSHG, in agreement with the analysis for bulk semiconductors.\cite{luppiPRB08}
 However, the inclusion of $\mathbf{v}^\mathrm{nl}$ does not
 changes the 
 spectral shape of $|\chi^{xxx}_{2\times 1}|$;
@@ -1236,7 +1255,7 @@ spectral shape of $|\chi^{xxx}_{2\times 1}|$;
 the cases of zero scissors correction from Fig.~\ref{fig2}.
 \begin{figure}
 \centering 
-\includegraphics[scale=.8]{plots/fig3}
+\includegraphics[scale=.8]{fig5}
 \caption{(color on line) 
 $\chi^{xxx}_{2\times 1}$
 vs $\hbar\omega$ for a slab with 32 
@@ -1247,7 +1266,7 @@ with and without the contribution from $\mathbf{v}^\mathrm{nl}$.
 
 To see the effect of the scissors correction, we take two different
 finite values for $\hbar\Delta$. The first one
-with a value of $\hbar\Delta=0.5$ eV, used in above results, 
+with a value of $\hbar\Delta=0.5$ eV, used in the above results, 
 is the ``average'' GW gap taken from 
 Ref.~\onlinecite{rohlfingPRB95} 
 that is in agreement with Ref.~\onlinecite{garciaCPC01}. The second one
@@ -1275,13 +1294,27 @@ peaks are almost exclusively related to the
 2$\omega$ resonances of
 Eq.~\eqref{chis}. The other peaks are a combination 
 of 1$\omega$ and 2$\omega$ resonances 
-and yield a more varied spectrum. 
-This way we see that small changes in the value of the 
+and yield a more varied spectrum.
+We mention that for large gap materials, the 1$\omega$ and 2$\omega$ would be splited
+showing a small interference effect, but still the 2$\omega$ would
+strongly depend on the surface states.
+ This way we see that small changes in the value of the 
 scissors shift can in general affect the SSH susceptibility 
 spectrum quite dramatically.
+In Ref.~\onlinecite{adolphPRB00}, the authors already remarked
+that nonlinear optical response of bulk materials
+is more influenced by the electronic structure
+of the material than the linear case. 
+In the case of semiconducting surfaces the
+problem is even more intricate due to the presence of electronic
+surface states.
+The high sensitivity of SSHG to the energy position  of surface
+states, as seen in Fig.~\ref{fig4}, makes SSHG a good benchmark
+spectroscopical tool for testing the validity of the inclusion of many-body effects,
+and in particular the quasi-particle correction to the electronic states. 
 \begin{figure}
 \centering 
-\includegraphics[scale=.8]{plots/fig4}
+\includegraphics[scale=.8]{fig6}
 \caption{(color on line) 
 $\chi^{xxx}_{2\times 1}$
 vs $\hbar\omega$ for a slab with 32 
@@ -1294,7 +1327,12 @@ the scissors correction $\hbar\Delta$.
 Although local fields are neglected they should, in principle, 
 be small parallel to the interface as the electric field is continuous.
 So, we would expect that the $xxx$ component of 
-$\boldsymbol{\chi}(-2\omega;\omega,\omega)$ would have a small influence from the local fields.
+$\boldsymbol{\chi}(-2\omega;\omega,\omega)$ 
+would have a small influence from the local fields.
+Also, the excitonic effects ought to be explored, but
+their efficient calculation is theoretically and 
+numerically challenging\cite{beyond}   and beyond the scope 
+of this article.
 Unfortunately the experimental measurement of the $xxx$
 component of $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ is not possible as the SH 
 radiated intensity would be proportional not only to this component 
@@ -1311,9 +1349,11 @@ results.
 We have presented a formulation to calculate the surface second-harmonic
 (SSH) susceptibility tensor $\boldsymbol{\chi}(-2\omega;\omega,\omega)$, using the length gauge
 formalism and within the independent particle approximation (IPA).
-It includes on equal footing and for the first time in the literature: 
-i) the scissors correction, ii) the cut function, and iii) the
-contribution of the non-local part of the pseudopotentials.
+It includes on equal footing:
+(i) the scissors correction, 
+(ii) the  
+contribution of the non-local part of the pseudopotentials, and  
+(iii) the cut function.
 We have used a Si(001)$2\times 1$ surface to confirm that our scheme
 correctly obtains the surface response as we confirm
 that 
@@ -1333,7 +1373,8 @@ $\boldsymbol{\chi}(-2\omega;\omega,\omega)$.
 The scissors correction shifts the spectrum to  
 higher energies though the shifting is not rigid and mixes the 
 $1\omega$ and $2\omega$ resonances,  
-and has a strong influence in the line-shape.
+and has a strong influence in the line-shape,
+as for the case of bulk semiconductors.\cite{luppiJCP10,luppiPRB10,leitsmannPRB05}
  The cut function allows us  
 to extract unequivocally $\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)$.
  The effects of the nonlocal part of the pseudopotentials  
@@ -1342,9 +1383,6 @@ keeps the same line-shape of $|\chi^{xxx}_{2\times
 but  
 reduces the value of   
 by 15-20\%. 
-Therefore,  
-the results show the importance of these three contributions for a correct calculation 
-of SSHG.
 The $xxx$ component of  
 $\boldsymbol{\chi}_{2\times 1}(-2\omega;\omega,\omega)$, 
 can not be
@@ -1357,16 +1395,17 @@ results.
 We have neglected
 local field 
 and excitonic effects.
-Although these are important factors in the optical response of a semiconductor,
-their efficient calculation is theoretically and 
-numerically challenging and still 
-under debate.\cite{beyond}  
+Although these are important factors in the optical response of a semiconductor, 
+their efficient calculation is theoretically and  
+numerically challenging and still  
+under debate.\cite{beyond}   
 This merits further study but is beyond the scope of this paper. 
 Nevertheless, the inclusion of aforementioned contributions 
 in
 our scheme opens the unprecedented possibility to study 
-surface SHG with more versatility and provides 
-more accurate results than previous approaches. 
+surface SHG with more versatility
+and 
+more accurate results.
 
 \section{Acknowledgments}
 
@@ -1376,12 +1415,83 @@ Polytechnique, Palaiseau, France) for the support and hospitality
 during a sabbatical year. B.S.M. acknowledges partial support from
 CONACYT-M\'exico Grant 153930. 
 
+%%%%%%%%%%%%%
 \appendix 
 \section{}\label{appe}
 We give explicit expressions for the quantities used in the evaluation 
 of Eq.~\eqref{chis}; when appropriate, some 
 intermediate steps are given for their derivation. 
+\subsection{ Expressions for 
+\texorpdfstring{$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$}{que} 
+}\label{fullchis}
+Omitting the frequency dependence for convenience of notation,
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}
+=
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}
++
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}
++
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}
++
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}
+$, where 
+\begin{align*}
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}
+&= \frac{|e|^3}{2\hbar^2}
+\int \frac{dk^3}{8\pi^3}
+\sum_{l\ne mn}\frac{f_{mn}}{\omega^\Sigma_{nm}}
+\left[
+  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a}}_{ml}
+        \{r^{\text{c}}_{ln}
+        r^{\text{b}}_{nm}\}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{lm}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a}}_{ln}
+        \{r^{\text{b}}_{nm}
+        r^{\text{c}}_{ml}\}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nl}}
+\right]\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
+,
+\nonumber\\
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}
+ &=   \frac{|e|^3}{2\hbar^2}\int \frac{dk^3}{8\pi^3}
+\sum_{mn}
+    \frac{f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+\Biggl[
+    \mathrm{Re}\left[r^{\text{b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]
++   \frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}
+    r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{\Sigma}_{nm}} 
+\Biggr]\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}
+,
+\nonumber\\
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}
+&= \frac{|e|^3}{2\hbar^2}\int \frac{dk^3}{8\pi^3}
+\sum_{l\ne mn}
+4\left[
+  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}
+        \{r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\}\right]}
+        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
+ -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}
+        \{r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\}\right]}
+        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
+\right]\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+,
+\nonumber\\
+\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}
+&=  \frac{|e|^3}{2\hbar^2}\int \frac{dk^3}{8\pi^3}
+\sum_{mn}
+    \frac{4f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}
+    \left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right] 
+-   \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}
+    r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{\Sigma}_{nm}}\right]
+    \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}
+. 
+\end{align*}
 
+%%%%
 \subsection{ Expressions for 
 \texorpdfstring{${\boldsymbol{\mathcal{\cal V}}}_{nm}(\mathbf{k})$}{que} 
 and 
@@ -1394,7 +1504,7 @@ Expanding the wave function in plane waves we obtain
 ,
 \end{equation*}
 where $\{\mathbf{G}\}$ are the reciprocal basis vectors satisfying
-$e^{\mathbf{R}\cdot\mathbf{G}}=1$, with $\{\mathbf{R}\}$ the translation vectors in real
+$e^{i\mathbf{R}\cdot\mathbf{G}}=1$, with $\{\mathbf{R}\}$ the translation vectors in real
 space, and $A_{n\mathbf{k}}(\mathbf{G})$ the expansion coefficients. Using
 $m_e\mathbf{v}=\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ into 
 Eq.~\eqref{vcali}
@@ -1440,6 +1550,7 @@ obtain the full-slab/bulk values,
 $\mathbf{v}_{nm}(\mathbf{k})$ and ${\mathbf{\cal C}}_{nm}(\mathbf{k})=\delta_{nm}$,
 from Eqs.~\eqref{eni.2} and \eqref{eni.4}.
 
+%%%%
 \subsection{Expressions for 
 \texorpdfstring{$({\mathbf{\cal V}}^{\mathrm{LDA},a}_{nm})_{;k^b}$}{Vnonlocal},
 \texorpdfstring{$(r^a_{nm})_{;k^b}$}{Vnonlocal}
@@ -1485,11 +1596,11 @@ where
 {\cal T}_{nm}^{\mathrm{a}\mathrm{b}}
 =
 \frac{\hbar}{m_e}\delta_{\mathrm{a}\mathrm{b}} 
-C_{nm} 
+{\cal C}_{nm} 
 -\hbar 
 \sum_q  
 L^{\mathrm{a}\mathrm{b}}_{nq} 
-C_{qm} 
+{\cal C}_{qm} 
 ,
 \label{tau.1}
 \end{equation}   
@@ -1501,12 +1612,13 @@ L_{nm}^{\mathrm{a}\mathrm{b}}
 \label{lab}
 \end{equation}  
 The matrix elements $L^{\mathrm{a}\mathrm{b}}_{nm}$
-are calculated in Appendix \ref{vesnl}.
+are small as 
+compared to the other terms, thus we neglect it throwout this work.\cite{valerie} 
 Notice that
 $(v^{\mathrm{LDA},\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}$ is obtained 
 from Eq.~\eqref{nmesn} by 
 taking 
-${\mathbf{\cal C}}(z)=1$ or $C_{nm}=\delta_{nm}$.
+${\mathbf{\cal C}}(z)=1$ or ${\cal C}_{nm}=\delta_{nm}$.
 
 To obtain $(r^{\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}$ we use Eq.~\eqref{chon.10} to
 write
@@ -1590,208 +1702,6 @@ where we remind the reader that $\mathbf{r}_{nm}$
 is calculated through 
 Eq.~\eqref{chon.10} for LDA. 
 
-\subsection{
-\texorpdfstring{$\boldsymbol{\mathcal{\cal V}}^{\mathrm{nl}}_{nm}$}{Vnonlocal},
-\texorpdfstring{$\mathbf{v}^\mathrm{nl}_{nm}$}{Vnonlocal}, and 
-\texorpdfstring{$T^{\mathrm{a}\mathrm{b}}_{nm}$}{[r,vnl]}}
-\label{vesnl}
-
-We take Eq.~\eqref{vnl} into Eq.~\eqref{vcali}
-and use
-$\sum_{\mathbf{G}} | \mathbf{k}+\mathbf{G}\rangle \langle\mathbf{k}+\mathbf{G} | =1$, 
-with
-$\langle\mathbf{r}|\mathbf{k}+\mathbf{G}=(1/\sqrt{\Omega})
-\mathrm{exp}(i(\mathbf{k}+\mathbf{G})\cdot\mathbf{r})$
-to obtain,
-\begin{align*}
-\boldsymbol{\mathcal{\cal V}}^{\mathrm{nl}}_{nm}(\mathbf{k})&=\frac{1}{2}
-\sum_{\mathbf{G}}
-\Big(
-\langle n\mathbf{k} | {\mathbf{\cal C}}(z) 
-| \mathbf{k}+\mathbf{G}\rangle\langle\mathbf{k}+\mathbf{G} |
-\mathbf{v}^\mathrm{nl} | m\mathbf{k}\rangle
-+
-\langle n\mathbf{k} |
-\mathbf{v}^\mathrm{nl}  
-| \mathbf{k}+\mathbf{G}\rangle\langle\mathbf{k}+\mathbf{G} |
-{\mathbf{\cal C}}(z) | m\mathbf{k}\rangle
-\Big)
-\nonumber\\
-&=\frac{1}{2 \hbar}
-\sum_{\mathbf{G}}
-\left(
-{\mathbf{\cal F}}^{\ell*}_{n\mathbf{k}}(\mathbf{G}) 
-H_{m\mathbf{k}}(\mathbf{G}) 
-+
-H^*_{n\mathbf{k}}(\mathbf{G}) 
-{\mathbf{\cal F}}_{m\mathbf{k}}(\mathbf{G}) 
-\right) 
-,
-\end{align*}  
-where 
-we have defined  
-\begin{align*}
-{\mathbf{\cal F}}_{n\mathbf{k}}(\mathbf{G}) 
-&=
-\sum_{\mathbf{G}'} 
-A_{n\mathbf{k}}(\mathbf{G}') 
-\delta_{\mathbf{G}_\parallel \mathbf{G}'_\parallel}f(G'_\perp-G_\perp) 
-,
-H_{n\mathbf{k}}(\mathbf{G})\\
-&=
-\sum_{\mathbf{G}'} 
-A_{n\mathbf{k}}(\mathbf{G}') 
-(\nabla_{\mathbf{K}}+\nabla_{\mathbf{K}'})  
-V^\mathrm{nl}(\mathbf{K},\mathbf{K}')
-,
-\end{align*}
-and $\mathbf{K}=\mathbf{k}+\mathbf{G}$, $\mathbf{K}'=\mathbf{k}+\mathbf{G}'$.
-For fully  separable pseudopotentials in the   
-Kleinman-Bylander (KB) form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}  
-the  
-matrix elements 
- $\langle\mathbf{K} |
-V^\mathrm{nl}  
-| \mathbf{K}'\rangle
-=V^\mathrm{nl}(\mathbf{K},\mathbf{K}')  
-$ 
-and their $\mathbf{K}$ and $\mathbf{K}'$ gradient 
-can be readily calculated.\cite{mottaCMS10,adolphPRB96,gordienkoRPJ04,fuchsCPC99} 
-We have 
-implemented 
-the calculation of $\boldsymbol{\mathcal{\cal V}}^{\mathrm{nl}}_{nm}(\mathbf{k})$ with the help of 
-the DP\texttrademark~code.\cite{francesco}
-We obtain $\mathbf{v}^{\mathrm{nl}}_{nm}(\mathbf{k})$ from the previous three 
-expressions by taking ${\mathbf{\cal C}}(z)=1$, which implies 
-that $f(G_\perp)=\delta_{G_\perp 0}$, 
-and 
-${\mathbf{\cal F}}_{n\mathbf{k}}(\mathbf{G}) \to F_{n\mathbf{k}}(\mathbf{G})=A_{n\mathbf{k}}(\mathbf{G})$.
-
-From Eqs.~\eqref{lab} and \eqref{vnl} 
-\begin{equation*}
-L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k}) 
-=
-\frac{1}{\hbar^2}
-\langle n\mathbf{k} |
-\big[ r^{\mathrm{a}},[ V^\mathrm{nl}, r^\mathrm{b}]\big]
-| m\mathbf{k}\rangle
-,
-\end{equation*} 
-and we expand the triple commutator to obtain,
-\begin{align*}
-L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k}) 
-&=
-\frac{1}{\hbar^2\Omega}
-\sum_{\mathbf{G},\mathbf{G}'} 
-A^*_{n\mathbf{k}}(\mathbf{K}) 
-A_{m\mathbf{k}}(\mathbf{K}')
-\int
-d\mathbf{r} d\mathbf{r}'
- e^{-i\mathbf{K}\cdot\mathbf{r}}
-\Big(
-r^{\mathrm{a}}
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
-r'^\mathrm{b}
--
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
-r'^\mathrm{a}
-r'^{\mathrm{b}}
-\nonumber\\
-&-
-r^\mathrm{b}
-r^{\mathrm{a}}
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
-+
- r^\mathrm{b}
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
-r'^{\mathrm{a}}
-\Big) 
- e^{i\mathbf{K}'\cdot\mathbf{r}'}
-,
-\end{align*} 
-where 
-$V^\mathrm{nl}(\mathbf{r},\mathbf{r}') = \langle\mathbf{r} | V^\mathrm{nl} | \mathbf{r}'\rangle$.
-We use the following identity
-\begin{align*}
-&
-\Big(
-\frac{\partial^2}{\partial K^\mathrm{a}\partial K'^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K'^\mathrm{a}\partial K'^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K^\mathrm{b}\partial K'^\mathrm{a}}
-\Big)
-\int 
-d\mathbf{r} d\mathbf{r}' 
- e^{-i\mathbf{K}\cdot\mathbf{r}}
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
-e^{i\mathbf{K}'\cdot\mathbf{r}'}
-\nonumber\\
-&=
-\int d\mathbf{r} d\mathbf{r}'
- e^{-i\mathbf{K}\cdot\mathbf{r}}
-\Big( 
-r^{\mathrm{a}} 
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
-r'^\mathrm{b}
-- 
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
-r'^\mathrm{a} 
-r'^{\mathrm{b}}
-- 
-r^\mathrm{b} 
-r^{\mathrm{a}} 
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
-+
- r^\mathrm{b} 
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
-r'^{\mathrm{a}}
-\Big)  
-e^{i\mathbf{K}'\cdot\mathbf{r}'}
-,
-\end{align*}
-to write
-\begin{equation*}
-L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
-=
-\frac{1}{\hbar^2}
-\sum_{\mathbf{G},\mathbf{G}'} 
-A^*_{n\mathbf{k}}(\mathbf{K}) 
-A_{m\mathbf{k}}(\mathbf{K}')
-\Big(
-\frac{\partial^2}{\partial K^\mathrm{a}\partial K'^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K'^\mathrm{a}\partial K'^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
-+
-\frac{\partial^2}{\partial K^\mathrm{b}\partial K'^\mathrm{a}}
-\Big)
-\langle \mathbf{K} |
-V^\mathrm{nl} 
-| \mathbf{K}'\rangle,
-\end{equation*} 
-where
-\begin{equation*}
-\langle\mathbf{K} |
-V^\mathrm{nl} 
-| \mathbf{K}'\rangle
-=
-\frac{1}{\Omega}
-\int 
-d\mathbf{r} d\mathbf{r}' 
- e^{-i\mathbf{K}\cdot\mathbf{r}}
-V^\mathrm{nl}(\mathbf{r},\mathbf{r}') 
-e^{i\mathbf{K}'\cdot\mathbf{r}'}
-,
-\end{equation*}
-The double derivatives with respect to $\mathbf{K}$ and $\mathbf{K}'$ 
-can be worked out explicitly and 
-$L^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})$
-can be finally calculated.\cite{valerie}
-
 \subsection{Expressions for  \texorpdfstring{$\boldsymbol{\mathcal{\cal V}}^{S}_{nm}$}{Vnm}
 and
 \texorpdfstring{$\Big({\boldsymbol{\mathcal{\cal V}}}^{S}_{nm}\Big)_{;\mathbf{k}}$}{(Vnm);kb}
@@ -1835,6 +1745,15 @@ Eq.~\eqref{chon.2},
 \end{equation*}
 a result that is in agreement with Eq. A(6) of Ref.~\onlinecite{cabellosPRB09}.
 
-\newpage
+%%%%%%%%%%%%%
 \bibliography{ref}
 \end{document}
+%%%%%%%%%%%%%
+
+Figures log:
+fig1 -> images/slab
+fig2 -> images/si2x1-crop
+fig3 -> plots/fig1 
+fig4 -> plots/fig2
+fig5 -> plots/fig3
+fig6 -> plots/fig4
