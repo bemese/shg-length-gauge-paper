@@ -1,0 +1,145 @@
+----------------------------------------------------------------------
+Report of the First Referee -- BZ12227/Anderson
+----------------------------------------------------------------------
+1. The authors claim that in this new formulation the scissor operator 
+is correctly implemented respect to previous attempts to include it in 
+the surface SHG response. Since some of the authors of the present 
+paper are also author of the previous approaches (PRB 63, 2054406; PRB 
+74, 075318) that “... incorrectly implemented” scissor operator, may 
+they explain more in details what was wrong in the old papers and why 
+now it is correct. 
+
+2. The idea behind the scissor operator is to shift all the conduction 
+bands of the same amount. While I can believe that this approximation 
+is justified in a bulk material, why it should be in case for a 
+surface? The shape and localization of surface states is different 
+from the one of the bulk. There are cases where this approximation has 
+been tested or compared with a full GW calculation for a surface? 
+
+    Our response
+    -----------------------
+    As noted by the referee, the scissors operator is commonly used for bulk 
+    materials. GW calculations have been performed in the case of the 
+    Si(001)2x1 surface, see [PRB 52 1905 (1995)]. It shows that the surface 
+    states “shift nearly rigidly in energy with respect to the LDA results so 
+    that their dispersion remains almost unchanged”. Thus shifting this states 
+    rigidly appears as a good approximation. Moreover the GW correction to the 
+    surface gap (0.5eV Ref 65, 0.65eV Ref 66) is close to the Si bulk correction 
+    and we have assumed the same value for the shift for all the states.
+    On the other hand, this approximation has already been used in linear optical 
+    calculations for surfaces, see [PRL 76 2810 (1996)], thus improving the 
+    agreement with experimental results. 
+    
+    We have modified the introduction consequently.
+
+    Document corrections
+    -----------------------
+    See corrections.tex:
+    @119: Introduction
+    @1192: Half-slab vs. full-slab
+
+3. At the top of page 6 the authors write that X2 satisfies intrinsic 
+permutation symmetry and then they put an equation with the same X2 in 
+both sides. They should correct this mistake.
+
+
+
+----------------------------------------------------------------------
+Report of the Second Referee -- BZ12227/Anderson
+----------------------------------------------------------------------
+1. In one of their own papers by one of the authors, C. Castillo et 
+al., PRB 68, 041310(R) (2003), the importance of the elimination of 
+the bottom layers of the slab in the case of linear optics has been 
+pointed out. Can this argument simply be applied to non-linear optics, 
+where at least three light beams have to be discussed? 
+
+2. The reduction of the spectral strength in Fig. 4 in the two lower 
+panels is a consequence of the inclusion of the scissors operator in 
+the optical matrix elements. Am I right? Is this effect really real? 
+Other treatments, e.g. in Ref. [36] and [54], claim that the scissors 
+operator should not be taken into the reformulation of the optical 
+matrix elements. 
+
+    Our response
+    -----------------------
+    Indeed the reduction in Fig. 4 is due to the inclusion of the scissors 
+    operator. The effect is real and appears also for Second Harmonic 
+    Generation (SHG) in bulk systems, see for instance 
+    Phys. Rev. B 82, 235201 (2010) Fig1.
+    
+    The scissors operator induces a change in the energy. As claimed in 
+    Ref. [36] and [54], it does not change the optical matrix elements, when 
+    using the length gauge for the calculation. However, the situation is 
+    different for the velocity gauge. We believe that it makes our treatment 
+    in the length gauge easier to implement.
+    
+    In linear spectra, the effect of the scissors operator appears only as a 
+    shift in energy. For SHG, the effect comes from an interplay between 
+    several terms, leading to a shift in the position of the peaks, but also 
+    to a modification of the spectral shape. To our knowledge, it has always 
+    resulted to a reduction of the spectral strength, but due to the complexity 
+    of the expression for $\chi^{(2)}, it is difficult to give more general 
+    trends (see also Refs.  Phys. Rev. B 71, 195209 (2005) and  
+    Phys. Rev. B 72, 045223 (2005)).
+    
+    We have added a sentence in the discussion of the effect of the scissor 
+    in Fig. 6
+
+    Document corrections
+    -----------------------
+    See corrections.tex
+    @1270: Results section C
+
+3. Abstract / Introduction: cancel “for the first time” 
+
+4. Abstract: cancel: “Our scheme … is exact” 
+
+5. Formulation in introduction “Radiation can occur …” is wrong 
+
+6. Sec.II.B: The description of light-matter interaction by the 
+Hamiltonian (6) is invalid, because Bloch matrix elements of the space 
+operator cannot be computed. However, another formulation as given in 
+M. Gajdos et al., PRB 73, 045112 (2006) is possible. This 
+representation is more convenient because no non-local contributions 
+to the optical matrix element occur. A comparison as in B. Adolph et 
+al., PRB 63, 125108 (2001), done for linear optics could also be 
+helpful in the case of SHG. 
+
+    Our response
+    -----------------------
+    We have defined the light-matter interaction using the formalism described in: 
+    S. Ismail-Beigi, E.K. Chang and S. Louie, Phys. Rev. Lett. 87, 087402 (2001)
+    expressed in the velocity gauge and accounting for nonlocal potentials. One 
+    can show that using a gauge transformation, the Hamiltonian is transformed 
+    into the effective Hamiltonian (Eq.(6)). Note that this gauge transformation 
+    is valid to all orders in the vector potential A(t). At this point, the 
+    interaction Hamiltonian has to be treated with great care, when expanding 
+    the wavefunction onto Bloch states. We have followed the procedure used by 
+    E. I. Blount, F. Seitz, and D. Turnbull, Solid State Phys. 13, 305 (1962) and 
+    J. E. Sipe and A. I. Shkrebtii, Phys. Rev. B 61, 5337 (2000). 
+    It amounts to splitting the operator r into the interband (r_e) and  
+    intraband (r_i) parts. The only contributions to the final expression 
+    Eq. (8) are quantities defined in terms of r_e and r_i, that can be computed 
+    for Bloch states.
+    
+    Section II.B has been slightly rewritten and reorganized. 
+    
+    The equivalence between the length and velocity (or transverse) gauges has 
+    been checked by Sipe and co-authors in the case of SHG for local potentials 
+    (see PRB 43 8990 (1991)). This demontration can be further extended to 
+    the case of nonlocal potentials, even when using the cut-function used in 
+    Section III.
+    
+    Concerning the suggestion of the referee to compare with the PAW approach, 
+    as performed in PRB 63, 125108 (2001), we agree that this would give very 
+    interesting insights in the case of SHG. However, our framework used for 
+    the surface cannot be presently extended to PAW.
+
+    Document corrections
+    -----------------------
+    See corrections.tex:
+    @409: Length Gauge Formalism
+
+7. The k-integration in 3D as indicated in many formulas from (18) and 
+below does not fit to the slab approximation. Usually, only a 2D 
+integration in k-space has to be performed.

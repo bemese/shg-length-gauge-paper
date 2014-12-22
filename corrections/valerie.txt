@@ -1,0 +1,25 @@
+Dear friends,
+
+we have modified the part of the manuscript Introduction and Results B for the remark concerning the scissor (see scissors.tex) and wrote an answer to the referee (see response_scissors.docx).
+
+The file section_II_B.tex contains the new version of Section II.B for the interaction hamiltonian. It has been slightly modified and reorganised. The answer to the referee is in Response_II_B.docx.
+
+We have noticed that reference 36 should go with ref 32, instead of 34-35.
+
+We have checked again the scale in pm²/V for all the spectra. It should really appear in 10^6 instead of 10^5 as written in the figures.
+
+If you agree, we can have a look tomorrow at the reduction of the spectral strength (referee 2, point 2).
+
+Best regards
+Valérie
+
+===============================================================================================
+
+Dear all,
+
+here is a answer to referee 2 point 2.
+
+We could add a sentence in section II.C (page 19), just after "...accounts for
+the non-rigid shift."
+
+The reduction of the spectral strength is in agreement with previous calculations for bulk systems (Refs 37, 69, 70)
