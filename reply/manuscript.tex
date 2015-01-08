@@ -2,7 +2,6 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
-\def\chon{red}
 %\usepackage{showlabels}
 
 \pacs{78.68.+m, 42.65.An, 71.15.Mb, 42.65.Ky, 78.66.-w}
@@ -126,14 +125,8 @@ approximation\cite{onidaRMP02} is known to correct the electronic gap of most
 semiconductors\cite{luceroJPCM12}. However this can be a very expensive
 calculation and thus one uses the much simpler scissors operator scheme.
 \cite{levinePRL89,levinePRL91,delsolePRB93}  
-{\color{\chon}This allows us to ``open'' the DFT-LDA gap to 
-its correct experimental or GW value for most bulk semiconductors.
-%%%% Valerie and Nicolas remove these lines
-% even when experiments are not available. 
-%%%%
-This approximation has already been used in linear optical calculations for 
-surfaces, see \cite{kippPRL96}, thus improving the agreement with 
-experimental results.}
+This allows us to ``open'' the DFT-LDA gap to 
+its correct experimental or GW value even when experiments are not available. 
 In this context, to correct for the underestimation of the energy band gap of 
 semiconductors Nastos et al.\cite{nastosPRB05} used the ``length gauge'' or 
 ``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to correctly include the 
@@ -413,39 +406,20 @@ are cell periodic.
 
 \subsection{Length Gauge Formalism}\label{lgf}
 
-{\color{\chon}According to ~\onlinecite{ismailPRL01}, we first start with the interaction 
-Hamiltonian expressed in the velocity gauge, containing the nonlocal parts
-$V^{nl}$ and $S$. Within the dipole approximation and using a gauge 
-transformation, it can be transformed into an effective Hamiltonian 
-\cite{valerie}
+To calculate the optical response 
+within the Length Gauge formalism, we take the 
+interaction Hamiltonian as
 \begin{equation}
 H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).
 \label{rde}
 \end{equation}
-The treatment of the position operator $\mathbf{r}$ for extended Bloch states 
-is problematic and has been discussed in Refs.\cite{adamsJCP53,blountSSP62}
-%%%% Valerie and Nicolas remove these lines
-% In particular, Ref.~\onlinecite{aversaPRB95} develops the treatment of 
-% $\mathbf{r}$ for the calculation of the nonlinear optical response.
-%%%%
-Following Ref.~\onlinecite{sipePRB00} we take the
-matrix elements of Eq.~\eqref{rhop} with the $H_{I}(t)$ of 
-Eq.~\eqref{rde}, we obtain 
-$(\tilde{\rho}^{(1)}(t))_{nm}=B_{nm}^{b}E^{b}(\omega)e^{i(\omega^\Sigma_{nm}-\tilde\omega)t}$,
-with 
-\begin{equation}
-B_{nm}^{b}=\frac{e}{\hbar }\frac{f_{mn}r_{nm}^{b}}{\omega^\Sigma_{nm}-\tilde\omega},
-\label{j.1}
-\end{equation}
-and 
-\begin{equation}
-(\tilde{\rho}^{(2)}(t))_{nm} = \frac{e}{i\hbar }\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\bigg[
-i\sum_{q }\Big(r_{nq }^{b}B_{q m}^{c}-B_{nq}^{c}r_{q m}^{b}
-\Big)  
--(B_{nm}^{c})_{;k^{b}}\bigg]E^{b}(\omega)E^{c}(\omega)e^{i(\omega^\Sigma_{nm}-2\tilde\omega)t}
-.
-\label{j.2}
-\end{equation}}
+The 
+treatment of the position operator
+$\mathbf{r}$ for extended Bloch states, $\langle\mathbf{r}|n\mathbf{k}\rangle$ has 
+been described in detail.\cite{adamsJCP53,blountSSP62} 
+In particular, Ref.~\onlinecite{aversaPRB95} develops
+the treatment of $\mathbf{r}$ for
+the calculation of the nonlinear optical response.
 $\mathbf{r}$ is split into the {\it intraband} 
 ($\mathbf{r}_i$) and {\it interband} ($\mathbf{r}_e$) parts, where 
 $\mathbf{r}=\mathbf{r}_i+\mathbf{r}_e$. 
@@ -539,8 +513,7 @@ where we have defined
 ,\nonumber
 \end{align}  
 with $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ the canonical momentum operator, 
-and using $[r^a,p^b]=i\hbar\delta_{ab}$, where $\delta_{ab}$ is the 
-Kronecker delta.
+and using $[r^a,p^b]=i\hbar\delta_{ab}$, where $\delta_{ab}$ is the Kronecker delta.
 Using Eq.~\eqref{hats} we obtain 
 \begin{equation}
 \mathbf{v}^S_{nm}=i\Delta f_{mn}\mathbf{r}_{nm},
@@ -548,7 +521,8 @@ Using Eq.~\eqref{hats} we obtain
 \end{equation}
 with $f_{nm}\equiv f_n-f_m$,
 where we see that $\mathbf{v}^S_{nn}=0$. From Eqs.~\eqref{pmnrmn} and
-\eqref{vop2} it follows that
+\eqref{vop2}
+ it follows that
 \begin{equation}
 \mathbf{r}_{nm}(\mathbf{k}) 
 =
@@ -586,9 +560,27 @@ We stress that within the length gauge,
 we need only replace $\omega^{\mathrm{LDA}}_{n}$ with 
 $\omega_{n}^{\Sigma}$ at the end of the derivation
 to obtain the scissored results for any 
-{\color{\chon}susceptibility expression, whether linear or nonlinear.\cite{nastosPRB05} 
+susceptibility expression, whether linear or nonlinear.\cite{nastosPRB05} 
 
-We have used the fact that for a cold semiconductor} $\partial
+Following Ref.~\onlinecite{sipePRB00} we take the
+matrix elements of Eq.~\eqref{rhop} with the $H_{I}(t)$ of 
+Eq.~\eqref{rde}, we obtain 
+$(\tilde{\rho}^{(1)}(t))_{nm}=B_{nm}^{b}E^{b}(\omega)e^{i(\omega^\Sigma_{nm}-\tilde\omega)t}$,
+with 
+\begin{equation}
+B_{nm}^{b}=\frac{e}{\hbar }\frac{f_{mn}r_{nm}^{b}}{\omega^\Sigma_{nm}-\tilde\omega},
+\label{j.1}
+\end{equation}
+and 
+\begin{equation}
+(\tilde{\rho}^{(2)}(t))_{nm} = \frac{e}{i\hbar }\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\bigg[
+i\sum_{q }\Big(r_{nq }^{b}B_{q m}^{c}-B_{nq}^{c}r_{q m}^{b}
+\Big)  
+-(B_{nm}^{c})_{;k^{b}}\bigg]E^{b}(\omega)E^{c}(\omega)e^{i(\omega^\Sigma_{nm}-2\tilde\omega)t}
+.
+\label{j.2}
+\end{equation}
+We have used the fact that for a cold semiconductor $\partial
 f_{n}/\partial \mathbf{k}=0$ and thus the intraband contribution to the linear
 term vanishes identically. 
 Note that the indices in Eq.~\eqref{j.2} are all different from each
@@ -1211,10 +1203,6 @@ $\hbar\Delta$.
 For these results we chose
 $\hbar\Delta=0.5$ eV, that is the GW gap reported in
 Refs.~\onlinecite{rohlfingPRB95,garciaCPC01}. 
-{\color{\chon}This is justified by the fact that the surface states of the clean 
-Si(001) surface investigated are found, from GW calculations 
-\cite{rohlfingPRB95}, to shift rigidly and to keep their dispersion with 
-respect to LDA.}
 We see that for all four instances the 
 difference between responses is quite small.
 Indeed, when the value $|\chi^{xxx}|$ 
@@ -1235,7 +1223,7 @@ including
 the
 contribution of the nonlocal part of the pseudopotentials 
 and the part of the many-body effects through the scissors correction.
-Our scheme should work for any slab.
+Our scheme should work for any slab.  
 
 \subsection{\texorpdfstring{Results for $\chi^{xxx}_{2\times 1}(-2\omega;\omega,\omega)$}
 {Results for Xxxx(2x1)(-2w;w,w)}}
@@ -1298,9 +1286,7 @@ by the scissors correction is not
 rigid, as pointed out in Ref.~\onlinecite{nastosPRB05}. 
  This is because the second-harmonic optical response mixes 
 $1\omega$ and $2\omega$ transitions (see Eq.~\eqref{chis}), and accounts 
-for the non-rigid shift. {\color{\chon}The reduction of the spectral strength is in 
-agreement with previous calculations for bulk systems.
-\cite{nastosPRB05, luppiPRB10, leitsmannPRB05}}
+for the non-rigid shift. 
 When we compare 
 $|\chi^{xxx}_{2\times 1}|$ for the two finite values of $\hbar\Delta$,
 we see that the first two peaks are almost rigidly 

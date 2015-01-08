@@ -6,9 +6,9 @@ set out 'fig.mp'
 set xrange [0:5]
 #
 set xlabel  "\\Large $\\hbar\\omega$ (eV)"
-set ylabel "\\Large $|\\chi^{xxx}_{\\mathrm{full-slab}}|$ (10$^5\\times$pm$^2$/V)" 
+set ylabel "\\Large $|\\chi^{xxx}_{\\mathrm{full-slab}}|$ (10$^6\\times$pm$^2$/V)" 
 shg(w,x,y,z)=sqrt((w+y)**2+(x+z)**2)
-scale=10.e5
+scale=1.e6
 f16=2645.886245/scale
 f24=3704.240743/scale
 f32=4815.512966/scale

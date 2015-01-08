@@ -1,0 +1,166 @@
+\subsection{Length Gauge Formalism}
+According to ~\onlinecite{ismailPRL01}, we first start with the interaction Hamiltonian expressed in the velocity gauge, containing the nonlocal parts
+$V^{nl}$ and $S$. Within the dipole approximation and using a gauge transformation, it can be transformed into an effective Hamiltonian \cite{Veniard, unpublished}
+\begin{equation}
+\tilde H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).  \label{rde}
+\end{equation}
+The treatment of the position operator $\bfr$ for extended Bloch states is problematic and has been discussed in Refs. \cite{adamsJCP53,blountSSP62} 
+{\color{\chon}. Following Ref.~\onlinecite{sipePRB00}, we take} the matrix elements of Eq.~\eqref{rhop} with the Hamiltonian $\tilde H_{I}(t)$ of
+Eq.~\eqref{rde}, we obtain 
+$(\tilde{\rho}^{(1)}(t))_{nm}=B_{nm}^{b}E^{b}(\omega)e^{i(\omega^\sigma_{nm}-\tilde\omega)t}$,
+with 
+\begin{equation}\label{j.1}
+B_{nm}^{b}=\frac{e}{\hbar }\frac{f_{mn}r_{nm}^{b}}{\omega^\Sigma_{nm}-\tilde\omega},
+\end{equation}
+and 
+\begin{eqnarray}\label{j.2}
+(\tilde{\rho}^{(2)}(t))_{nm} &=&\frac{e}{i\hbar }\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\bigg[
+i\sum_{q }\Big(r_{nq }^{b}B_{q m}^{c}-B_{nq}^{c}r_{q m}^{b}
+\Big)  
+-(B_{nm}^{c})_{;k^{b}}\bigg]E^{b}(\omega)E^{c}(\omega)e^{i(\omega^\Sigma_{nm}-2\tilde\omega)t}
+.
+\end{eqnarray}
+$\bfr$ is split into the {\it intraband} 
+($\bfr_i$) and {\it interband} ($\bfr_e$) parts, where 
+$\bfr=\bfr_i+\bfr_e$. 
+For $\bfr_e$ one uses
+\begin{align}\label{rnminn}
+\bra{n\bfk}\bfr_e\ket{m\bfk'} &=
+(1-\gd_{nm})\gd(\bfk-\bfk')\bfgxi_{nm}(\bfk) 
+,
+\end{align}
+such that $\bfr_{e,nm}=0$ for $n=m${\color{\chon} .
+>From Eq.~\eqref{mv}} with $H_0\to
+H^\Sigma_0$, we obtain
+\begin{align}\label{pmnrmn}
+\bfr_{e,nm}(\bfk) =
+\bfgxi_{nm}(\bfk)\equiv 
+\bfr_{nm}(\bfk) 
+&=
+\frac{\bfv^\gs_{nm}(\bfk)}{i\go^\gs_{nm}(\bfk)}
+\quad\quad n\notin D_m 
+,
+\end{align}  
+where we defined
+$\go^\gs_{nm}(\bfk)\equiv\go^\gs_n(\bfk)-\go^\gs_m(\bfk)$, and
+$D_m$ are all the possible degenerate $m$-states. 
+%We recognize that for each instance in which 
+%$n\notin D_m$ or $n\ne m$, $\bfr_{nm}(\bfk)$ are interband matrix
+%elements.
+For the intraband part, {\color{\chon} $\bfr_i$ only appears in
+commutators during the derivation of
+the optical response. We use},\cite{aversaPRB95}
+\begin{equation}\label{conmri3n}
+\bra{n\bfk}[\bfr_i,\calo]\ket{m\bfk'}
+=i\gd(\bfk-\bfk')(\calo_{nm})_{;\bfk}
+,
+\end{equation}  
+where
+\begin{equation}\label{gendevnn}
+(\calo_{nm})_{;\bfk}=
+\nabla_\bfk 
+\calo_{n m}(\bfk) 
+- 
+i 
+\calo_{nm}(\bfk) 
+\left(
+\bfgxi_{nn}(\bfk) 
+-
+\bfgxi_{mm}(\bfk) 
+\right) 
+,
+\end{equation} 
+is
+the generalized derivative 
+of the operator $\calo$. 
+The vectors $\bfgxi_{nn}(\bfk)$ are defined in 
+Ref.~\onlinecite{aversaPRB95} {\color{\chon} though} they do not need to be 
+calculated explicitly in what follows. 
+
+Before {\color{\chon} continuing,} 
+we derive a key result for the length gauge formulation. 
+{\color{\chon} Again, using} $H^\Sigma_0$ in
+Eq.~\eqref{mv} we obtain
+\begin{align}\label{vop2}
+\bfv^\gs&=
+\bfv 
++
+\bfv^\nl 
++\bfv^S
+=
+\bfv^\lda 
++\bfv^S 
+,
+\end{align}
+where we have defined 
+\begin{subequations}
+\begin{align}\label{ve}
+\bfv 
+&=\frac{\bfp}{m_e},
+\\\label{vnl}
+\bfv^\nl 
+&=
+\frac{1}{i\hbar}[\bfr,V^\nl],
+\\\label{vs}
+\bfv^S
+&=
+\frac{1}{i\hbar}[\bfr, S],
+\\\label{vlda}
+\bfv^\lda 
+&=
+\bfv 
++\bfv^\nl 
+,
+\end{align}  
+\end{subequations}
+ with $[r^a,p^b]=i\hbar\gd_{ab}$, where $\gd_{ab}$ is the Kronecker delta.
+Using Eq.~\eqref{hats} we obtain 
+\begin{equation}\label{chon.2} 
+\bfv^S_{nm}=i\Delta f_{mn}\bfr_{nm},
+\end{equation}
+with $f_{nm}\equiv f_n-f_m$,
+where we see that $\bfv^S_{nn}=0$. From Eq.~\eqref{pmnrmn} and Eq.~\eqref{vop2} {\color{\chon} it} follows that
+\begin{align}\label{chon.10}
+\bfr_{nm}(\bfk) 
+=
+\frac{\bfv^\gs_{nm}(\bfk)}{i\go^\gs_{nm}(\bfk)}
+=
+\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
+\quad\quad n\notin D_m 
+. 
+\end{align}
+The matrix elements 
+of $\bfr_{nm}(\bfk)$ are {\color{\chon} identical using either} 
+the LDA or {\color{\chon} scissored} 
+Hamiltonian, {\color{\chon} thus negating the} need to label them.
+Of course, {\color{\chon} it} is more convenient to calculate them
+through $\bfv^\lda_{nm}(\bfk)$ {\color{\chon} which 
+includes} only the contribution of 
+$\bfv^\nl_{nm}(\bfk)$. These {\color{\chon} can} be readily
+calculated
+for 
+fully separable nonlocal pseudopotentials in the 
+Kleinman-Bylander 
+form,\cite{francesco,mottaCMS10,kleinmanPRL82,adolphPRB96}{\color{\chon}.}
+{\color{\chon} The} advantage of using the electron density operator along with the length gauge formalism for 
+{\color{\chon} calculating linear and nonlinear} optical responses, for the scissored Hamiltonian, 
+resides in the ease with {\color{\chon} which the scissors operator
+can be introduced into the calculation by simply using the unscissored LDA Hamiltonian, $H_0^{\mathrm{LDA}}$,
+for the unperturbed system 
+with $-e\mathbf{r}\cdot \mathbf{E}(t)$ as the interaction{\color{\chon}. We stress that within the length gauge, 
+we need only replace $\omega^{\mathrm{LDA}}_{n}$ with 
+$\omega_{n}^{\Sigma}$ at the end of the derivation}
+to obtain the scissored results for any 
+susceptibility expression, whether linear or nonlinear \cite{PRBNastos}. 
+
+
+We have used the fact that for a cold semiconductor $\partial
+f_{n}/\partial \mathbf{k}=0$ and thus the intraband contribution to the linear
+term vanishes identically. 
+%In Appendix \ref{gender} we show how the generalized derivative of 
+%$(B^a_{nm})_{;k^b}$ can be obtained.
+{\color{\chon} Note that the indices in Eq.~\eqref{j.2} are all} different from each
+other. {\color{\chon} This is due to the $f_{nm}$ factor in Eq.~\eqref{j.1}, 
+and therefore $B^a_{nn}=0$}. The dependence {\color{\chon} on} $\bfk$ 
+of all quantities is implicitly understood from 
+{\color{\chon} this point forward.}

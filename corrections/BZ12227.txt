@@ -42,7 +42,7 @@ been tested or compared with a full GW calculation for a surface?
 permutation symmetry and then they put an equation with the same X2 in 
 both sides. They should correct this mistake.
 
-
+We have corrected this typo.
 
 ----------------------------------------------------------------------
 Report of the Second Referee -- BZ12227/Anderson
@@ -92,9 +92,18 @@ matrix elements.
 
 3. Abstract / Introduction: cancel “for the first time” 
 
+We have removed the phrases. 
+
 4. Abstract: cancel: “Our scheme … is exact” 
 
+We have removed the phrase. 
+
 5. Formulation in introduction “Radiation can occur …” is wrong 
+
+We have change the phrase to
+"However, the SHG process can occur only  
+at the surface where the inversion symmetry is  
+broken."  
 
 6. Sec.II.B: The description of light-matter interaction by the 
 Hamiltonian (6) is invalid, because Bloch matrix elements of the space 
@@ -143,3 +152,4 @@ helpful in the case of SHG.
 7. The k-integration in 3D as indicated in many formulas from (18) and 
 below does not fit to the slab approximation. Usually, only a 2D 
 integration in k-space has to be performed.
+
