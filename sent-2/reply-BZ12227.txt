@@ -2,16 +2,17 @@ Athanasios Chantis
 Assistant Editor                                                                 
 Physical Review B
 
-Dear Dr. Athanasios Chantis,                                                               
+Dear Dr. Athanasios Chantis, 
+   
+Please find here enclosed the revised version of the manuscript  BZ12227/Anderson.
 
 We thank the referees for their positive and useful comments and
-suggestions of our manuscript.  In the following text we give reply to
-each one of these points.
+suggestions of our manuscript and we believe that it helped us to improve the quality of our work.
 
-Other than the aforementioned changes we corrected the scale on
-figures 3-6 from 10^5 to 10^6 due to a typo.
+In the following, we answer all the points raised by the referees and we also list all the changes made in the paper.                                                       
+Other than the aforementioned changes we corrected the scale on figures 3-6 from 10^5 to 10^6 due to a typo.
 
-We think that with these changes the manuscript should be ready for publication.
+We are confident that all suggestions have been met, and hope that our manuscript can now be published in Physical Review B.
 
 ----------------------------------------------------------------------
 Report of the First Referee -- BZ12227/Anderson
@@ -81,15 +82,20 @@ where at least three light beams have to be discussed?
     Our response
     -----------------------
 
-    The discussion about which light beams have the cut function
-    applied was resolved in PRB 74, 075318 (2006) (Ref 57), where it
-    was shown that it is applied through the polarization of the
-    system in order to find the linear optical surface response.
-
-    In this manuscript, we have used the same idea in order to obtain
-    the surface SHG response. Therefore, there is no ambiguity that
-    the cut function has to be implemented through the nonlinear (SH)
-    polarization of the system.
+	In linear optics, it has been pointed out that it is important
+	to remove half of the slab (i.e. bottom layer) to get the
+	response of only one surface.  In PRB 74, 075318 (2006) (Ref
+	57), it is shown that a procedure can be safely defined by
+	applying a cut function on the polarization vector, which is
+	the key ingredient to get the measurable quantities. This
+	amounts to modifying the matrix elements corresponding to the
+	emitted field.  For second harmonic generation, we use the
+	same procedure applying the cut function on the second order
+	polarization as explained in the text. It automatically
+	modifies the emitted field, but the matrix elements
+	corresponding to the incoming fields remain unchanged.  The
+	procedure could even be generalized to any order involving
+	more light beams.
 
 2. The reduction of the spectral strength in Fig. 4 in the two lower
 panels is a consequence of the inclusion of the scissors operator in
@@ -186,9 +192,11 @@ integration in k-space has to be performed.
     Our response 
     -----------------------
 
-    We have added a sentence on page 15 to explain that the linear
-    analytic tetrahedron method for evaluating the 3D Brillouin zone
-    integrals is done by only using one k-point in the 'z'
-    direction. Thus, we use a 3D integration scheme with a 2D k-point
-    grid.
-
+	Formula (18) is the general definition of the current in
+	reciprocal space and contains a 3D-integration. It is only for
+	the numerical calculation applied to the slab that the
+	integration over the Brillouin zone reduces to a
+	2D-integration, with only one k-point in the z-direction. The
+	linear analytic tetrahedron method for evaluating the 3D
+	Brillouin zone integrals is applied straightforwardly to
+	our grid. We have added a sentence on page 15.

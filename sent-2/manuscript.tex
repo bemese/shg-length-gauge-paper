@@ -2,8 +2,6 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
-\def\chon{red}
-%\usepackage{showlabels}
 
 \pacs{78.68.+m, 42.65.An, 71.15.Mb, 42.65.Ky, 78.66.-w}
 
@@ -96,7 +94,7 @@ different from zero, but usually it is very small,\cite{downerSIA01} and we negl
 Much of the foundation of surface science has been built from 
 experiments involving emission or scattering of electrons from surfaces. 
 These require ultrahigh vacuum (UHV) environments and provide no access to 
-buried interfaces. However, SSHG is compatibile with non-UHV conditions and 
+buried interfaces. However, SSHG is compatible with non-UHV conditions and 
 has access to interfaces buried beneath transparent overlayers. Even when 
 applied to surfaces in UHV, the light source and detectors can be aligned and
 used outside the vacuum chamber. 
@@ -127,17 +125,14 @@ approximation\cite{onidaRMP02} is known to correct the electronic gap of most
 semiconductors\cite{luceroJPCM12}. However this can be a very expensive
 calculation and thus one uses the much simpler scissors operator scheme.
 \cite{levinePRL89,levinePRL91,delsolePRB93}  
-{\color{\chon}This allows us to ``open'' the DFT-LDA gap to 
+This allows us to ``open'' the DFT-LDA gap to 
 its correct experimental or GW value for most bulk semiconductors.
-%%%% Valerie and Nicolas remove these lines
-% even when experiments are not available. 
-%%%%
 This approximation has already been used in linear optical calculations for 
 surfaces,\cite{kippPRL96} thus improving the agreement with 
-experimental results.}
+experimental results.
 In this context, to correct for the underestimation of the energy band gap of 
 semiconductors Nastos et al.\cite{nastosPRB05} used the ``length gauge'' or 
-``$\mathbf{r}\cdot\mathbf{E}$ gauge'' to show how to correctly include the 
+``$\mathbf{r}\cdot\mathbf{E}$'' gauge to show how to correctly include the 
 many-body corrections through the scissors operator in the SH susceptibility.
 Later, Cabellos \textit{et al}.\cite{cabellosPRB09} elaborated a derivation 
 of the ``velocity gauge'' or ``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the 
@@ -173,18 +168,17 @@ tight-binding framework. This model allows for obtaining results from
 selected regions of a system including the surface. However, in these 
 references the scissors operator is either excluded or incorrectly 
 implemented. 
-{\color{\chon}In the works that include this operator,  the velocity gauge was
-  used to derive the expressions for $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$.
+In the works that include this operator,  the velocity gauge was
+used to derive the expressions for $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$.
 Nevertheless, a
-  term in the time-dependent perturbation scheme
+term in the time-dependent perturbation scheme
 necessary to satisfy the gauge invariance 
 of $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$  was omitted. 
 This was demonstrated
 in
-  Ref.~\onlinecite{cabellosPRB09} where a comparison between the
-  velocity and the length gauge  
+Ref.~\onlinecite{cabellosPRB09} where a comparison between the
+velocity and the length gauge  
 was carried out.
-}
 
 Finally, DFT-LDA calculations are often based on the use of pseudopotentials.
 As it will be discussed 
@@ -351,13 +345,16 @@ The unperturbed Hamiltonian
 is used to solve the Kohn-Sham equations\cite{kohnPR65} of Density  
 Functional Theory (DFT). It is convenient to work within the Local 
 Density Approximation (LDA), so we label the hamiltonian with the corresponding  
-LDA superscript. Any other approximation can be used (like GGA) and our 
+LDA superscript. Any other approximation can be used (like the
+generalized gradient approximation) and our 
 derivation remains the same. Then,
 \begin{equation*}
 H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})
 =\frac{p^{2}}{2m_e}+V(\mathbf{r},\mathbf{p})
 \end{equation*}
-with $m_e$ the mass of the electron, $\mathbf{p}$ its canonical momentum, and 
+with $m_e$ the mass of the electron, 
+$\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ 
+its canonical momentum, and 
 $V$
  the periodic crystal potential, where we neglect spin-orbit terms.
 To be more general in our derivation of
@@ -427,7 +424,7 @@ are cell periodic.
 
 \subsection{Length Gauge Formalism}\label{lgf}
 
-{\color{\chon}According to Ref. ~\onlinecite{ismailPRL01}, we first
+According to Ref. ~\onlinecite{ismailPRL01}, we first
   start with the interaction  
 Hamiltonian expressed in the velocity gauge, containing the nonlocal parts
 $V^{nl}(\mathbf{r},\mathbf{p})$ and 
@@ -441,10 +438,6 @@ H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).
 The treatment of the position operator $\mathbf{r}$ for extended Bloch states 
 is problematic and has been discussed in 
 Refs. \onlinecite{adamsJCP53,blountSSP62}.
-%%%% Valerie and Nicolas remove these lines
-% In particular, Ref.~\onlinecite{aversaPRB95} develops the treatment of 
-% $\mathbf{r}$ for the calculation of the nonlinear optical response.
-%%%%
 Following Ref.~\onlinecite{sipePRB00} we take the
 matrix elements of Eq.~\eqref{rhop} with the $H_{I}(t)$ of 
 Eq.~\eqref{rde}, and we obtain 
@@ -462,7 +455,7 @@ i\sum_{q }\Big(r_{nq }^{b}B_{q m}^{c}-B_{nq}^{c}r_{q m}^{b}
 -(B_{nm}^{c})_{;k^{b}}\bigg]E^{b}(\omega)E^{c}(\omega)e^{i(\omega^\Sigma_{nm}-2\tilde\omega)t}
 .
 \label{j.2}
-\end{equation}}
+\end{equation}
 The position operator
 $\mathbf{r}$ is split into the {\it intraband} 
 ($\mathbf{r}_i$) and {\it interband} ($\mathbf{r}_e$) parts, where 
@@ -556,7 +549,6 @@ where we have defined
 +\mathbf{v}^\mathrm{nl}
 ,\nonumber
 \end{align}  
-with $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ the canonical momentum operator, 
 and using $[r^a,p^b]=i\hbar\delta_{ab}$, where $\delta_{ab}$ is the 
 Kronecker delta.
 Using Eq.~\eqref{hats} we obtain 
@@ -1151,15 +1143,11 @@ valence bands, and a set of 244 $\mathbf{k}$-points.
 The $\mathbf{k}$-points are used for 
 the linear analytic  
 tetrahedron method for evaluating the  
-{\color{\chon}3D} Brillouin Zone (BZ) integrals  
+3D Brillouin Zone (BZ) integrals  
 where special care was taken to examine the double resonances
 of Eq.~\eqref{chis}. \cite{nastosPRB05}
-{\color{\chon}Since we are dealing with a surface
-only one $\mathbf{k}$-point
-along $z$ is required for the 3D BZ integrals, and in this case
-the electronic bands 
-show no dispersion along $k_z$. 
-}
+Note that the Brillouin zone for the slab geometry collapses to a               
+2D-zone, with only one $\mathbf{k}$-point along the $z$-axis.
 All spectra were calculated with a Gaussian smearing of 0.15 eV.
 \begin{figure}
 \centering 
@@ -1236,14 +1224,13 @@ $\hbar\Delta$.
 For these results we chose
 $\hbar\Delta=0.5$ eV, that is the GW gap reported in
 Refs.~\onlinecite{rohlfingPRB95,garciaCPC01}. 
-{\color{\chon}This is justified by the fact that the surface states of the clean 
+This is justified by the fact that the surface states of the clean 
 Si(001) surface are 
 rigidly shifted and maintain their
 dispersion relation with 
 respect to LDA according to
  the GW calculations of Ref.
 \onlinecite{rohlfingPRB95}. 
-}
 We see that for all four instances the 
 difference between responses is quite small.
 Indeed, when the value $|\chi^{xxx}|$ 
@@ -1320,16 +1307,17 @@ where more $\mathbf{k}$-points in the Brillouin zone were
 used to calculate its GW value.
 From Fig.~\ref{fig4}
 we note that the scissors correction 
-shifts the spectra from it LDA value to higher energies as expected.
+shifts the spectra from its LDA value to higher energies as expected.
  However, contrary 
 to the case of linear optics\cite{cabellosPRB09} the shift introduced 
 by the scissors correction is not 
 rigid, as pointed out in Ref.~\onlinecite{nastosPRB05}. 
  This is because the second-harmonic optical response mixes 
 $1\omega$ and $2\omega$ transitions (see Eq.~\eqref{chis}), and accounts 
-for the non-rigid shift. {\color{\chon}The reduction of the spectral strength is in 
+for the non-rigid shift. 
+The reduction of the spectral strength is in 
 agreement with previous calculations for bulk systems.
-\cite{nastosPRB05, luppiPRB10, leitsmannPRB05}}
+\cite{nastosPRB05, luppiPRB10, leitsmannPRB05}
 When we compare 
 $|\chi^{xxx}_{2\times 1}|$ for the two finite values of $\hbar\Delta$,
 we see that the first two peaks are almost rigidly 
